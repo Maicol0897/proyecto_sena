@@ -1,0 +1,37 @@
+/* fondo de la columna izquierda */
+.hero-panel{
+    background-color: #4a1228;
+    min-height: 100vh;
+}
+/* logo */
+.logo22-img{
+    width: 40px;
+    height: 40px;
+}
+.badge-version{
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+/* estilos para los textos del centro */
+.hero-subtitulo{
+    color: #f87171;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+.hero-titulo{
+    color:#ffffff;
+    font-weight: 900;
+    font-size:2.8rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+.hero-texto{
+    color:#d1d5db;
+    font-size: 1rem;
+    max-width: 400px;
+}
