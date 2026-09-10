@@ -1,3 +1,4 @@
+/* BLOQUE IZQUIERDO / 1 */
 /* fondo de la columna izquierda */
 .hero-panel{
     background-color: #4a1228;
@@ -17,21 +18,29 @@
 }
 /* estilos para los textos del centro */
 .hero-subtitulo{
-    color: #f87171;
+    color: #ffffff;
     font-weight: bold;
     font-size: 0.8rem;
     letter-spacing: 1px;
     margin-bottom: 8px;
 }
 .hero-titulo{
-    color:#ffffff;
+    color:#f87171;
     font-weight: 900;
     font-size:2.8rem;
     line-height: 1.1;
     margin-bottom: 15px;
 }
 .hero-texto{
-    color:#d1d5db;
+    color: #f87171;
     font-size: 1rem;
     max-width: 400px;
+}
+
+/* BLOQUE DERECHO / 2*/
+
+.form-contenedor{
+    width: 100%;
+    max-width: 400px;
+    
 }
