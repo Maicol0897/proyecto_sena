@@ -44,3 +44,128 @@
     max-width: 400px;
     
 }
+/* CONTEXTO GENERAL DEL FORMULARIO */
+.login-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ENCABEZADO */
+.login-header h2 {
+    color: #2b0d18;
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* ESTRUCTURA DEL FORMULARIO */
+.login-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.field-group {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.field-group label {
+    font-weight: 700;
+    color: #2b0d18;
+    font-size: 0.88rem;
+}
+
+.label-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.forgot-link {
+    font-size: 0.82rem;
+    color: #800020;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* INPUTS PERSONALIZADOS */
+.form-control-custom {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #e5e7eb;
+    background-color: #f5f3f4;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-control-custom:focus {
+    border-color: #6b1d38;
+}
+
+/* BOTÓN PRINCIPAL */
+.btn-primary-custom {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #6b1d38;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* PIE DE PÁGINA Y SEPARADOR */
+.login-footer {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    font-size: 0.88rem;
+}
+
+.register-link {
+    color: #6b1d38;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.divider {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 0.75rem;
+    color: #9ca3af;
+    font-size: 0.82rem;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    background-color: #e5e7eb;
+}
+
+/* BOTÓN SECUNDARIO */
+.btn-secondary-custom {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #fff1f2;
+    color: #1f2937;
+    border: 1px solid #fca5a5;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
