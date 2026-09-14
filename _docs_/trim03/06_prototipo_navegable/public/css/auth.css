@@ -1,50 +1,59 @@
-/* BLOQUE IZQUIERDO / 1 */
-/* fondo de la columna izquierda */
-.hero-panel{
+/* REGLAS GLOBALES Y PREVENCIÓN DE DESBORDAMIENTO */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* BLOQUE IZQUIERDO / HERO */
+.hero-panel {
     background-color: #4a1228;
     min-height: 100vh;
+    overflow: hidden;
 }
-/* logo */
-.logo22-img{
-    width: 40px;
-    height: 40px;
+
+/* CORREGIDO */
+.logo22-img {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: contain;
 }
-.badge-version{
+
+.badge-version {
     color: #ffffff;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.8rem;
 }
-/* estilos para los textos del centro */
-.hero-subtitulo{
+
+.hero-subtitulo {
     color: #ffffff;
     font-weight: bold;
     font-size: 0.8rem;
     letter-spacing: 1px;
     margin-bottom: 8px;
 }
-.hero-titulo{
-    color:#f87171;
+
+.hero-titulo {
+    color: #f87171;
     font-weight: 900;
-    font-size:2.8rem;
+    font-size: 2.8rem;
     line-height: 1.1;
     margin-bottom: 15px;
 }
-.hero-texto{
+
+.hero-texto {
     color: #f87171;
     font-size: 1rem;
     max-width: 400px;
 }
 
-/* BLOQUE DERECHO / 2*/
-
-.form-contenedor{
+/* BLOQUE DERECHO / FORMULARIO */
+.form-contenedor {
     width: 100%;
     max-width: 400px;
-    
 }
-/* CONTEXTO GENERAL DEL FORMULARIO */
+
 .login-grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -53,14 +62,12 @@
     max-width: 400px;
 }
 
-/* ENCABEZADO */
 .login-header h2 {
     color: #2b0d18;
     font-size: 2rem;
     margin: 0;
 }
 
-/* ESTRUCTURA DEL FORMULARIO */
 .login-form {
     display: grid;
     gap: 1rem;
