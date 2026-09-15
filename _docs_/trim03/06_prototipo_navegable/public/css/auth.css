@@ -176,3 +176,28 @@ img {
     align-items: center;
     gap: 0.5rem;
 }
+
+/*  auto registro/ desarrolador 2 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Tipografía general para toda la página */
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #f8f9fa;
+}
+
+/* Ancho máximo para la tarjeta del registro */
+.registro-card {
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Tamaño y color naranja del círculo del icono */
+.registro-icon {
+  width: 60px; 
+  height: 60px; 
+  background-color: #FE9A00; /* Falta el punto y coma final */
+}
+
