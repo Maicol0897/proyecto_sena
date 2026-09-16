@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BakeAdmin</title>
+    <!-- Rutas relativas corregidas con ../../ -->
+    <link rel="shortcut icon" href="../img/logo-bake.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/auth/login.css">
+</head>
+<body>
+    <div class="container-fluid vh-100 p-0">
+        <div class="row h-100 g-0">
+            <!-- COLUMNA IZQUIERDA / LOGOS, TEXTO, ETC -->
+            <div class="col-12 col-md-6 hero-panel p-5 d-flex flex-column justify-content-between">
+                <!-- BLOQUE 1: Logo y versión -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-2">
+                        <!-- Extensión .png agregada -->
+                        <img src="../img/logo.png" alt="logo22" class="logo-bake img" style="width: 45px; height: auto;">
+                        <h5 class="mb-0 text-white fw-bold">BakeAdmin,<br><small>Sistema de Gestión</small></h5>
+                    </div>
+                </div>
+                <!-- BLOQUE 2: Texto principal -->
+                <div class="my-auto">
+                    <p class="hero-subtitulo">GESTIÓN OPERATIVA</p>
+                    <h1 class="hero-titulo">TU PANADERÍA,<br>TU CONTROL.</h1>
+                    <p class="hero-texto">Gestión producción, pedidos, domicilios y compras desde un solo lugar</p>
+                </div>
+            </div>
+            <!-- COLUMNA DERECHA / FORMULARIO -->
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center p-4 bg-white">
+                <!-- contendor general de el login -->
+                 <div class="login-grid-container">
+                    <!-- el encabezado del formulario -->
+                     <header class="login-header">
+                        <h2 class="fw-bold">Inicia sesion</h2>
+                        <p class="text-muted">Accede a tu panel de control</p>
+                     </header>
+                     <!-- formulario de entrada -->
+                      <form class="login-form">
+                        <!-- campo 1 / correo -->
+                         <div class="field-group">
+                            <label for="email">Correo Electronico</label>
+                            <input type="email" id="email" class="form-control-custom" placeholder="correo@bakeadmin.com" required>
+                        </div>
+                        <!-- compo 2 . password -->
+                         <div class="field-group">
+                            <div class="label-row">
+                                <label for="password">Contraseña</label>
+                                <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                            </div>
+                            <input type="password" id="password" class="form-control-custom" placeholder="......." required>
+                        </div>
+                        <!-- Boton / submit -->
+                         <button type="submit" class="btn-primary-custom">
+                            Ingresar <span> &rarr;</span>
+                         </button>
+                      </form>
+                      <!-- pie de pagina del formulario -->
+                       <footer class="login-footer">
+                        <p class="m-0">¿Eres cliente nuevo? <a href="#" class="registrer-link">Registrate aqui</a></p>
+                        <div class="divider">
+                            <span> o continua sin cuenta</span>
+                        </div>
+                        <!-- boton secundario sin cuenta -->
+                         <button type="button" class="btn-secondary-custom">
+                            <span>☕</span> Ver menu y Realizar Pedidos (sin cuenta)
+                         </button>
+                       </footer>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../../public/js/app.js"></script>
+</body>
+</html>
