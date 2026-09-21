@@ -1,0 +1,141 @@
+/* ==========================================
+   ESTILOS GENERALES Y FUENTES
+   ========================================== */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* ==========================================
+   BARRA DE NAVEGACIÓN (NAVBAR)
+   ========================================== */
+.navbar-custom {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Ajustes del contenedor del logo */
+.logo-box {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-img {
+  object-fit: cover;
+}
+
+.text-subtitle {
+  font-size: 0.75rem;
+}
+
+/* Enlaces del menú de navegación */
+.navbar-nav .nav-link {
+  color: #6c757d;
+  transition: color 0.2s ease-in-out;
+  padding: 0.5rem 0.75rem;
+}
+
+
+/* ==========================================
+   BOTÓN SINCRONIZADO Y AVATAR
+   ========================================== */
+.btn-sincronizado {
+  color: black;
+  border: 1px solid #FE9A00;
+  font-size: 0.9rem;
+}
+
+/* Avatar del usuario con tono terracota/naranja */
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #FE9A00;
+  font-size: 0.9rem;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s ease;
+  border: 1px solid black;
+}
+
+.user-avatar:hover {
+  opacity: 0.9;
+}
+
+
+/* ==========================================
+   ESTILOS DE LAS TARJETAS DE CAJAS SUPERIORES
+   ========================================== */
+
+.one_card {
+  background-color: #EFF6FF;
+  height: 80px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.two_card {
+  background-color: #FE9A00;
+  height: 80px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.thre_card {
+  background-color: #D4EDDA;
+  height: 80px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.four_card {
+  background-color: #FFE4B5;
+  height: 80px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.five_card {
+  background-color: #054738;
+  height: 80px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.one_card:hover,
+.two_card:hover,
+.thre_card:hover,
+.four_card:hover,
+.five_card:hover {
+  transform: translateY(-2px);
+}
+
+/* Botón de pedido */
+.btn-pedido {
+  background-color: #FE9A00;
+  height: 40px;
+}
+
+.btn-pedido:hover {
+  background-color: #e08800;
+}
+
+
+/* ==========================================
+   MENÚ DESPLEGABLE DE AVATAR Y UTILIDADES
+   ========================================== */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+#menuPerfil {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+#menuPerfil .dropdown-item:hover {
+  background-color: #f8f9fa;
+}
