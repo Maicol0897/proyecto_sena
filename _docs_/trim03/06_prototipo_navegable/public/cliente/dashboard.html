@@ -42,12 +42,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center gap-2 fw-medium text-secondary" href="#">
+                        <a class="nav-link d-flex align-items-center gap-2 fw-medium text-secondary" href="../cliente/menu.html">
                             <i class="bi bi-cup-hot"></i> Menú
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center gap-2 fw-medium text-secondary" href="#">
+                        <a class="nav-link d-flex align-items-center gap-2 fw-medium text-secondary" href="../cliente/mis-pedidos.html">
                             <i class="bi bi-cart"></i> Mis Pedidos
                         </a>
                     </li>
@@ -88,7 +88,8 @@
                                 <hr class="dropdown-divider">
                             </li>
                             <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2 py-2 text-danger" href="../auth/login.html">Cerrar Sesión</a>
+                                <a class="dropdown-item d-flex align-items-center gap-2 py-2 text-danger"
+                                    href="../auth/login.html">Cerrar Sesión</a>
                             </li>
                         </ul>
                     </div>
@@ -104,9 +105,9 @@
     <p class="ms-3">Panel de control - <span
             class="badge bg-white text-black border rounded-pill px-3 py-1 fw-normal shadow-sm">Cliente</span></p>
     <!-- tarjeta principal -->
-    <div class="container-fluid mt-3 mb-3 ms-3 me-3 my-3 mx-3">
-        <div class="row me-4">
-            <div class="card w-100 mb-3" style="background-color: #D35400;">
+    <div class="container-fluid px-4 py-3">
+        <div>
+            <div class="card w-100 mb-3 rounded-4 shadow-sm " style="background-color: #D35400;">
                 <div class="card-body">
                     <h6 class="card-text" style="color: #FFE885;" class="fw-medium">🍞 BakeAdmin </h6>
                     <h3 class="card-title text-white">¿Qué vas a pedir hoy?</h3>
@@ -120,29 +121,58 @@
             </div>
         </div>
         <!-- 2. TARJETA MIS PEDIDOS (Alineada perfectamente con la de arriba) -->
-  <a href="../cliente/mis-pedidos.html" class="card text-decoration-none border shadow-sm rounded-4 p-3 mb-4 d-block">
-    <div class="card-body p-1 d-flex align-items-center justify-content-between">
-      
-      <!-- Lado Izquierdo: Icono + Textos -->
-      <div class="d-flex align-items-center gap-3">
-        <div class="rounded-3 d-flex align-items-center justify-content-center p-3" 
-             style="background-color: #FFF3CD; width: 54px; height: 54px;">
-          <i class="bi bi-box-seam fs-4" style="color: #B84A00;"></i>
+        <a href="../cliente/mis-pedidos.html"
+            class="card text-decoration-none border shadow-sm rounded-4 p-3 mb-4 d-block mx-4 ms-0 me-1">
+            <div class="card-body p-1 d-flex align-items-center justify-content-between">
+
+                <!-- Lado Izquierdo: Icono + Textos -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="rounded-3 d-flex align-items-center justify-content-center p-3"
+                        style="background-color: #FFF3CD; width: 54px; height: 54px;">
+                        <i class="bi bi-box-seam fs-4" style="color: #B84A00;"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="fw-bold text-dark mb-0 fs-6">Mis Pedidos</h5>
+                        <small class="text-muted">Ver el estado de tus pedidos en tiempo real</small>
+                    </div>
+                </div>
+
+                <!-- Lado Derecho: Flecha -->
+                <div class="text-secondary pe-2">
+                    <i class="bi bi-arrow-up-right fs-5"></i>
+                </div>
+
+            </div>
+        </a>
+
+        <!-- pie de pagina / con tarjetas -->
+
+        <div class="contenedor">
+                <div class="card-group">
+                    <div class="card  rounded-4 shadow-sm  me-2">
+                        <div class="card-body mb-1">
+                            <p class="text-center fs-6 mb-0 mt-4">🚀</p>
+                            <h5 class="card-title text-center">Entrega rapida</h5>
+                            <p class="card-text text-center">30-45 minutos</p>
+                        </div>
+                    </div>
+                    <div class="card rounded-4 shadow-sm  me-2">
+                        <div class="card-body mb-1">
+                            <p class="text-center fs-6 mb-0 mt-4">💳</p>
+                            <h5 class="card-title text-center">Multiples pagos</h5>
+                            <p class="card-text text-center">Efectivo,QR,Tarjeta</p>
+                        </div>
+                    </div>
+                    <div class="card rounded-4 shadow me-2">
+                        <div class="card-body mb-1">
+                            <p class="text-center fs-6 mb-0 mt-4">☕</p>
+                            <h5 class="card-title text-center">Menu variado</h5>
+                            <p class="card-text text-center">Bebidas, Comidas y Postres</p>
+                        </div>
+                    </div>
+                </div>
         </div>
-
-        <div>
-          <h5 class="fw-bold text-dark mb-0 fs-6">Mis Pedidos</h5>
-          <small class="text-muted">Ver el estado de tus pedidos en tiempo real</small>
-        </div>
-      </div>
-
-      <!-- Lado Derecho: Flecha -->
-      <div class="text-secondary pe-2">
-        <i class="bi bi-arrow-up-right fs-5"></i>
-      </div>
-
-    </div>
-  </a>
 
 
 
