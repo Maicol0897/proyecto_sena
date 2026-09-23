@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USUARIOS - BAKEADMIN</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo-bake.png">
+
+    <!-- CSS de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Tu archivo CSS personalizado -->
+    <link rel="stylesheet" href="../css/admin/usuarios.css">
+</head>
+
+<body class="bg-light">
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-2 navbar-custom">
+            <div class="container-fluid px-4">
+
+                <!-- Logo y Nombre del Sistema -->
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                    <div
+                        class="bg-dark rounded overflow-hidden d-flex align-items-center justify-content-center logo-box">
+                        <img src="../img/logo.png" alt="Logo BakeAdmin" class="w-100 h-100 logo-img">
+                    </div>
+                    <div class="d-flex flex-column lh-sm">
+                        <span class="fw-bold text-dark fs-5 mb-0">BakeAdmin</span>
+                        <small class="text-muted text-subtitle">Gestión Operativa</small>
+                    </div>
+                </a>
+
+                <!-- Botón responsive para móviles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Enlaces y Elementos de la Derecha -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto ms-lg-4 mb-2 mb-lg-0 gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium d-flex align-items-center gap-1" href="#Dashboard">
+                                <i class="bi bi-grid-fill"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center gap-1" href="#Usuarios">
+                                <i class="bi bi-people"></i> Usuarios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center gap-1" href="#Compras">
+                                <i class="bi bi-cart3"></i> Compras
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center gap-1" href="#Domicilios">
+                                <i class="bi bi-truck"></i> Domicilios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center gap-1" href="#Produccion">
+                                <i class="bi bi-cookie"></i> Producción
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Botón de Sincronizado y Menú de Perfil de Usuario -->
+                    <div class="d-flex align-items-center gap-3 position-relative">
+
+                        <button class="btn btn-sincronizado rounded-pill text-white d-flex align-items-center gap-2">
+                            <i class="bi bi-cloud-check"></i> Sincronizado
+                        </button>
+
+                        <!-- Botón Avatar -->
+                        <button id="btnAvatar" class="btn p-0 border-0 bg-transparent" type="button">
+                            <div
+                                class="user-avatar rounded-circle text-white fw-bold d-flex align-items-center justify-content-center">
+                                AB</div>
+                        </button>
+
+                        <!-- Menú Desplegable Avatar -->
+                        <div id="menuPerfil"
+                            class="dropdown-menu dropdown-menu-end p-3 shadow-sm rounded-4 border-0 menu-perfil-card">
+
+                            <!-- Encabezado con Avatar, Nombre y Rol -->
+                            <div class="d-flex align-items-center mb-3">
+                                <div
+                                    class="user-avatar rounded-circle text-white fw-bold d-flex align-items-center justify-content-center me-3">
+                                    AB</div>
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-dark">Admin BakeAdmin</h6>
+                                    <span class="badge bg-purple-subtle text-purple rounded-pill px-2 py-1 fs-7">
+                                        Administrador
+                                    </span>
+                                </div>
+                            </div>
+
+                            <hr class="dropdown-divider my-2">
+
+                            <!-- Lista de Opciones -->
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <button id="opcionMiPerfil"
+                                        class="dropdown-item d-flex align-items-center gap-2 rounded-2 py-2">
+                                        <i class="bi bi-person fs-5"></i>
+                                        <span>Mi Perfil</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button id="opcionAjustes"
+                                        class="dropdown-item d-flex align-items-center gap-2 rounded-2 py-2">
+                                        <i class="bi bi-gear fs-5"></i>
+                                        <span>Ajustes</span>
+                                    </button>
+                                </li>
+
+                                <hr class="dropdown-divider my-2">
+
+                                <li>
+                                    <button id="opcionCerrarSesion"
+                                        class="dropdown-item d-flex align-items-center gap-2 rounded-2 py-2 text-danger">
+                                        <i class="bi bi-box-arrow-right fs-5"></i>
+                                        <span>Cerrar Sesión</span>
+                                    </button>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="card border-0 shadow-sm rounded-4">
+            <div class="card-body p-4">
+
+                <!-- Encabezado de la página -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="fw-bold mb-0">Gestión de Clientes</h2>
+                    <button type="button" class="btn-crear-nuevo btn-primary rounded-pill px-4" data-bs-toggle="modal"
+                        data-bs-target="#modalCliente" onclick="prepararCreacion()">
+                        <i class="bi bi-plus-lg me-2"></i>Nuevo Cliente
+                    </button>
+                </div>
+
+                <!-- Tabla de Clientes -->
+                <div class="table-responsive">
+                    <table class="table align-middle text-nowrap mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Teléfono</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Dirección</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaClientesBody">
+
+                            <!-- Fila 1 -->
+                            <tr>
+                                <td class="fw-medium">Carlos López</td>
+                                <td>3101234567</td>
+                                <td>carlos.lopez@example.com</td>
+                                <td>Calle 45 # 12-34</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="form-check form-switch mb-0">
+                                            <input class="form-check-input switch-estado" type="checkbox" role="switch"
+                                                checked onchange="toggleEstado(this)">
+                                        </div>
+                                        <span
+                                            class="badge badge-estado bg-success-subtle text-success rounded-pill px-3 py-1">
+                                            Activo
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn btn-link text-dark p-1 me-1" title="Editar"
+                                        onclick="editarCliente(this)">
+                                        <i class="bi bi-pencil-square fs-5"></i>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <!-- Fila 2 -->
+                            <tr>
+                                <td class="fw-medium">Pedro Inactivo</td>
+                                <td>3209876543</td>
+                                <td>pedro.inactivo@example.com</td>
+                                <td>Carrera 7 # 89-01</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="form-check form-switch mb-0">
+                                            <input class="form-check-input switch-estado" type="checkbox" role="switch"
+                                                onchange="toggleEstado(this)">
+                                        </div>
+                                        <span
+                                            class="badge badge-estado bg-secondary-subtle text-secondary rounded-pill px-3 py-1">
+                                            Inactivo
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn btn-link text-dark p-1 me-1" title="Editar"
+                                        onclick="editarCliente(this)">
+                                        <i class="bi bi-pencil-square fs-5"></i>
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Formulario Cliente -->
+    <div class="modal fade" id="modalCliente" tabindex="-1" aria-labelledby="modalClienteLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow rounded-4">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="modalClienteLabel">Nuevo Cliente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formCliente" class="needs-validation" novalidate>
+                        <input type="hidden" id="clienteId">
+
+                        <div class="mb-3">
+                            <label for="clienteNombre" class="form-label fw-medium">Nombre completo</label>
+                            <input type="text" class="form-control rounded-3" id="clienteNombre" required>
+                            <div class="invalid-feedback">
+                                Por favor ingresa el nombre.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="clienteTelefono" class="form-label fw-medium">Teléfono</label>
+                            <input type="tel" class="form-control rounded-3" id="clienteTelefono" required>
+                            <div class="invalid-feedback">
+                                Por favor ingresa un teléfono.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="clienteEmail" class="form-label fw-medium">Correo electrónico</label>
+                            <input type="email" class="form-control rounded-3" id="clienteEmail" required>
+                            <div class="invalid-feedback">
+                                Por favor ingresa un correo electrónico válido.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="clienteDireccion" class="form-label fw-medium">Dirección</label>
+                            <input type="text" class="form-control rounded-3" id="clienteDireccion" required>
+                            <div class="invalid-feedback">
+                                Por favor ingresa una dirección.
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-2 mt-4">
+                            <button type="button" class="btn btn-light rounded-pill px-4"
+                                data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary rounded-pill px-4"
+                                id="btnGuardar">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Tu script JS local -->
+    <script src="../js/admin/usuarios.js"></script>
+</body>
+
+</html>

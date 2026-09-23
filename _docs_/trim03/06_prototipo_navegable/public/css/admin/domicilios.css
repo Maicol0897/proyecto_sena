@@ -39,9 +39,15 @@ body {
    BOTÓN SINCRONIZADO Y AVATAR
    ========================================== */
 .btn-sincronizado {
-  color: black;
-  border: 1px solid #FE9A00;
-  font-size: 0.9rem;
+  background-color: #00c853;
+  /* Verde vibrante exacto a la imagen */
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  box-shadow: 0 2px 4px rgba(0, 200, 83, 0.2);
+  transition: all 0.2s ease-in-out;
+
 }
 
 /* Avatar del usuario con tono terracota/naranja */
@@ -53,7 +59,6 @@ body {
   cursor: pointer;
   user-select: none;
   transition: opacity 0.2s ease;
-  border: 1px solid black;
 }
 
 .user-avatar:hover {
@@ -138,4 +143,32 @@ body {
 
 #menuPerfil .dropdown-item:hover {
   background-color: #f8f9fa;
+}
+
+
+/* ==========================================
+   LÍNEA DE PROGRESO Y PASOS (STEPPER - SEGUIMIENTO)
+   ========================================== */
+.step-item .step-icon {
+  background-color: #ffffff;
+  border: 2px solid #e2e8f0;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.step-item .step-label {
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+/* Estado Activo / Completado del Stepper */
+.step-item.active .step-icon {
+  background-color: #ff9800;
+  border-color: #ff9800;
+  color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(255, 152, 0, 0.2);
+}
+
+.step-item.active .step-label {
+  color: #d97706;
 }

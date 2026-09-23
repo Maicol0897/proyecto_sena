@@ -1,43 +1,13 @@
-// Banco de datos local para la simulación
-let pedidos = [];
+document.addEventListener('DOMContentLoaded', () => {
 
-let domiciliarios = [
-  { nombre: "Carlos Domiciliario", disponible: true, pedidos: 0 },
-  { nombre: "Pedro Repartidor", disponible: true, pedidos: 0 },
-  { nombre: "Laura Entrega", disponible: true, pedidos: 0 }
-];
+  /* ==========================================================================
+     1. NAVEGADOR Y MENÚ DE PERFIL DE USUARIO
+     ========================================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
-  inicializarEventos();
-  actualizarTodo();
-});
-
-// 1. EVENTOS PRINCIPALES Y MENÚ DE PERFIL
-function inicializarEventos() {
-  // Cambio entre pestañas
-  const tabs = document.querySelectorAll(".nav-tab-btn");
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      tabs.forEach(t => {
-        t.classList.remove("bg-white", "border", "shadow-sm", "text-dark");
-        t.classList.add("text-muted", "border-0");
-      });
-
-      tab.classList.remove("text-muted", "border-0");
-      tab.classList.add("bg-white", "border", "shadow-sm", "text-dark");
-
-      const targetId = tab.getAttribute("data-target");
-      document.querySelectorAll(".tab-pane-content").forEach(pane => pane.classList.add("d-none"));
-      
-      const targetPane = document.getElementById(targetId);
-      if (targetPane) targetPane.classList.remove("d-none");
-    });
-  });
-
-  // Toggle del Menú de Avatar
   const btnAvatar = document.getElementById("btnAvatar");
   const menuPerfil = document.getElementById("menuPerfil");
 
+  // Abrir / Cerrar Menú del Perfil
   if (btnAvatar && menuPerfil) {
     btnAvatar.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -45,15 +15,24 @@ function inicializarEventos() {
       menuPerfil.classList.toggle("show");
     });
 
+    // Cerrar menú al hacer clic fuera
     document.addEventListener("click", (e) => {
-      if (!menuPerfil.contains(e.target) && e.target !== btnAvatar) {
+      if (!menuPerfil.contains(e.target) && !btnAvatar.contains(e.target)) {
         menuPerfil.classList.add("d-none");
         menuPerfil.classList.remove("show");
       }
     });
   }
 
-  // Apertura segura de Offcanvas (Mi Perfil)
+  // Función auxiliar para ocultar el menú
+  const ocultarMenuPerfil = () => {
+    if (menuPerfil) {
+      menuPerfil.classList.add("d-none");
+      menuPerfil.classList.remove("show");
+    }
+  };
+
+  // Apertura de Offcanvas Mi Perfil
   const opcionMiPerfil = document.getElementById("opcionMiPerfil");
   if (opcionMiPerfil) {
     opcionMiPerfil.addEventListener("click", () => {
@@ -62,11 +41,11 @@ function inicializarEventos() {
         const bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(el);
         bsOffcanvas.show();
       }
-      if (menuPerfil) menuPerfil.classList.add("d-none");
+      ocultarMenuPerfil();
     });
   }
 
-  // Apertura segura de Offcanvas (Ajustes)
+  // Apertura de Offcanvas Ajustes
   const opcionAjustes = document.getElementById("opcionAjustes");
   if (opcionAjustes) {
     opcionAjustes.addEventListener("click", () => {
@@ -75,7 +54,7 @@ function inicializarEventos() {
         const bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(el);
         bsOffcanvas.show();
       }
-      if (menuPerfil) menuPerfil.classList.add("d-none");
+      ocultarMenuPerfil();
     });
   }
 
@@ -83,254 +62,136 @@ function inicializarEventos() {
   const opcionCerrarSesion = document.getElementById("opcionCerrarSesion");
   if (opcionCerrarSesion) {
     opcionCerrarSesion.addEventListener("click", () => {
-      alert("Sesión cerrada correctamente.");
-      if (menuPerfil) menuPerfil.classList.add("d-none");
-      window.location.href = "";
+      if (confirm("¿Estás seguro de que deseas cerrar sesión?")) {
+        ocultarMenuPerfil();
+        window.location.href = "login.html";
+      }
     });
   }
 
-  // Creación de Pedido desde Modal
-  const formNuevoPedido = document.getElementById("formNuevoPedido");
-  if (formNuevoPedido) {
-    formNuevoPedido.addEventListener("submit", (e) => {
-      e.preventDefault();
-      crearNuevoPedido();
-    });
-  }
-}
 
-// 2. REGISTRO DE NUEVO PEDIDO
-function crearNuevoPedido() {
-  const nombre = document.getElementById("nombreCliente").value;
-  const telefono = document.getElementById("telefonoCliente").value;
-  const direccion = document.getElementById("direccionCliente").value;
-  const productos = document.getElementById("productosPedido").value;
-  const precio = document.getElementById("precioPedido").value;
-  const pago = document.getElementById("metodoPago").value;
-  const observaciones = document.getElementById("observaciones").value;
+  /* ==========================================================================
+     2. GESTIÓN DEL FORMULARIO Y MODAL DE CLIENTES
+     ========================================================================== */
 
-  const nuevo = {
-    id: `#PED-00${pedidos.length + 1}`,
-    hora: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
-    cliente: nombre,
-    telefono: telefono,
-    direccion: direccion,
-    productos: productos,
-    precio: `$ ${Number(precio).toLocaleString('es-CO')}`,
-    pago: pago,
-    estado: "Pendiente",
-    repartidor: "",
-    observaciones: observaciones
-  };
+  const form = document.getElementById('formCliente');
+  if (form) {
+    form.addEventListener('submit', event => {
+      event.preventDefault();
 
-  pedidos.push(nuevo);
-
-  document.getElementById("formNuevoPedido").reset();
-  const modalElem = document.getElementById("nuevoPedido");
-  if (modalElem) {
-    const modal = bootstrap.Modal.getInstance(modalElem) || new bootstrap.Modal(modalElem);
-    modal.hide();
-  }
-
-  actualizarTodo();
-}
-
-// 3. VISTA PESTAÑA PEDIDOS
-function renderizarPedidos() {
-  const contenedor = document.getElementById("contenedorPedidos");
-  if (!contenedor) return;
-
-  contenedor.innerHTML = "";
-
-  const tplCompacto = document.getElementById("tpl-pedido-listo-compacto");
-  const tplDetallado = document.getElementById("tpl-pedido-detallado");
-
-  const pedidosActivos = pedidos.filter(p => p.estado !== "Entregado");
-
-  if (pedidosActivos.length === 0) {
-    contenedor.innerHTML = `<p class="text-center text-muted py-4">No hay pedidos pendientes en lista.</p>`;
-    return;
-  }
-
-  pedidos.forEach((p, index) => {
-    if (p.estado === "Entregado") return;
-
-    if (p.estado === "Listo" && !p.repartidor) {
-      const clon = tplCompacto.content.cloneNode(true);
-
-      clon.querySelector(".data-id").textContent = p.id;
-      clon.querySelector(".data-hora").textContent = p.hora;
-      clon.querySelector(".data-cliente").textContent = p.cliente;
-      clon.querySelector(".data-direccion").textContent = p.direccion;
-      clon.querySelector(".data-precio").textContent = p.precio;
-
-      const btnEstado = clon.querySelector(".btn-estado");
-      btnEstado.onclick = () => cambiarEstado(index, "En Camino", "Pedro Repartidor");
-
-      contenedor.appendChild(clon);
-    } else {
-      const clon = tplDetallado.content.cloneNode(true);
-      const badge = clon.querySelector(".data-badge-estado");
-      const btn = clon.querySelector(".btn-accion");
-      const btnIcon = clon.querySelector(".btn-icon");
-      const btnTexto = clon.querySelector(".btn-texto");
-      const repartidorWrapper = clon.querySelector(".data-repartidor-wrapper");
-
-      clon.querySelector(".data-id").textContent = p.id;
-      clon.querySelector(".data-precio").textContent = p.precio;
-      clon.querySelector(".data-cliente").textContent = p.cliente;
-      clon.querySelector(".data-telefono").textContent = p.telefono;
-      clon.querySelector(".data-direccion").textContent = p.direccion;
-      clon.querySelector(".data-pago").textContent = p.pago;
-
-      const elemProd = clon.querySelector(".data-productos");
-      if (elemProd) elemProd.textContent = p.productos ? `📦 ${p.productos}` : "";
-
-      const elemObs = clon.querySelector(".data-observaciones");
-      if (elemObs) elemObs.textContent = p.observaciones ? `📝 ${p.observaciones}` : "";
-
-      if (p.estado === "Pendiente") {
-        badge.textContent = "Pendiente";
-        badge.className = "badge px-2 py-1 bg-warning-subtle text-warning-emphasis";
-
-        btn.className = "btn btn-sm btn-outline-primary px-3 d-flex align-items-center gap-1";
-        btnIcon.className = "bi bi-cup-hot";
-        btnTexto.textContent = "Preparar";
-        btn.onclick = () => cambiarEstado(index, "En Preparación");
-      } else if (p.estado === "En Preparación") {
-        badge.textContent = "En Preparación";
-        badge.className = "badge px-2 py-1 bg-info-subtle text-info";
-
-        btn.className = "btn btn-sm btn-outline-success px-3 d-flex align-items-center gap-1";
-        btnIcon.className = "bi bi-check-circle";
-        btnTexto.textContent = "Marcar Listo";
-        btn.onclick = () => cambiarEstado(index, "Listo");
-      } else if (p.estado === "En Camino") {
-        badge.textContent = "En Camino";
-        badge.className = "badge px-2 py-1 bg-primary-subtle text-primary";
-
-        if (repartidorWrapper) {
-          repartidorWrapper.classList.remove("d-none");
-          clon.querySelector(".data-repartidor").textContent = p.repartidor;
-        }
-
-        btn.className = "btn btn-sm text-white px-3 d-flex align-items-center gap-1";
-        btn.style.backgroundColor = "#8b5cf6";
-        btnIcon.className = "bi bi-truck";
-        btnTexto.textContent = "Confirmar Entrega";
-        btn.onclick = () => cambiarEstado(index, "Entregado");
+      if (!form.checkValidity()) {
+        event.stopPropagation();
+        form.classList.add('was-validated');
+        return;
       }
 
-      contenedor.appendChild(clon);
-    }
-  });
-}
+      const nombre = document.getElementById('clienteNombre').value.trim();
+      const telefono = document.getElementById('clienteTelefono').value.trim();
+      const email = document.getElementById('clienteEmail').value.trim();
+      const direccion = document.getElementById('clienteDireccion').value.trim();
 
-// 4. VISTA PESTAÑA COMANDAS
-function renderizarComandas() {
-  const contenedor = document.getElementById("contenedorComandas");
-  if (!contenedor) return;
+      if (filaEnEdicion) {
+        // MODO EDITAR
+        const celdas = filaEnEdicion.querySelectorAll('td');
+        celdas[0].textContent = nombre;
+        celdas[1].textContent = telefono;
+        celdas[2].textContent = email;
+        celdas[3].textContent = direccion;
+      } else {
+        // MODO CREAR
+        const tbody = document.getElementById('tablaClientesBody');
+        const nuevaFila = document.createElement('tr');
 
-  contenedor.innerHTML = "";
+        nuevaFila.innerHTML = `
+          <td class="fw-medium"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <div class="d-flex align-items-center gap-2">
+              <div class="form-check form-switch mb-0">
+                <input class="form-check-input switch-estado" type="checkbox" role="switch" checked onchange="toggleEstado(this)">
+              </div>
+              <span class="badge badge-estado bg-success-subtle text-success rounded-pill px-3 py-1">
+                Activo
+              </span>
+            </div>
+          </td>
+          <td>
+            <button class="btn btn-link text-dark p-1 me-1" title="Editar" onclick="editarCliente(this)">
+              <i class="bi bi-pencil-square fs-5"></i>
+            </button>
+          </td>
+        `;
 
-  const tplComanda = document.getElementById("tpl-comanda-card");
-  const comandas = pedidos.filter(p => p.estado === "En Preparación" || p.estado === "Listo");
+        const celdas = nuevaFila.querySelectorAll('td');
+        celdas[0].textContent = nombre;
+        celdas[1].textContent = telefono;
+        celdas[2].textContent = email;
+        celdas[3].textContent = direccion;
 
-  if (comandas.length === 0) {
-    contenedor.innerHTML = `<div class="col-12"><p class="text-center text-muted py-4">No hay comandas activas en cocina.</p></div>`;
-    return;
+        tbody.appendChild(nuevaFila);
+      }
+
+      // Cerrar Modal
+      const modalEl = document.getElementById('modalCliente');
+      const modal = bootstrap.Modal.getInstance(modalEl);
+      if (modal) {
+        modal.hide();
+      }
+
+      form.reset();
+      form.classList.remove('was-validated');
+      filaEnEdicion = null;
+    }, false);
   }
+});
 
-  comandas.forEach(p => {
-    const clon = tplComanda.content.cloneNode(true);
-    clon.querySelector(".data-id").textContent = p.id;
-    
-    const badge = clon.querySelector(".data-badge");
-    badge.textContent = p.estado;
-    badge.className = `badge ${p.estado === 'En Preparación' ? 'bg-info-subtle text-info' : 'bg-success-subtle text-success'}`;
 
-    clon.querySelector(".data-hora").textContent = p.hora;
-    clon.querySelector(".data-productos").textContent = `📦 ${p.productos}`;
-    clon.querySelector(".data-observaciones").textContent = p.observaciones ? `📝 ${p.observaciones}` : '';
+/* ==========================================================================
+   3. FUNCIONES GLOBALES
+   ========================================================================== */
 
-    contenedor.appendChild(clon);
-  });
-}
+let filaEnEdicion = null;
 
-// 5. VISTA PESTAÑA SEGUIMIENTO
-function renderizarSeguimiento() {
-  const contenedor = document.getElementById("contenedorSeguimiento");
-  if (!contenedor) return;
+function toggleEstado(checkbox) {
+  const contenedor = checkbox.closest('td');
+  const badge = contenedor.querySelector('.badge-estado');
 
-  contenedor.innerHTML = "";
-
-  const tplSeguimiento = document.getElementById("tpl-seguimiento-row");
-  const enRuta = pedidos.filter(p => p.estado === "En Camino");
-
-  if (enRuta.length === 0) {
-    contenedor.innerHTML = `<p class="text-center text-muted py-4">No hay pedidos en ruta actualmente.</p>`;
-    return;
+  if (checkbox.checked) {
+    badge.textContent = 'Activo';
+    badge.className = 'badge badge-estado bg-success-subtle text-success rounded-pill px-3 py-1';
+  } else {
+    badge.textContent = 'Inactivo';
+    badge.className = 'badge badge-estado bg-secondary-subtle text-secondary rounded-pill px-3 py-1';
   }
-
-  enRuta.forEach(p => {
-    const clon = tplSeguimiento.content.cloneNode(true);
-    clon.querySelector(".data-id").textContent = p.id;
-    clon.querySelector(".data-cliente").textContent = p.cliente;
-    clon.querySelector(".data-direccion").textContent = p.direccion;
-    clon.querySelector(".data-estado").textContent = p.estado;
-    clon.querySelector(".data-repartidor").textContent = p.repartidor;
-
-    contenedor.appendChild(clon);
-  });
 }
 
-// 6. VISTA PESTAÑA DOMICILIARIOS
-function renderizarDomiciliarios() {
-  const contenedor = document.getElementById("contenedorDomiciliarios");
-  if (!contenedor) return;
-
-  contenedor.innerHTML = "";
-
-  const tplDomiciliario = document.getElementById("tpl-domiciliario-card");
-
-  domiciliarios.forEach(d => {
-    const clon = tplDomiciliario.content.cloneNode(true);
-    clon.querySelector(".data-nombre").textContent = d.nombre;
-    
-    const badge = clon.querySelector(".data-estado");
-    badge.textContent = d.disponible ? "Disponible" : "Ocupado";
-    badge.className = `badge ${d.disponible ? 'bg-success' : 'bg-secondary'}`;
-
-    const totalEnRuta = pedidos.filter(p => p.repartidor === d.nombre && p.estado === "En Camino").length;
-    clon.querySelector(".data-pedidos").textContent = totalEnRuta;
-
-    contenedor.appendChild(clon);
-  });
+function prepararCreacion() {
+  filaEnEdicion = null;
+  document.getElementById('modalClienteLabel').innerText = 'Nuevo Cliente';
+  const form = document.getElementById('formCliente');
+  form.reset();
+  form.classList.remove('was-validated');
+  
+  const campoId = document.getElementById('clienteId');
+  if (campoId) campoId.value = '';
 }
 
-// 7. TRANSICIÓN DE ESTADOS Y CONTROL DE FLUJO
-function cambiarEstado(index, nuevoEstado, repartidor = "") {
-  pedidos[index].estado = nuevoEstado;
+function editarCliente(boton) {
+  filaEnEdicion = boton.closest('tr');
 
-  if (repartidor) {
-    pedidos[index].repartidor = repartidor;
-  }
+  const celdas = filaEnEdicion.querySelectorAll('td');
 
-  actualizarTodo();
-}
+  document.getElementById('modalClienteLabel').innerText = 'Editar Cliente';
+  document.getElementById('clienteNombre').value = celdas[0].textContent.trim();
+  document.getElementById('clienteTelefono').value = celdas[1].textContent.trim();
+  document.getElementById('clienteEmail').value = celdas[2].textContent.trim();
+  document.getElementById('clienteDireccion').value = celdas[3].textContent.trim();
 
-function actualizarContadores() {
-  document.getElementById("cantTotal").textContent = pedidos.length;
-  document.getElementById("cantPendientes").textContent = pedidos.filter(p => p.estado === "Pendiente").length;
-  document.getElementById("cantPreparacion").textContent = pedidos.filter(p => p.estado === "En Preparación").length;
-  document.getElementById("cantEnCamino").textContent = pedidos.filter(p => p.estado === "En Camino").length;
-  document.getElementById("cantEntregados").textContent = pedidos.filter(p => p.estado === "Entregado").length;
-}
+  document.getElementById('formCliente').classList.remove('was-validated');
 
-function actualizarTodo() {
-  actualizarContadores();
-  renderizarPedidos();
-  renderizarComandas();
-  renderizarSeguimiento();
-  renderizarDomiciliarios();
+  const modalEl = document.getElementById('modalCliente');
+  const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+  modal.show();
 }

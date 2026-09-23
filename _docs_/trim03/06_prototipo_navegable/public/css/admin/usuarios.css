@@ -1,0 +1,110 @@
+/* ==========================================
+   BARRA DE NAVEGACIÓN (NAVBAR)
+   ========================================== */
+.navbar-custom {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Ajustes del contenedor del logo */
+.logo-box {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-img {
+  object-fit: cover;
+}
+
+.text-subtitle {
+  font-size: 0.75rem;
+}
+
+/* Enlaces del menú de navegación */
+.navbar-nav .nav-link {
+  color: #6c757d;
+  transition: color 0.2s ease-in-out;
+  padding: 0.5rem 0.75rem;
+}
+
+/* ==========================================
+   BOTÓN SINCRONIZADO Y AVATAR
+   ========================================== */
+.btn-sincronizado {
+  background-color: #00c853;
+  /* Verde vibrante exacto a la imagen */
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  box-shadow: 0 2px 4px rgba(0, 200, 83, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Avatar del usuario con tono terracota/naranja */
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #FE9A00;
+  font-size: 0.9rem;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+
+.user-avatar:hover {
+  opacity: 0.9;
+}
+
+/* ==========================================
+   MENÚ DESPLEGABLE DE PERFIL Y ROL
+   ========================================== */
+.bg-purple-subtle {
+  background-color: #f3e8ff;
+}
+
+.text-purple {
+  color: #8b5cf6;
+}
+
+.fs-7 {
+  font-size: 0.75rem;
+}
+
+.menu-perfil-card {
+  position: absolute;
+  right: 0;
+  top: 120%;
+  z-index: 1000;
+  min-width: 250px;
+  display: none; /* Oculto por defecto */
+}
+
+/* Clase activada desde JavaScript para visibilidad */
+.menu-perfil-card.show {
+  display: block !important;
+}
+
+#menuPerfil .dropdown-item:hover {
+  background-color: #f1f5f9;
+}
+
+#menuPerfil .dropdown-item.text-danger:hover {
+  background-color: #fef2f2;
+}
+/* Estado Activo (Verde de la imagen) */
+.badge-activo-custom {
+  background-color: #00c853 !important;
+  color: #ffffff !important;
+}
+
+/* Botón Crear Nuevo Usuario / Cliente */
+.btn-crear-nuevo {
+  background-color: #00c853 !important;
+  color: #ffffff !important;
+  border: none;
+}
+
+.btn-crear-nuevo:hover {
+  background-color: #00a843 !important;
+  color: #ffffff !important;
+}
