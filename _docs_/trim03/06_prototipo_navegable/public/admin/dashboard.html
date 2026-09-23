@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/admin/dashboard.css">
+</head>
+<body class="bg-light">
+    <!-- CONTENEDOR BARRA NAVEGACION -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container-fluid">
+            <!-- LOGO/ESLOGAN -->
+            <div class="logo d-flex align-items-center">
+                <img src="../img/logo.png" alt="BakeAdmin">
+                <div class="informacion-logo">
+                    <h2 class="fw-bold fs-5 mb-0">BakeAdmin</h2>
+                    <h3 class="text-secondary fs-6 mb-0">Gestión Operativa</h3>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal" aria-expanded="false" aria-label="abrir navegacion">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+                <!-- MODULOS -->
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <div class="navbar-nav gap-4">
+
+    <a href="" class="nav-link text-primary fw-semibold d-flex align-items-center gap-2">
+        <i class="bi bi-grid-3x3-gap"></i>
+        Dashboard
+    </a>
+
+    <a href="../admin/dashboard.html" class="nav-link text-dark d-flex align-items-center gap-2">
+        <i class="bi bi-people"></i>
+        Usuarios
+    </a>
+
+    <a href="../admin/compras.html" class="nav-link text-dark d-flex align-items-center gap-2">
+        <i class="bi bi-cart3"></i>
+        Compras
+    </a>
+
+    <a href="../admin/domicilios.html" class="nav-link text-dark d-flex align-items-center gap-2">
+        <i class="bi bi-truck"></i>
+        Domicilios
+    </a>
+
+    <a href="../admin/produccion.html" class="nav-link text-dark d-flex align-items-center gap-2">
+        <i class="bi bi-gear"></i>
+        Producción
+    </a>
+
+</div>
+                    <!-- AVATAR/ESTADO -->
+                    <div class="avatar-usuarios d-flex align-items-center ms-lg-auto">
+                        <div class="estado">
+                            <span class="badge text-bg-success d-flex align-items-center gap-2 px-3 py-2">
+    <i class="bi bi-cloud"></i>
+    Sincronizado
+</span>
+                        </div>
+                        <div class="usuario">
+                            <div class="avatar rounded-circle bg-primary text-white fw-bold d-flex align-items-center justify-content-center">AB</div>
+                            <div class="informacion-usuario d-none d-lg-block">
+                                <p class="fw-semibold mb-0"></p>
+                                <span class="text-secondary small"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </nav>
+    <!-- CABECERA -->
+    <header>
+        <h1 class="fw-bold mb-2">¡Bienvenido, Admin BakeAdmin!</h1>
+        <p class="text-secondary mb-0">Panel de control - Administrador</p>
+    </header>
+    <main>
+        <!-- ESTADISTICAS -->
+        <section class="card-estadistica row g-3">
+            <!-- PRIMERA TAREJTA -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-empleados h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between pb-2">
+                            <p class="small fw-medium text-secondary mb-0">
+                                Empleados Activos
+                            </p>
+                            <div class="icono-estadistica icono-empleados p-2 rounded-3">
+                                <i class="bi bi-people fs-5"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="fs-4 fw-bold mb-1">24</h2>
+                            <p class="small text-secondary mb-0">
+                                <span class="text-success">+2</span>
+                                vs. ayer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SEGUNDA TARJETA -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-pedidos h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between pb-2">
+                            <p class="small fw-medium text-secondary mb-0">
+                                Pedidos Hoy
+                            </p>
+                            <div class="icono-estadistica icono-pedidos p-2 rounded-3">
+                                <i class="bi bi-cart fs-5"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="fs-4 fw-bold mb-1">156</h2>
+                            <p class="small text-secondary mb-0">
+                                <span class="text-success">+12</span>
+                                vs. ayer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- TERCERA TARJETA -->
+             <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-produccion h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between pb-2">
+                            <p class="small fw-medium text-secondary mb-0">
+                                En Producción
+                            </p>
+                            <div class="icono-estadistica icono-produccion p-2 rounded-3">
+                                <i class="bi bi-gear fs-5"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="fs-4 fw-bold mb-1">89</h2>
+                            <p class="small text-secondary mb-0">
+                                <span class="text-success">-3</span>
+                                vs. ayer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CUARTA TARJETA -->
+             <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-domicilios h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between pb-2">
+                            <p class="small fw-medium text-secondary mb-0">
+                                Domicilios Activos
+                            </p>
+                            <div class="icono-estadistica icono-domicilios p-2 rounded-3">
+                                <i class="bi bi-truck fs-5"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="fs-4 fw-bold mb-1">42</h2>
+                            <p class="small text-secondary mb-0">
+                                <span class="text-success">+1</span>
+                                vs. ayer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ALERTAS -->    
+        <section class="contenido-inferior">
+
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+
+            <h2 class="h5 fw-semibold mb-4">
+                Alertas y Notificaciones
+            </h2>
+
+            <div class="d-flex flex-column gap-3">
+                
+                <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
+                    <i class="bi bi-exclamation-triangle fs-5 text-warning"></i>
+                    <span class="small">
+                        Stock bajo: Harina de trigo (5 kg restantes)
+                    </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
+                    <i class="bi bi-clock fs-5 text-primary"></i>
+                    <span class="small">
+                        3 facturas pendientes de validación
+                    </span>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
+                    <i class="bi bi-check-circle fs-5 text-success"></i>
+                    <span class="small">
+                        Sincronización completada hace 2 minutos
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+            <!-- ACCESOS RÁPIDOS -->
+<div class="row g-3">
+
+    <!-- USUARIOS -->
+    <div class="col-12 col-md-6 col-lg-3">
+        <a href="../admin/usuarios.html"
+           class="btn btn-outline-secondary w-100 h-100 py-3 d-flex flex-column align-items-center justify-content-center gap-2 acceso">
+            <i class="bi bi-people fs-3"></i>
+            <span class="fw-medium">Gestionar Usuarios</span>
+        </a>
+    </div>
+
+    <!-- COMPRAS -->
+    <div class="col-12 col-md-6 col-lg-3">
+        <a href="../admin/compras.html"
+           class="btn btn-outline-secondary w-100 h-100 py-3 d-flex flex-column align-items-center justify-content-center gap-2 acceso">
+            <i class="bi bi-cart fs-3"></i>
+            <span class="fw-medium">Compras</span>
+        </a>
+    </div>
+
+    <!-- DOMICILIOS -->
+    <div class="col-12 col-md-6 col-lg-3">
+        <a href="../admin/domicilios.html"
+           class="btn btn-outline-secondary w-100 h-100 py-3 d-flex flex-column align-items-center justify-content-center gap-2 acceso">
+            <i class="bi bi-truck fs-3"></i>
+            <span class="fw-medium">Domicilios</span>
+        </a>
+    </div>
+
+    <!-- PRODUCCIÓN -->
+    <div class="col-12 col-md-6 col-lg-3">
+        <a href="../admin/produccion.html"
+           class="btn btn-outline-secondary w-100 h-100 py-3 d-flex flex-column align-items-center justify-content-center gap-2 acceso">
+            <i class="bi bi-gear fs-3"></i>
+            <span class="fw-medium">Producción</span>
+        </a>
+    </div>
+
+</div>
+        </section>
+    </main>
+    <!-- PIE DE PAGINA -->
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</htm>
