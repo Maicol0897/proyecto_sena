@@ -14,7 +14,7 @@
         <div class="container-fluid">
             <!-- LOGO/ESLOGAN -->
             <div class="logo d-flex align-items-center">
-                <img src="../img/logo.png" alt="BakeAdmin">
+                <img src="../img/logo-bake.png" alt="BakeAdmin">
                 <div class="informacion-logo">
                     <h2 class="fw-bold fs-5 mb-0">BakeAdmin</h2>
                     <h3 class="text-secondary fs-6 mb-0">Gestión Operativa</h3>
@@ -27,40 +27,39 @@
                 <!-- MODULOS -->
                 <div class="collapse navbar-collapse" id="menuPrincipal">
                     <div class="navbar-nav gap-4">
-
-    <a href="" class="nav-link text-primary fw-semibold d-flex align-items-center gap-2">
-        <i class="bi bi-grid-3x3-gap"></i>
-        Dashboard
-    </a>
-
-    <a href="../admin/dashboard.html" class="nav-link text-dark d-flex align-items-center gap-2">
-        <i class="bi bi-people"></i>
-        Usuarios
-    </a>
-
-    <a href="../admin/compras.html" class="nav-link text-dark d-flex align-items-center gap-2">
-        <i class="bi bi-cart3"></i>
-        Compras
-    </a>
-
-    <a href="../admin/domicilios.html" class="nav-link text-dark d-flex align-items-center gap-2">
-        <i class="bi bi-truck"></i>
-        Domicilios
-    </a>
-
-    <a href="../admin/produccion.html" class="nav-link text-dark d-flex align-items-center gap-2">
-        <i class="bi bi-gear"></i>
-        Producción
-    </a>
-
-</div>
+                        <!-- DASHBOARD -->
+                        <a href="" class="nav-link text-primary fw-semibold d-flex align-items-center gap-2">
+                            <i class="bi bi-grid-3x3-gap"></i>
+                            Dashboard
+                        </a>
+                        <!-- MODULO USUARIOS -->
+                        <a href="../admin/dashboard.html" class="nav-link text-dark d-flex align-items-center gap-2">
+                            <i class="bi bi-people"></i>
+                            Usuarios
+                        </a>
+                        <!-- MODULO COMPRAS A PROVEEDORES -->
+                        <a href="../admin/compras.html" class="nav-link text-dark d-flex align-items-center gap-2">
+                            <i class="bi bi-cart3"></i>
+                            Compras
+                        </a>
+                        <!-- MODULO DOMICILIOS -->
+                        <a href="../admin/domicilios.html" class="nav-link text-dark d-flex align-items-center gap-2">
+                            <i class="bi bi-truck"></i>
+                            Domicilios
+                        </a>
+                        <!-- MODULO PRODUCCIÓN -->
+                        <a href="../admin/produccion.html" class="nav-link text-dark d-flex align-items-center gap-2">
+                            <i class="bi bi-gear"></i>
+                            Producción
+                        </a>
+                    </div>
                     <!-- AVATAR/ESTADO -->
                     <div class="avatar-usuarios d-flex align-items-center ms-lg-auto">
                         <div class="estado">
                             <span class="badge text-bg-success d-flex align-items-center gap-2 px-3 py-2">
-    <i class="bi bi-cloud"></i>
-    Sincronizado
-</span>
+                                <i class="bi bi-cloud"></i>
+                                Sincronizado
+                            </span>
                         </div>
                         <div class="usuario">
                             <div class="avatar rounded-circle bg-primary text-white fw-bold d-flex align-items-center justify-content-center">AB</div>
@@ -172,81 +171,71 @@
         </section>
         <!-- ALERTAS -->    
         <section class="contenido-inferior">
-
-    <div class="card border-0 shadow-sm">
-        <div class="card-body p-4">
-
-            <h2 class="h5 fw-semibold mb-4">
-                Alertas y Notificaciones
-            </h2>
-
-            <div class="d-flex flex-column gap-3">
-                
-                <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
-                    <i class="bi bi-exclamation-triangle fs-5 text-warning"></i>
-                    <span class="small">
-                        Stock bajo: Harina de trigo (5 kg restantes)
-                    </span>
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h2 class="h5 fw-semibold mb-4">
+                        Alertas y Notificaciones
+                    </h2>
+                    <!-- ALERTA STOCK -->
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
+                            <i class="bi bi-exclamation-triangle fs-5 text-warning"></i>
+                            <span class="small">
+                                Stock bajo: Harina de trigo (5 kg restantes)
+                            </span>
+                        </div>
+                        <!-- ALERTA FACTURACIÓN -->
+                        <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
+                            <i class="bi bi-clock fs-5 text-primary"></i>
+                            <span class="small">
+                                3 facturas pendientes de validación
+                            </span>
+                        </div>
+                        <!-- ALERTA SINCRONIZACIÓN -->
+                        <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
+                            <i class="bi bi-check-circle fs-5 text-success"></i>
+                            <span class="small">
+                                Sincronización completada hace 2 minutos
+                            </span>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
-                    <i class="bi bi-clock fs-5 text-primary"></i>
-                    <span class="small">
-                        3 facturas pendientes de validación
-                    </span>
-                </div>
-
-                <div class="d-flex align-items-center gap-3 p-3 bg-light rounded-3">
-                    <i class="bi bi-check-circle fs-5 text-success"></i>
-                    <span class="small">
-                        Sincronización completada hace 2 minutos
-                    </span>
-                </div>
-
             </div>
-
-        </div>
-    </div>
             <!-- ACCESOS RÁPIDOS -->
-<div class="row g-3">
-
-    <!-- USUARIOS -->
-    <div class="col-12 col-md-6 col-lg-3">
-        <a href="../admin/usuarios.html"
-           class="btn btn-outline-secondary w-100 h-100 py-3 d-flex flex-column align-items-center justify-content-center gap-2 acceso">
-            <i class="bi bi-people fs-3"></i>
-            <span class="fw-medium">Gestionar Usuarios</span>
-        </a>
-    </div>
-
-    <!-- COMPRAS -->
-    <div class="col-12 col-md-6 col-lg-3">
-        <a href="../admin/compras.html"
-           class="btn btn-outline-secondary w-100 h-100 py-3 d-flex flex-column align-items-center justify-content-center gap-2 acceso">
-            <i class="bi bi-cart fs-3"></i>
-            <span class="fw-medium">Compras</span>
-        </a>
-    </div>
-
-    <!-- DOMICILIOS -->
-    <div class="col-12 col-md-6 col-lg-3">
-        <a href="../admin/domicilios.html"
-           class="btn btn-outline-secondary w-100 h-100 py-3 d-flex flex-column align-items-center justify-content-center gap-2 acceso">
-            <i class="bi bi-truck fs-3"></i>
-            <span class="fw-medium">Domicilios</span>
-        </a>
-    </div>
-
-    <!-- PRODUCCIÓN -->
-    <div class="col-12 col-md-6 col-lg-3">
-        <a href="../admin/produccion.html"
-           class="btn btn-outline-secondary w-100 h-100 py-3 d-flex flex-column align-items-center justify-content-center gap-2 acceso">
-            <i class="bi bi-gear fs-3"></i>
-            <span class="fw-medium">Producción</span>
-        </a>
-    </div>
-
-</div>
+            <div class="row g-3">
+                <!-- USUARIOS -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <a href="../admin/usuarios.html"
+                    class="btn btn-outline-secondary w-100 h-100 py-3 d-flex flex-column align-items-center justify-content-center gap-2 acceso">
+                        <i class="bi bi-people fs-3"></i>
+                        <span class="fw-medium">Gestionar Usuarios</span>
+                    </a>
+                </div>
+                <!-- COMPRAS -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <a href="../admin/compras.html"
+                    class="btn btn-outline-secondary w-100 h-100 py-3 d-flex flex-column align-items-center justify-content-center gap-2 acceso">
+                        <i class="bi bi-cart fs-3"></i>
+                        <span class="fw-medium">Compras</span>
+                    </a>
+                </div>
+                <!-- DOMICILIOS -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <a href="../admin/domicilios.html"
+                    class="btn btn-outline-secondary w-100 h-100 py-3 d-flex flex-column align-items-center justify-content-center gap-2 acceso">
+                        <i class="bi bi-truck fs-3"></i>
+                        <span class="fw-medium">Domicilios</span>
+                    </a>
+                </div>
+                <!-- PRODUCCIÓN -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <a href="../admin/produccion.html"
+                    class="btn btn-outline-secondary w-100 h-100 py-3 d-flex flex-column align-items-center justify-content-center gap-2 acceso">
+                        <i class="bi bi-gear fs-3"></i>
+                        <span class="fw-medium">Producción</span>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
     <!-- PIE DE PAGINA -->
