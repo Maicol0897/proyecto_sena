@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="shortcut icon" href="../../public/img/logo.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+
+</head>
+<body>
+    <!-- Contenedor general -->
+<div class="container-fluid">
+    <!-- Fila del Navegador -->
+    <nav class="row align-items-center py-2 border-bottom">
+        
+        <!-- 1. Columna Logo (Ancho: 3 en PC, 12 en Móvil) -->
+        <div class="col-lg-3 col-auto d-flex align-items-center gap-2">
+            <img src="../../public/img/logo-bake.png" alt="BakeAdmin Logo" class="logo22-bake-img" style="width: 45px !important; height: 45px !important; object-fit: contain">
+            <div>
+                <h5 class="mb-0 text-dark fw-bold">BakeAdmin</h5>
+                <small class="text-muted">Sistema de Gestión</small>
+            </div>
+        </div>
+
+        <!-- 2. Columna Menú (Ancho: 6 en PC, 12 en Móvil) -->
+        <div class="col-auto ms-3">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../cliente/dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../cliente/menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../cliente/mis-pedidos.html">Mis Pedidos</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 3. Columna Perfil / Ingreso (Ancho: 3 en PC, 12 en Móvil) -->
+        <div class="col-lg-3 col-12 d-flex justify-content-end align-items-center gap-2">
+            <span class="badge bg-success rounded-pill">Sincronizado</span>
+            <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px;">
+                AC
+            </div>
+        </div>
+
+    </nav>
+</div>
+</html>
