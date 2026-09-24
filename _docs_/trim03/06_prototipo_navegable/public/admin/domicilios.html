@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOMICILIOS - BakeAdmin</title>
+    <!-- ICONO -->
+
+    <link rel="icon" type="image/x-icon" href="../img/logo-bake.png">
+
+
+
+    <!-- Estilos de Bootstrap -->
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+
+    <!-- Tus estilos personalizados -->
+
+    <link rel="stylesheet" href="../css/admin/domicilios.css">
+
+</head>
+
+
+
+<body>
+
+
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-2 navbar-custom">
+
+            <div class="container-fluid px-4">
+
+
+
+                <!-- Logo y Nombre del Sistema -->
+
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+
+                    <div
+                        class="bg-dark rounded overflow-hidden d-flex align-items-center justify-content-center logo-box">
+
+                        <img src="../img/logo.png" alt="Logo BakeAdmin" class="w-100 h-100 logo-img">
+
+                    </div>
+
+                    <div class="d-flex flex-column lh-sm">
+
+                        <span class="fw-bold text-dark fs-5 mb-0">BakeAdmin</span>
+
+                        <small class="text-muted text-subtitle">Gestión Operativa</small>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- Botón responsive para móviles -->
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+
+                <!-- Enlaces y Elementos de la Derecha -->
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+
+                    <ul class="navbar-nav me-auto ms-lg-4 mb-2 mb-lg-0 gap-lg-2">
+
+                        <li class="nav-item">
+
+                            <a class="nav-link fw-medium d-flex align-items-center gap-1" href="#Dashboard">
+
+                                <i class="bi bi-grid-fill"></i> Dashboard
+
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link text-secondary d-flex align-items-center gap-1" href="#Usuarios">
+
+                                <i class="bi bi-people"></i> Usuarios
+
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link text-secondary d-flex align-items-center gap-1" href="#Compras">
+
+                                <i class="bi bi-cart3"></i> Compras
+
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link text-secondary d-flex align-items-center gap-1" href="#Domicilios">
+
+                                <i class="bi bi-truck"></i> Domicilios
+
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link text-secondary d-flex align-items-center gap-1" href="#Produccion">
+
+                                <i class="bi bi-cookie"></i> Producción
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+
+
+                    <!-- Botón de Sincronizado y Avatar Usuario -->
+
+                    <div class="d-flex align-items-center gap-3 position-relative">
+
+                        <button
+                            class="btn btn-sincronizado rounded-pill text-white d-flex align-items-center gap-2 px-3 py-1 fw-medium">
+
+                            <i class="bi bi-cloud-check"></i> Sincronizado
+
+                        </button>
+
+
+
+                        <div id="btnAvatar"
+                            class="user-avatar rounded-circle text-white d-flex align-items-center justify-content-center fw-bold cursor-pointer"
+                            style="cursor: pointer;">
+
+                            AD
+
+                        </div>
+
+
+
+                        <!-- Menú Desplegable Avatar -->
+
+                        <div id="menuPerfil" class="dropdown-menu dropdown-menu-end p-2 shadow-sm d-none"
+                            style="position: absolute; right: 0; top: 110%; z-index: 1000; min-width: 200px;">
+
+                            <div class="px-2 py-1 border-bottom mb-2">
+
+                                <p class="fw-bold mb-0 text-dark">Admin BakeAdmin</p>
+
+                                <small class="text-muted">Administrador</small>
+
+                            </div>
+
+                            <button id="opcionMiPerfil"
+                                class="dropdown-item rounded d-flex align-items-center gap-2 py-2">
+
+                                <i class="bi bi-person"></i> Mi Perfil
+
+                            </button>
+
+                            <button id="opcionAjustes"
+                                class="dropdown-item rounded d-flex align-items-center gap-2 py-2">
+
+                                <i class="bi bi-gear"></i> Ajustes
+
+                            </button>
+
+                            <hr class="dropdown-divider my-1">
+
+                            <button id="opcionCerrarSesion"
+                                class="dropdown-item rounded text-danger d-flex align-items-center gap-2 py-2">
+
+                                <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- Cuerpo de página -->
+
+    <main class="py-4">
+
+        <div class="d-flex justify-content-between text-align-items-center px-4 mb-4">
+
+            <div>
+
+                <h2 class="fw-bold text-dark fs-2 mb-0">Domicilios</h2>
+
+                <p class="text-muted small mb-0">Gestión de pedidos y entregas a domicilios</p>
+
+            </div>
+
+            <div class="d-flex gap-2">
+
+                <button class="btn btn-pedido text-white d-flex align-items-center gap-2 px-3 py-1 fw-medium"
+                    data-bs-toggle="modal" data-bs-target="#nuevoPedido">
+
+                    <i class="bi bi-plus-lg"></i>Nuevo Pedido
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Cajas superiores -->
+
+        <div class="row g-3 mb-4 px-4">
+
+            <div class="col">
+
+                <div class="one_card border text-center py-3">
+
+                    <h3 id="cantTotal" class="fw-bold mb-0 text-dark">0</h3>
+
+                    <small class="text-muted">Total Hoy</small>
+
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <div class="two_card border text-center py-3">
+
+                    <h3 id="cantPendientes" class="fw-bold mb-0 text-dark">0</h3>
+
+                    <small class="text-muted">Pendientes</small>
+
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <div class="thre_card border text-center py-3">
+
+                    <h3 id="cantPreparacion" class="fw-bold mb-0 text-dark">0</h3>
+
+                    <small class="text-muted">Preparación</small>
+
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <div class="four_card border text-center py-3">
+
+                    <h3 id="cantEnCamino" class="fw-bold mb-0 text-dark">0</h3>
+
+                    <small class="text-muted">En Camino</small>
+
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <div class="five_card border text-center py-3">
+
+                    <h3 id="cantEntregados" class="fw-bold mb-0 text-dark">0</h3>
+
+                    <small class="text-">Entregados</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Navegación de pestañas -->
+
+        <div class="px-4 mb-4">
+
+            <div class="bg-light p-1 rounded-3 d-flex text-center border">
+
+                <button class="btn nav-tab-btn flex-fill fw-medium text-dark bg-white border shadow-sm py-2"
+                    data-target="tabPedidos">
+
+                    Pedidos
+
+                </button>
+
+                <button class="btn nav-tab-btn flex-fill fw-medium text-muted py-2 border-0" data-target="tabComandas">
+
+                    Comandas
+
+                </button>
+
+                <button class="btn nav-tab-btn flex-fill fw-medium text-muted py-2 border-0"
+                    data-target="tabSeguimiento">
+
+                    Seguimiento
+
+                </button>
+
+                <button class="btn nav-tab-btn flex-fill fw-medium text-muted py-2 border-0"
+                    data-target="tabDomiciliarios">
+
+                    Domiciliarios
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Contenedores dinámicos por Pestañas -->
+
+        <div id="tabPedidos" class="tab-pane-content">
+
+            <div id="contenedorPedidos" class="px-4"></div>
+
+        </div>
+
+
+
+        <div id="tabComandas" class="tab-pane-content d-none">
+
+            <div id="contenedorComandas" class="px-4 row g-3"></div>
+
+        </div>
+
+
+
+        <div id="tabSeguimiento" class="tab-pane-content d-none">
+
+            <div id="contenedorSeguimiento" class="px-4"></div>
+
+        </div>
+
+
+
+        <div id="tabDomiciliarios" class="tab-pane-content d-none">
+
+            <div id="contenedorDomiciliarios" class="px-4 row g-3"></div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- MODAL DE NUEVO PEDIDO -->
+    <div class="modal fade" id="nuevoPedido" tabindex="-1" aria-labelledby="nuevoPedidoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="nuevoPedidoLabel">Nuevo Pedido a Domicilio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <form id="formNuevoPedido">
+                    <div class="modal-body">
+                        <!-- Sección Cliente -->
+                        <h6 class="fw-bold mb-3 text-secondary">Datos del Cliente</h6>
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="nombreCliente" class="form-label">Nombre *</label>
+                                <input type="text" class="form-control" id="nombreCliente" placeholder="Nombre completo"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="telefonoCliente" class="form-label">Teléfono *</label>
+                                <input type="tel" class="form-control" id="telefonoCliente"
+                                    placeholder="Número de contacto" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="direccionCliente" class="form-label">Dirección *</label>
+                                <input type="text" class="form-control" id="direccionCliente"
+                                    placeholder="Dirección de entrega" required>
+                            </div>
+                        </div>
+
+                        <!-- Detalle del Pedido -->
+                        <h6 class="fw-bold mb-3 text-secondary">Detalle del Pedido</h6>
+                        <div class="row g-3 mb-3">
+                            <div class="col-12">
+                                <label for="metodoPago" class="form-label">Método de Pago</label>
+                                <select class="form-select" id="metodoPago">
+                                    <option value="Efectivo" selected>Efectivo</option>
+                                    <option value="Nequi / Daviplata">Nequi / Daviplata</option>
+                                    <option value="Tarjeta">Tarjeta Débito/Crédito</option>
+                                </select>
+                                <!-- Observaciones -->
+                                <div class="mb-3">
+                                    <label for="observaciones" class="form-label">Observaciones</label>
+                                    <input type="text" class="form-control" id="observaciones"
+                                        placeholder="Indicaciones especiales (opcional)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECCIÓN MENÚ DIGITAL -->
+                        <div class="mt-3">
+                            <label class="form-label fw-bold">Menú Digital</label>
+                            <div class="row g-2 mb-2">
+                                <div class="col-8">
+                                    <input type="text" id="inputBuscar" class="form-control form-control-sm"
+                                        placeholder="Buscar producto...">
+                                </div>
+                                <div class="col-4">
+                                    <select id="selectCategoria" class="form-select form-select-sm">
+                                        <option value="Todos">Todas las categorías</option>
+                                        <option value="Panadería">Panadería</option>
+                                        <option value="Almuerzos">Almuerzos</option>
+                                        <option value="Bebidas">Bebidas</option>
+                                        <option value="Ensaladas">Ensaladas</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- CONTENEDOR DONDE SE MOSTRARÁN LAS TARJETAS -->
+                            <div id="gridProductos" class="row row-cols-1 row-cols-sm-2 g-2 style-scroll"
+                                style="max-height: 200px; overflow-y: auto;"></div>
+
+                            <p id="mensajeVacio" class="text-muted text-center small my-3 d-none">No se encontraron
+                                productos.</p>
+                        </div>
+
+                        <!-- PLANTILLA DEL PRODUCTO PARA EL JAVASCRIPT -->
+                        <template id="tplProducto">
+                            <div class="col">
+                                <div class="card h-100 p-2 shadow-sm border-0 bg-light">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <h6 class="product-title mb-0 small fw-bold"></h6>
+                                            <small class="product-sub text-muted d-block"
+                                                style="font-size: 0.75rem;"></small>
+                                        </div>
+                                        <span class="product-price fw-bold text-primary small"></span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mt-2">
+                                        <span class="product-status badge bg-success-subtle text-success border"
+                                            style="font-size: 0.65rem;">Disponible</span>
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-warning btn-seleccionar-prod py-0 px-2"
+                                            style="font-size: 0.75rem;">
+                                            <i class="bi bi-plus-lg"></i> Agregar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+
+                    </div> <!-- Cierre de modal-body -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-sm btn-warning text-white fw-bold">Crear Pedido</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+
+
+    <!-- PANEL LATERAL MI PERFIL -->
+
+    <div id="panelMiPerfil" class="offcanvas offcanvas-end" tabindex="-1">
+
+        <div class="offcanvas-header border-bottom">
+
+            <h5 class="offcanvas-title fw-bold">Mi Perfil</h5>
+
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+
+        </div>
+
+        <div class="offcanvas-body">
+
+            <div class="text-center mb-3">
+
+                <div class="user-avatar rounded-circle text-black d-inline-flex align-items-center justify-content-center fw-bold fs-4 mb-2"
+                    style="width: 60px; height: 60px;">
+
+                    AD
+
+                </div>
+
+                <h5 class="mb-0">Admin BakeAdmin</h5>
+
+                <small class="text-muted">Administrador</small>
+
+            </div>
+
+            <form>
+
+                <div class="mb-3">
+
+                    <label class="form-label">Nombre</label>
+
+                    <input type="text" class="form-control" value="Admin BakeAdmin">
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">Correo Electrónico</label>
+
+                    <input type="email" class="form-control" value="admin@bakeadmin.com">
+
+                </div>
+
+                <button type="button" class="btn btn-dark w-100">Guardar Cambios</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- PANEL LATERAL AJUSTES -->
+
+    <div id="panelAjustes" class="offcanvas offcanvas-end" tabindex="-1">
+
+        <div class="offcanvas-header border-bottom">
+
+            <h5 class="offcanvas-title fw-bold">Ajustes</h5>
+
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+
+        </div>
+
+        <div class="offcanvas-body">
+
+            <h6 class="fw-bold mb-3">Preferencias</h6>
+
+            <div class="form-check form-switch mb-3">
+
+                <input class="form-check-input" type="checkbox" id="notifCheck" checked>
+
+                <label class="form-check-label" for="notifCheck">Notificaciones de sonido</label>
+
+            </div>
+
+            <div class="form-check form-switch mb-3">
+
+                <input class="form-check-input" type="checkbox" id="syncCheck" checked>
+
+                <label class="form-check-label" for="syncCheck">Sincronización automática</label>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- PLANTILLAS TEMPLATE -->
+
+    <template id="tpl-pedido-listo-compacto">
+
+        <div class="card border mb-2 bg-white rounded-3 shadow-sm">
+
+            <div class="card-body py-2 px-3 d-flex justify-content-between align-items-center">
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <span class="fw-bold text-dark fs-6 data-id"></span>
+
+                    <span
+                        class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1">Listo</span>
+
+                    <small class="text-muted"><i class="bi bi-clock"></i> <span class="data-hora"></span></small>
+
+                    <span class="text-muted">|</span>
+
+                    <span class="small text-secondary"><i class="bi bi-person"></i> <span
+                            class="data-cliente"></span></span>
+
+                    <span class="small text-secondary"><i class="bi bi-geo-alt text-danger"></i> <span
+                            class="data-direccion"></span></span>
+
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <span class="fw-bold text-warning-emphasis fs-6 data-precio"></span>
+
+                    <button class="btn btn-outline-primary btn-sm px-3 btn-estado">
+
+                        <i class="bi bi-person-plus"></i> Asignar Domicilio
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </template>
+
+
+
+    <template id="tpl-pedido-detallado">
+
+        <div class="card border mb-2 bg-white rounded-3 shadow-sm">
+
+            <div class="card-body py-3 px-3">
+
+                <div class="d-flex justify-content-between align-items-center mb-1">
+
+                    <div class="d-flex align-items-center gap-2">
+
+                        <span class="fw-bold fs-6 text-dark data-id"></span>
+
+                        <span class="badge px-2 py-1 data-badge-estado"></span>
+
+                    </div>
+
+                    <span class="fw-bold text-warning-emphasis fs-6 data-precio"></span>
+
+                </div>
+
+                <div class="d-flex justify-content-between align-items-end">
+
+                    <div class="small text-muted">
+
+                        👤 <span class="data-cliente"></span> · 📞 <span class="data-telefono"></span> · 📍 <span
+                            class="data-direccion"></span> · 💳 <span class="data-pago"></span>
+
+                        <div class="fw-medium text-dark mt-1 data-productos"></div>
+
+                        <div class="text-secondary mt-1 data-observaciones"></div>
+
+                        <div class="text-primary fw-medium mt-1 d-none data-repartidor-wrapper">
+
+                            <i class="bi bi-bicycle"></i> <span class="data-repartidor"></span>
+
+                        </div>
+
+                    </div>
+
+                    <button class="btn btn-sm px-3 d-flex align-items-center gap-1 btn-accion">
+
+                        <i class="btn-icon"></i> <span class="btn-texto"></span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </template>
+
+
+
+    <template id="tpl-comanda-card">
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card border shadow-sm rounded-3">
+
+                <div
+                    class="card-header bg-white d-flex justify-content-between align-items-center border-bottom-0 pt-3">
+
+                    <span class="fw-bold fs-6 data-id"></span>
+
+                    <span class="badge data-badge"></span>
+
+                </div>
+
+                <div class="card-body py-2">
+
+                    <p class="small text-muted mb-1"><i class="bi bi-clock"></i> <span class="data-hora"></span></p>
+
+                    <div class="fw-bold text-dark fs-6 my-2 data-productos"></div>
+
+                    <p class="small text-secondary mb-0 data-observaciones"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </template>
+
+
+
+    <template id="tpl-seguimiento-row">
+
+        <div class="card border mb-2 bg-white rounded-3 p-3">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <div>
+
+                    <h6 class="fw-bold mb-1 data-id"></h6>
+
+                    <small class="text-muted">Cliente: <span class="data-cliente"></span> | Dirección: <span
+                            class="data-direccion"></span></small>
+
+                </div>
+
+                <div class="text-end">
+
+                    <span class="badge bg-primary mb-1 data-estado"></span>
+
+                    <div class="small text-primary"><i class="bi bi-bicycle"></i> <span class="data-repartidor"></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </template>
+
+
+
+    <template id="tpl-domiciliario-card">
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card border p-3 bg-white shadow-sm rounded-3">
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+
+                    <h6 class="fw-bold mb-0 data-nombre"></h6>
+
+                    <span class="badge data-estado"></span>
+
+                </div>
+
+                <p class="mb-0 text-muted small">Pedidos en ruta: <span class="data-pedidos"></span></p>
+
+            </div>
+
+        </div>
+
+    </template>
+
+    <template id="tpl-seguimiento-card">
+        <div class="col-md-6 col-lg-4 mb-3">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-header bg-transparent d-flex justify-content-between align-items-center border-0 pb-0">
+                    <strong class="data-id">#PED-000</strong>
+                    <span class="data-badge badge bg-info-subtle text-info">En Preparación</span>
+                </div>
+                <div class="card-body">
+                    <div class="fw-semibold text-dark mb-1 data-cliente">👤 Nombre del Cliente</div>
+                    <p class="small text-muted mb-2"><i class="bi bi-clock me-1"></i><span
+                            class="data-hora">00:00</span></p>
+                    <p class="fw-medium mb-1 data-productos">📦 Productos...</p>
+                    <p class="small text-secondary mb-0 data-observaciones"></p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <div class="modal fade" id="modalAsignarDomiciliario" tabindex="-1" aria-labelledby="modalAsignarLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="modalAsignarLabel">Asignar Domiciliario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted small mb-3">Selecciona el repartidor para el pedido <strong
+                            id="lblPedidoId"></strong>:</p>
+                    <div class="mb-3">
+                        <label for="selectDomiciliarios" class="form-label fw-medium">Repartidores Disponibles</label>
+                        <select class="form-select" id="selectDomiciliarios">
+                            <!-- Se llena dinámicamente -->
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" id="btnConfirmarAsignacion" class="btn btn-sm btn-primary">Confirmar
+                        Asignación</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../js/admin/domicilios.js"></script>
+
+</body>
+
+
+
+</html>
