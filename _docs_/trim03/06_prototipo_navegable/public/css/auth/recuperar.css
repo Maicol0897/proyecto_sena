@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-global {
+    display: flex;
+    background: #fdfcf7;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.tarjeta-blanca {
+    max-width: 360px;
+    padding: 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgb(0, 0, 0, 0.08);
+}
+
+.logo22-img, .texto, .email, .enviar-instrucciones, .volver-inicio {
+    /* border: 1px dashed gray; */
+    margin-bottom: 15px;
+}
+
+.logo22-img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    display: flex;
+    background-color: #c25910; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.texto {
+    height: auto;   
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+}
+
+p {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+.email {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+}
+
+.email input {
+    padding: 12px;
+    background-color: #f3f4f6;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    border: none;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.enviar-instrucciones {
+    width: 100%;
+    height: 45px;
+    background-color: #0b0b12;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.volver-inicio {
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+a {
+    text-decoration: none;
+    color: #374151;
+    cursor: pointer;
+}
+
+form {
+    display: flex; flex-direction: column; gap: 16px;
+}
