@@ -1,0 +1,988 @@
+{
+  "_type": "Project",
+  "_id": "0a046bc3b89341b084eda211e174",
+  "name": "Diagrama_de_Distribucion_Corregido",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "d212fe73eedb43cfa9bc65742b37",
+      "_parent": {
+        "$ref": "0a046bc3b89341b084eda211e174"
+      },
+      "name": "DistributionModel",
+      "ownedElements": [
+        {
+          "_type": "UMLNode",
+          "_id": "420598efae7948eea5f8072827d2",
+          "_parent": {
+            "$ref": "d212fe73eedb43cfa9bc65742b37"
+          },
+          "name": "Cliente PC",
+          "stereotype": "device",
+          "visibility": "public",
+          "ownedElements": [
+            {
+              "_type": "UMLArtifact",
+              "_id": "80352feee6a34ecab13b8d046874",
+              "_parent": {
+                "$ref": "420598efae7948eea5f8072827d2"
+              },
+              "name": "Navegadores",
+              "visibility": "public"
+            }
+          ],
+          "tags": [
+            {
+              "_type": "Tag",
+              "_id": "d618c3cd33724cada3da6188f7ed",
+              "_parent": {
+                "$ref": "420598efae7948eea5f8072827d2"
+              },
+              "name": "hardware",
+              "kind": "string",
+              "value": "Chrome: Pentium 4+, 1GB, x64 | Firefox: 1GHz+, 1-2GB, x64 | Edge: SSE3, 1GB+, x64"
+            }
+          ]
+        },
+        {
+          "_type": "UMLNode",
+          "_id": "220650bcefef41579014333b0777",
+          "_parent": {
+            "$ref": "d212fe73eedb43cfa9bc65742b37"
+          },
+          "name": "Cliente Movil",
+          "stereotype": "device",
+          "visibility": "public",
+          "ownedElements": [
+            {
+              "_type": "UMLArtifact",
+              "_id": "b72f408b907541899d6366f2eb76",
+              "_parent": {
+                "$ref": "220650bcefef41579014333b0777"
+              },
+              "name": "Android",
+              "visibility": "public"
+            },
+            {
+              "_type": "UMLArtifact",
+              "_id": "ca14a803c391474e8711db593850",
+              "_parent": {
+                "$ref": "220650bcefef41579014333b0777"
+              },
+              "name": "iOS",
+              "visibility": "public"
+            }
+          ],
+          "tags": [
+            {
+              "_type": "Tag",
+              "_id": "de91d3239f9546758c06806adba2",
+              "_parent": {
+                "$ref": "220650bcefef41579014333b0777"
+              },
+              "name": "hardware",
+              "kind": "string",
+              "value": "Segun fabricante y modelo del dispositivo"
+            }
+          ]
+        },
+        {
+          "_type": "UMLNode",
+          "_id": "1c336fd22e6f4025a226735939e1",
+          "_parent": {
+            "$ref": "d212fe73eedb43cfa9bc65742b37"
+          },
+          "name": "App Service_Frontend",
+          "stereotype": "execution environment",
+          "visibility": "public",
+          "ownedElements": [
+            {
+              "_type": "UMLArtifact",
+              "_id": "01d7000805264a0ea2432c575b63",
+              "_parent": {
+                "$ref": "1c336fd22e6f4025a226735939e1"
+              },
+              "name": "React_Angular_Vue",
+              "visibility": "public"
+            }
+          ],
+          "tags": [
+            {
+              "_type": "Tag",
+              "_id": "30d93467ef7644c4af02f5a7e056",
+              "_parent": {
+                "$ref": "1c336fd22e6f4025a226735939e1"
+              },
+              "name": "hardware",
+              "kind": "string",
+              "value": "Runtime: React / Angular / Vue.js"
+            }
+          ]
+        },
+        {
+          "_type": "UMLNode",
+          "_id": "87a13c07c4974ea1aa0dbd8bf4ea",
+          "_parent": {
+            "$ref": "d212fe73eedb43cfa9bc65742b37"
+          },
+          "name": "App Service_Backend",
+          "stereotype": "execution environment",
+          "visibility": "public",
+          "ownedElements": [
+            {
+              "_type": "UMLArtifact",
+              "_id": "c40ea697dd4a421395e43ac2be8b",
+              "_parent": {
+                "$ref": "87a13c07c4974ea1aa0dbd8bf4ea"
+              },
+              "name": "JS_Java_Python",
+              "visibility": "public"
+            }
+          ],
+          "tags": [
+            {
+              "_type": "Tag",
+              "_id": "5421e0d141c048fc837fe2809abf",
+              "_parent": {
+                "$ref": "87a13c07c4974ea1aa0dbd8bf4ea"
+              },
+              "name": "hardware",
+              "kind": "string",
+              "value": "CPU/RAM/Disco segun el lenguaje escogido"
+            }
+          ]
+        },
+        {
+          "_type": "UMLNode",
+          "_id": "95ad9436c8ca427e8e7a3d5b3edf",
+          "_parent": {
+            "$ref": "d212fe73eedb43cfa9bc65742b37"
+          },
+          "name": "SGBD_DB",
+          "stereotype": "device",
+          "visibility": "public",
+          "ownedElements": [
+            {
+              "_type": "UMLArtifact",
+              "_id": "764c9a07b668436ea681c0b57d76",
+              "_parent": {
+                "$ref": "95ad9436c8ca427e8e7a3d5b3edf"
+              },
+              "name": "Motor_SQL",
+              "visibility": "public"
+            }
+          ],
+          "tags": [
+            {
+              "_type": "Tag",
+              "_id": "b7eefd433a1a422592bf24442f41",
+              "_parent": {
+                "$ref": "95ad9436c8ca427e8e7a3d5b3edf"
+              },
+              "name": "hardware",
+              "kind": "string",
+              "value": "CPU/RAM/Disco segun el motor de base de datos"
+            }
+          ]
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "2fa3194bd5384db3bd1ed7ff5748",
+          "_parent": {
+            "$ref": "d212fe73eedb43cfa9bc65742b37"
+          },
+          "name": "HTTP/HTTPS (TCP) PORT80",
+          "visibility": "public",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "1297e76f99c84b91a65ec4f992d7",
+            "_parent": {
+              "$ref": "2fa3194bd5384db3bd1ed7ff5748"
+            },
+            "reference": {
+              "$ref": "420598efae7948eea5f8072827d2"
+            },
+            "navigable": false,
+            "visibility": "public"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "7a1daa0099724e02be18d57fe171",
+            "_parent": {
+              "$ref": "2fa3194bd5384db3bd1ed7ff5748"
+            },
+            "reference": {
+              "$ref": "1c336fd22e6f4025a226735939e1"
+            },
+            "navigable": true,
+            "visibility": "public"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "c91b8e3216b746be87e6fb84b4b9",
+          "_parent": {
+            "$ref": "d212fe73eedb43cfa9bc65742b37"
+          },
+          "name": "HTTPS (TCP) PORT80",
+          "visibility": "public",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "9bc067efda3741ebbd34760ffb07",
+            "_parent": {
+              "$ref": "c91b8e3216b746be87e6fb84b4b9"
+            },
+            "reference": {
+              "$ref": "220650bcefef41579014333b0777"
+            },
+            "navigable": false,
+            "visibility": "public"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "d3f0b554416941a4b5058d85c850",
+            "_parent": {
+              "$ref": "c91b8e3216b746be87e6fb84b4b9"
+            },
+            "reference": {
+              "$ref": "87a13c07c4974ea1aa0dbd8bf4ea"
+            },
+            "navigable": true,
+            "visibility": "public"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "e66844c5d5c64f34a3f3df1e98d4",
+          "_parent": {
+            "$ref": "d212fe73eedb43cfa9bc65742b37"
+          },
+          "name": "HTTP/HTTPS (TCP) PORT8080",
+          "visibility": "public",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "fb7471bab2784583be8a1f5dbb1b",
+            "_parent": {
+              "$ref": "e66844c5d5c64f34a3f3df1e98d4"
+            },
+            "reference": {
+              "$ref": "1c336fd22e6f4025a226735939e1"
+            },
+            "navigable": false,
+            "visibility": "public"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "ec1c1abea0644e658100c840da02",
+            "_parent": {
+              "$ref": "e66844c5d5c64f34a3f3df1e98d4"
+            },
+            "reference": {
+              "$ref": "87a13c07c4974ea1aa0dbd8bf4ea"
+            },
+            "navigable": true,
+            "visibility": "public"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "7e985366a9b24b489a7a6b0903ee",
+          "_parent": {
+            "$ref": "d212fe73eedb43cfa9bc65742b37"
+          },
+          "name": "TCP PORT3306",
+          "visibility": "public",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "6deab1de53994faebeb9ec9a0e43",
+            "_parent": {
+              "$ref": "7e985366a9b24b489a7a6b0903ee"
+            },
+            "reference": {
+              "$ref": "87a13c07c4974ea1aa0dbd8bf4ea"
+            },
+            "navigable": false,
+            "visibility": "public"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "88d5010640d7439380c5c74fb827",
+            "_parent": {
+              "$ref": "7e985366a9b24b489a7a6b0903ee"
+            },
+            "reference": {
+              "$ref": "95ad9436c8ca427e8e7a3d5b3edf"
+            },
+            "navigable": true,
+            "visibility": "public"
+          }
+        },
+        {
+          "_type": "UMLDeploymentDiagram",
+          "_id": "689bdf8a59f94d91bde430cb28bc",
+          "_parent": {
+            "$ref": "d212fe73eedb43cfa9bc65742b37"
+          },
+          "name": "Diagrama de Distribucion - Corregido",
+          "visible": true,
+          "defaultDiagram": true,
+          "ownedViews": [
+            {
+              "_type": "UMLNodeView",
+              "_id": "1ed79d6d8ccf4a03a7bc3f281a7e",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "420598efae7948eea5f8072827d2"
+              },
+              "left": 20,
+              "top": 20,
+              "width": 490,
+              "height": 350,
+              "visible": true,
+              "containedViews": [
+                {
+                  "$ref": "33137ae8415d471f905c4b95d80b"
+                }
+              ],
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "2b5182aa473d42f5b1cc93e942e1",
+                  "_parent": {
+                    "$ref": "1ed79d6d8ccf4a03a7bc3f281a7e"
+                  },
+                  "model": {
+                    "$ref": "420598efae7948eea5f8072827d2"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "1881c218431a4a1b9050d5daa763",
+                      "_parent": {
+                        "$ref": "2b5182aa473d42f5b1cc93e942e1"
+                      },
+                      "text": "«device»"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "bdb1d502b10442978aa2bda90710",
+                      "_parent": {
+                        "$ref": "2b5182aa473d42f5b1cc93e942e1"
+                      },
+                      "text": "Cliente PC"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLArtifactView",
+              "_id": "33137ae8415d471f905c4b95d80b",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "80352feee6a34ecab13b8d046874"
+              },
+              "left": 50,
+              "top": 110,
+              "width": 420,
+              "height": 120,
+              "visible": true,
+              "containerView": {
+                "$ref": "1ed79d6d8ccf4a03a7bc3f281a7e"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "1c89389873a248d0a73bccf17570",
+                  "_parent": {
+                    "$ref": "33137ae8415d471f905c4b95d80b"
+                  },
+                  "model": {
+                    "$ref": "80352feee6a34ecab13b8d046874"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "1ef09d52edfa4e0aa57a528d49c1",
+                      "_parent": {
+                        "$ref": "1c89389873a248d0a73bccf17570"
+                      },
+                      "text": "«artifact»"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "890cd731b6f848ffb66cb04d15c2",
+                      "_parent": {
+                        "$ref": "1c89389873a248d0a73bccf17570"
+                      },
+                      "text": "Navegadores"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLNodeView",
+              "_id": "437424f6f0b540eb82cc0703ca69",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "220650bcefef41579014333b0777"
+              },
+              "left": 20,
+              "top": 470,
+              "width": 500,
+              "height": 420,
+              "visible": true,
+              "containedViews": [
+                {
+                  "$ref": "fa5f641ea753453db88f21cd33bd"
+                },
+                {
+                  "$ref": "78973ffd1c454e28b5246837b4ef"
+                }
+              ],
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "f60ba68b5b3b4116800803ba6767",
+                  "_parent": {
+                    "$ref": "437424f6f0b540eb82cc0703ca69"
+                  },
+                  "model": {
+                    "$ref": "220650bcefef41579014333b0777"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "8e4f419eacf44c8d8a4a76844b53",
+                      "_parent": {
+                        "$ref": "f60ba68b5b3b4116800803ba6767"
+                      },
+                      "text": "«device»"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "ee062d916b5b4379959e66c65932",
+                      "_parent": {
+                        "$ref": "f60ba68b5b3b4116800803ba6767"
+                      },
+                      "text": "Cliente Movil"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLArtifactView",
+              "_id": "fa5f641ea753453db88f21cd33bd",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "b72f408b907541899d6366f2eb76"
+              },
+              "left": 50,
+              "top": 560,
+              "width": 440,
+              "height": 110,
+              "visible": true,
+              "containerView": {
+                "$ref": "437424f6f0b540eb82cc0703ca69"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "fa9b9e87aa4447ae828decccfbc5",
+                  "_parent": {
+                    "$ref": "fa5f641ea753453db88f21cd33bd"
+                  },
+                  "model": {
+                    "$ref": "b72f408b907541899d6366f2eb76"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "438a68c7f0de496797314d6d9eb0",
+                      "_parent": {
+                        "$ref": "fa9b9e87aa4447ae828decccfbc5"
+                      },
+                      "text": "«artifact»"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "552c620f0ca645b0b588662c078c",
+                      "_parent": {
+                        "$ref": "fa9b9e87aa4447ae828decccfbc5"
+                      },
+                      "text": "Android"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLArtifactView",
+              "_id": "78973ffd1c454e28b5246837b4ef",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "ca14a803c391474e8711db593850"
+              },
+              "left": 50,
+              "top": 690,
+              "width": 440,
+              "height": 110,
+              "visible": true,
+              "containerView": {
+                "$ref": "437424f6f0b540eb82cc0703ca69"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "87393260d8c6481a8f32db9c5cf7",
+                  "_parent": {
+                    "$ref": "78973ffd1c454e28b5246837b4ef"
+                  },
+                  "model": {
+                    "$ref": "ca14a803c391474e8711db593850"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "c14aee980f884edb85205ed1b79e",
+                      "_parent": {
+                        "$ref": "87393260d8c6481a8f32db9c5cf7"
+                      },
+                      "text": "«artifact»"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "edb54008757844a1b251483c1e23",
+                      "_parent": {
+                        "$ref": "87393260d8c6481a8f32db9c5cf7"
+                      },
+                      "text": "iOS"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLNodeView",
+              "_id": "ec883b2ee8d64e3f8c20cbcbac9d",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "1c336fd22e6f4025a226735939e1"
+              },
+              "left": 830,
+              "top": 20,
+              "width": 500,
+              "height": 350,
+              "visible": true,
+              "containedViews": [
+                {
+                  "$ref": "e4c6bf8530844c70be3c9e80c8cc"
+                }
+              ],
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "cd9e128f918f4d05a3c326ae83c6",
+                  "_parent": {
+                    "$ref": "ec883b2ee8d64e3f8c20cbcbac9d"
+                  },
+                  "model": {
+                    "$ref": "1c336fd22e6f4025a226735939e1"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "d6931011cfb2477a8bddc80bc167",
+                      "_parent": {
+                        "$ref": "cd9e128f918f4d05a3c326ae83c6"
+                      },
+                      "text": "«execution environment»"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "2bf28c684b27426db5abf1553b58",
+                      "_parent": {
+                        "$ref": "cd9e128f918f4d05a3c326ae83c6"
+                      },
+                      "text": "App Service_Frontend"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLArtifactView",
+              "_id": "e4c6bf8530844c70be3c9e80c8cc",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "01d7000805264a0ea2432c575b63"
+              },
+              "left": 860,
+              "top": 110,
+              "width": 430,
+              "height": 120,
+              "visible": true,
+              "containerView": {
+                "$ref": "ec883b2ee8d64e3f8c20cbcbac9d"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "d296c4b5a78b47a29c8db458e2f3",
+                  "_parent": {
+                    "$ref": "e4c6bf8530844c70be3c9e80c8cc"
+                  },
+                  "model": {
+                    "$ref": "01d7000805264a0ea2432c575b63"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "fe0bb3179d57448f8c28bb0dc735",
+                      "_parent": {
+                        "$ref": "d296c4b5a78b47a29c8db458e2f3"
+                      },
+                      "text": "«artifact»"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "5216d63f5034457bbfc376e14fe2",
+                      "_parent": {
+                        "$ref": "d296c4b5a78b47a29c8db458e2f3"
+                      },
+                      "text": "React_Angular_Vue"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLNodeView",
+              "_id": "0172bb85809f463190bc43908e75",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "87a13c07c4974ea1aa0dbd8bf4ea"
+              },
+              "left": 830,
+              "top": 470,
+              "width": 500,
+              "height": 420,
+              "visible": true,
+              "containedViews": [
+                {
+                  "$ref": "634c2dfe48e64c40b64e421d430c"
+                }
+              ],
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "711c64cefa194090921dff3ba819",
+                  "_parent": {
+                    "$ref": "0172bb85809f463190bc43908e75"
+                  },
+                  "model": {
+                    "$ref": "87a13c07c4974ea1aa0dbd8bf4ea"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "0ced09d7f5924ac89068ee65d44b",
+                      "_parent": {
+                        "$ref": "711c64cefa194090921dff3ba819"
+                      },
+                      "text": "«execution environment»"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "849a616925134f628d1323a34b42",
+                      "_parent": {
+                        "$ref": "711c64cefa194090921dff3ba819"
+                      },
+                      "text": "App Service_Backend"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLArtifactView",
+              "_id": "634c2dfe48e64c40b64e421d430c",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "c40ea697dd4a421395e43ac2be8b"
+              },
+              "left": 860,
+              "top": 560,
+              "width": 430,
+              "height": 150,
+              "visible": true,
+              "containerView": {
+                "$ref": "0172bb85809f463190bc43908e75"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "68a7e90e4c6348ba9f93d29a2576",
+                  "_parent": {
+                    "$ref": "634c2dfe48e64c40b64e421d430c"
+                  },
+                  "model": {
+                    "$ref": "c40ea697dd4a421395e43ac2be8b"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "e99e28ee276341f2940f7a063a4b",
+                      "_parent": {
+                        "$ref": "68a7e90e4c6348ba9f93d29a2576"
+                      },
+                      "text": "«artifact»"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "b0f24544f56a41149aee7a886b76",
+                      "_parent": {
+                        "$ref": "68a7e90e4c6348ba9f93d29a2576"
+                      },
+                      "text": "JS_Java_Python"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLNodeView",
+              "_id": "a41b842065a64d15b2abe603eff1",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "95ad9436c8ca427e8e7a3d5b3edf"
+              },
+              "left": 1450,
+              "top": 470,
+              "width": 450,
+              "height": 420,
+              "visible": true,
+              "containedViews": [
+                {
+                  "$ref": "ff7327c5c568499b9e04b13cff60"
+                }
+              ],
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "ea681e3473a34fc687aa53053956",
+                  "_parent": {
+                    "$ref": "a41b842065a64d15b2abe603eff1"
+                  },
+                  "model": {
+                    "$ref": "95ad9436c8ca427e8e7a3d5b3edf"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "22c59969a9ef488da911d331aa59",
+                      "_parent": {
+                        "$ref": "ea681e3473a34fc687aa53053956"
+                      },
+                      "text": "«device»"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "5f20919fca4447fc8a18f499a428",
+                      "_parent": {
+                        "$ref": "ea681e3473a34fc687aa53053956"
+                      },
+                      "text": "SGBD_DB"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLArtifactView",
+              "_id": "ff7327c5c568499b9e04b13cff60",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "764c9a07b668436ea681c0b57d76"
+              },
+              "left": 1480,
+              "top": 560,
+              "width": 380,
+              "height": 110,
+              "visible": true,
+              "containerView": {
+                "$ref": "a41b842065a64d15b2abe603eff1"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "0018d7f8f1724943b4311af93f4a",
+                  "_parent": {
+                    "$ref": "ff7327c5c568499b9e04b13cff60"
+                  },
+                  "model": {
+                    "$ref": "764c9a07b668436ea681c0b57d76"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "881d7843eaf04392806f7a9b77c7",
+                      "_parent": {
+                        "$ref": "0018d7f8f1724943b4311af93f4a"
+                      },
+                      "text": "«artifact»"
+                    },
+                    {
+                      "_type": "LabelView",
+                      "_id": "5bd75643c30c402e85c7aa1d6108",
+                      "_parent": {
+                        "$ref": "0018d7f8f1724943b4311af93f4a"
+                      },
+                      "text": "Motor_SQL"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "4086f5b6de33460ba001c1f75af0",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "2fa3194bd5384db3bd1ed7ff5748"
+              },
+              "head": {
+                "$ref": "ec883b2ee8d64e3f8c20cbcbac9d"
+              },
+              "tail": {
+                "$ref": "1ed79d6d8ccf4a03a7bc3f281a7e"
+              },
+              "lineStyle": 0,
+              "visible": true,
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "9cf58a4a22294212a4aa6fb6f8b7",
+                  "_parent": {
+                    "$ref": "4086f5b6de33460ba001c1f75af0"
+                  },
+                  "text": "HTTP/HTTPS (TCP) PORT80"
+                }
+              ]
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "4f18939b6c264fac97f01719eacb",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "c91b8e3216b746be87e6fb84b4b9"
+              },
+              "head": {
+                "$ref": "0172bb85809f463190bc43908e75"
+              },
+              "tail": {
+                "$ref": "437424f6f0b540eb82cc0703ca69"
+              },
+              "lineStyle": 0,
+              "visible": true,
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "cb957e53b4de43d88679dcb2866d",
+                  "_parent": {
+                    "$ref": "4f18939b6c264fac97f01719eacb"
+                  },
+                  "text": "HTTPS (TCP) PORT80"
+                }
+              ]
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "d55b9b9454054b9eb19abd7f6240",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "e66844c5d5c64f34a3f3df1e98d4"
+              },
+              "head": {
+                "$ref": "0172bb85809f463190bc43908e75"
+              },
+              "tail": {
+                "$ref": "ec883b2ee8d64e3f8c20cbcbac9d"
+              },
+              "lineStyle": 0,
+              "visible": true,
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "6c261cc9d8fa45b38930cda71719",
+                  "_parent": {
+                    "$ref": "d55b9b9454054b9eb19abd7f6240"
+                  },
+                  "text": "HTTP/HTTPS (TCP) PORT8080"
+                }
+              ]
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "37877e4a08d34a06b645d4b033b1",
+              "_parent": {
+                "$ref": "689bdf8a59f94d91bde430cb28bc"
+              },
+              "model": {
+                "$ref": "7e985366a9b24b489a7a6b0903ee"
+              },
+              "head": {
+                "$ref": "a41b842065a64d15b2abe603eff1"
+              },
+              "tail": {
+                "$ref": "0172bb85809f463190bc43908e75"
+              },
+              "lineStyle": 0,
+              "visible": true,
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "c4892132458248359330ce1cfc5f",
+                  "_parent": {
+                    "$ref": "37877e4a08d34a06b645d4b033b1"
+                  },
+                  "text": "TCP PORT3306"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
