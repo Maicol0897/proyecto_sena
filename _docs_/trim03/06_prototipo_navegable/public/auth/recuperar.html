@@ -1,36 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/auth/recuperar.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar contraseña - BakeAdmin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <!-- contendor fondo -->
-    <main class="contenedor-global">
-        <div class="tarjeta-blanca">
-            <div class="logo22-img">
-                <img src="../../public/img/img-login/Bake-admin.png" alt="logo BakeAdmin">
-            </div>
-            <div class="texto">
-                <h1>Recuperar contraseña</h1>
-                <p>Ingresa tu correo electronico y te enviaremos instrucciones</p>
-            </div>
-            <!-- ENTRADA INFORMACION DE CORREO ELECTRONICO -->
-            <form action="">
-                <div class="email">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" placeholder="correo@bakeadmin.com">
-                </div>
-                <button class="enviar-instrucciones"><span>&#x2709;</span> 
-                    Enviar Instrucciones
-                </button>
-            </form>
-            <div class="volver-inicio"><span>&#8592;</span> 
-                <a href="../auth/login.html">Volver al inicio</a>
-            </div>
+  <div class="pantalla">
+    <!-- ===== CAJA IZQUIERDA (vino oscuro) ===== -->
+    <section class="izq">
+      <div class="bola-1"></div>
+      <div class="bola-2"></div>
+
+      <div class="marca">
+        <img src="img/logo.png" alt="Logo Coffee Park">
+        <div>
+          <p class="marca__nombre">BakeAdmin</p>
+          <p class="marca__sub">Coffee Park</p>
         </div>
-    </main>
+      </div>
+
+      <div class="mensaje">
+        <p class="mensaje__etiqueta">✦ Gestión operativa</p>
+        <h1 class="mensaje__titulo">TU PANADERÍA,<br><span>TU CONTROL.</span></h1>
+        <p class="mensaje__texto">Gestiona producción, pedidos, domicilios y compras desde un solo lugar.</p>
+      </div>
+
+      <p class="izq__pie">Coffee Park · Colombia</p>
+    </section>
+
+    <!-- ===== CAJA DERECHA (el formulario) ===== -->
+    <section class="der">
+      <div class="der__contenido">
+
+        <a class="volver" href="login.html">← Volver al inicio</a>
+
+        <div class="icono-caja">✉</div>
+        <h2 class="titulo">Recuperar contraseña</h2>
+        <p class="descripcion">Enviaremos el enlace a tu correo de recuperación.</p>
+
+        <form class="formulario" action="recuperar-2.html">
+          <div>
+            <label class="etiqueta" for="correo">Correo de acceso</label>
+            <input class="campo" id="correo" name="correo" type="email" placeholder="correo@ejemplo.com" required>
+            <!-- Quita la palabra "hidden" para ver cómo se ve el error -->
+            <p class="error" hidden>Ingrese un correo válido.</p>
+          </div>
+          <button class="boton boton--principal boton--48 boton--completo" type="submit">Enviar enlace</button>
+        </form>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
