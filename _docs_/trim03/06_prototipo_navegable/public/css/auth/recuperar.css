@@ -122,7 +122,7 @@ body {
 
 .volv-ini {
   color: var(--bs-primary);
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 .icono-mensaje {
@@ -133,7 +133,8 @@ body {
   margin-bottom: 20px;
 }
 
-.titulo-recuperar {
+.titulo-recuperar, 
+.titulo-clav-actu /* VISTA CONTRASEÑA ACTUALIZADA */{
   font-size: 30px;
   line-height: 36px;
   font-weight: 900;
@@ -143,10 +144,10 @@ body {
 .descripcion {
   line-height: 20px;
   color: #7A6873;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
-label {
+.correo-acceso {
   font-size: 14px;
   font-weight: 600;
   color: #321525;
@@ -154,7 +155,7 @@ label {
   line-height: 20px;
 }
 
-input {
+.campo-correo-acceso {
   width: 100%;
   height: 48px;
   padding: 0px 16px 0px 16px;
@@ -165,7 +166,8 @@ input {
   margin-bottom: 20px;
 }
 
-button {
+.btn-env-enl, 
+.btn-act-clave /* VISTA CONTRASEÑA ACTUALIZADA */{
   width: 100%;
   height: 48px;
   background: var(--bs-primary);
@@ -174,5 +176,68 @@ button {
   border-radius: 12px;
   cursor: pointer;
   font-size: 14px;
-  font-weight: 600; 
+  font-weight: 600;
+}
+
+/* PANEL DERECHO - VISTA NUEVA CONTRASEÑA */
+
+.paso {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: #96244F;
+}
+
+.nuev-clav {
+  font-size: 14px;
+  font-weight: 600;
+  color: #321525;
+  margin-bottom: 1px;
+  line-height: 20px;
+}
+
+.camp-nuev-clav,
+.camp-confir-clav {
+  width: 100%;
+  height: 48px;
+  padding: 0px 16px 0px 16px;
+  font-size: 14px;
+  border: 0px;
+  border-radius: 12px;
+  background: #F2EEF1;
+}
+
+.camp-nuev-clav {
+  margin-bottom: 12px;
+}
+
+.camp-confir-clav {
+  margin-bottom: 16px;
+}
+
+/* PANEL DERECHO - VISTA CONTRASEÑA ACTUALIZADA */
+
+.icono-exito {
+  width: 80px;
+  height: 80px;
+  background-color: #DBFCE7;
+  color: #008236;
+  margin-bottom: 20px;
+}
+
+.descripcion-exito {
+  margin-bottom: 28px;
+}
+
+.btn-ini-sesion {
+  width: 100%;
+  height: 48px;
+  background: var(--bs-primary);
+  color: white;
+  border: 0px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
 }
