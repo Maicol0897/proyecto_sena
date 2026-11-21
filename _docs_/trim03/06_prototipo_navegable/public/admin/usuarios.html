@@ -15,7 +15,7 @@
     <!-- MODULO USUARIOS: VISTA USUARIOS DUBERNEY-->
     <!-- CONTENEDOR GENERAL: MENU LATERAL A UN LADO Y EL CONTENIDO AL OTRO -->
     <div class="d-flex min-vh-100">
-     <!-- MENU LATERAL (SIDEBAR): FIJO A LA IZQUIERDA, SOLO SE VE DESDE 992PX -->
+        <!-- MENU LATERAL (SIDEBAR): FIJO A LA IZQUIERDA, SOLO SE VE DESDE 992PX -->
         <aside class="panel-menu position-fixed top-0 bottom-0 start-0 d-none d-lg-flex flex-column text-white">
             <!-- LOGO Y NOMBRE DE LA MARCA -->
             <div class="panel-marca d-flex align-items-center">
@@ -146,14 +146,15 @@
                         class="encabezado d-flex flex-column gap-3 flex-sm-row justify-content-sm-between align-items-sm-end">
                         <div class="d-flex flex-column">
                             <h1 class="titulo-usuarios mb-0">Usuarios y seguridad</h1>
-                            <p class="subtitulo-usuarios mt-1 mb-0">Administra accesos, permisos y sedes de Coffee Park.</p>
+                            <p class="subtitulo-usuarios mt-1 mb-0">Administra accesos, permisos y sedes de Coffee Park.
+                            </p>
                         </div>
                         <!-- ABRE LA VENTANA NUEVO USUARIO -->
                         <button class="btn-nuevo-usuario d-inline-flex align-items-center justify-content-center gap-2"
                             data-bs-toggle="modal" data-bs-target="#ventana-usuario">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="lucide lucide-plus preview-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-plus preview-icon">
                                 <path d="M5 12h14" />
                                 <path d="M12 5v14" />
                             </svg>Nuevo usuario</button>
@@ -161,11 +162,12 @@
                     <!-- PESTANAS: LA BARRA CON LOS 3 BOTONES Y DEBAJO EL CONTENIDO DE CADA UNA -->
                     <div class="pestanas d-flex flex-column gap-2 mt-4">
                         <!-- BARRA DE PESTANAS: SE AJUSTA AL ANCHO DE SUS BOTONES (align-self-start) Y SI NO CABEN SE PARTEN CON flex-wrap -->
-                        <div class="barra-pestana align-self-start mw-100 d-flex flex-wrap p-1 rounded-4 bg-white" role="tablist">
+                        <div class="barra-pestana align-self-start mw-100 d-flex flex-wrap p-1 rounded-4 bg-white"
+                            role="tablist">
                             <button type="button" role="tab" class="active" data-bs-toggle="tab"
                                 data-bs-target="#pestana-usuarios">Usuarios</button>
-                            <button type="button" role="tab" data-bs-toggle="tab"
-                                data-bs-target="#pestana-roles">Roles y permisos</button>
+                            <button type="button" role="tab" data-bs-toggle="tab" data-bs-target="#pestana-roles">Roles
+                                y permisos</button>
                             <button type="button" role="tab" data-bs-toggle="tab"
                                 data-bs-target="#pestana-sedes">Sedes</button>
                         </div>
@@ -186,10 +188,18 @@
                                         <!-- FILTROS: 1 COLUMNA EN CELULAR Y DESDE 1024PX BUSCADOR + 3 LISTAS EN UNA FILA -->
                                         <div class="filtros-usuarios d-grid">
                                             <!-- BUSCADOR: LA LUPA VA ENCIMA DEL CAMPO (position-absolute) Y EL TEXTO SE CORRE CON padding-left -->
-<div class="buscador position-relative">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-<input type="text" class="entrada" placeholder="Buscar por nombre o correo…" aria-label="Buscar usuario">
-</div>
+                                            <div class="buscador position-relative">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-search">
+                                                    <circle cx="11" cy="11" r="8" />
+                                                    <path d="m21 21-4.3-4.3" />
+                                                </svg>
+                                                <input type="text" class="entrada"
+                                                    placeholder="Buscar por nombre o correo…"
+                                                    aria-label="Buscar usuario">
+                                            </div>
                                             <select class="entrada" aria-label="Filtrar por rol">
                                                 <option>Todos los roles</option>
                                                 <option>Administrador</option>
@@ -217,12 +227,12 @@
                                             <table class="tabla-contenido tabla-usuarios w-100">
                                                 <thead>
                                                     <tr class="tabla-encabezados fw-medium text-nowrap align-middle">
-                                                    <th>Nombre completo</th>
-                                                    <th>Correo</th>
-                                                    <th>Rol</th>
-                                                    <th>Sede</th>
-                                                    <th>Estado</th>
-                                                    <th>Acciones</th>
+                                                        <th>Nombre completo</th>
+                                                        <th>Correo</th>
+                                                        <th>Rol</th>
+                                                        <th>Sede</th>
+                                                        <th>Estado</th>
+                                                        <th>Acciones</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -235,8 +245,29 @@
                                                         <td>
                                                             <!-- ACCIONES ALINEADAS A LA DERECHA: EDITAR ABRE LA VENTANA, ACTIVAR/DESACTIVAR CAMBIA EL ESTADO -->
                                                             <div class="d-flex justify-content-end gap-1">
-                                                                <button class="btn-fantasma" data-bs-toggle="modal" data-bs-target="#ventana-usuario"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil-line"><path d="M13 21h8"/><path d="m15 5 4 4"/><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>Editar</button>
-                                                                <button class="btn-fantasma btn-fantasma-peligro"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-x"><path d="M2 21a8 8 0 0 1 11.873-7"/><circle cx="10" cy="8" r="5"/><path d="m17 17 5 5"/><path d="m22 17-5 5"/></svg>Desactivar</button>
+                                                                <button class="btn-fantasma" data-bs-toggle="modal"
+                                                                    data-bs-target="#ventana-usuario"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-pencil-line">
+                                                                        <path d="M13 21h8" />
+                                                                        <path d="m15 5 4 4" />
+                                                                        <path
+                                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                                    </svg>Editar</button>
+                                                                <button class="btn-fantasma btn-fantasma-peligro"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-user-x">
+                                                                        <path d="M2 21a8 8 0 0 1 11.873-7" />
+                                                                        <circle cx="10" cy="8" r="5" />
+                                                                        <path d="m17 17 5 5" />
+                                                                        <path d="m22 17-5 5" />
+                                                                    </svg>Desactivar</button>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -249,8 +280,29 @@
                                                         <td>
                                                             <!-- ACCIONES ALINEADAS A LA DERECHA: EDITAR ABRE LA VENTANA, ACTIVAR/DESACTIVAR CAMBIA EL ESTADO -->
                                                             <div class="d-flex justify-content-end gap-1">
-                                                                <button class="btn-fantasma" data-bs-toggle="modal" data-bs-target="#ventana-usuario"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil-line"><path d="M13 21h8"/><path d="m15 5 4 4"/><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>Editar</button>
-                                                                <button class="btn-fantasma btn-fantasma-peligro"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-x"><path d="M2 21a8 8 0 0 1 11.873-7"/><circle cx="10" cy="8" r="5"/><path d="m17 17 5 5"/><path d="m22 17-5 5"/></svg>Desactivar</button>
+                                                                <button class="btn-fantasma" data-bs-toggle="modal"
+                                                                    data-bs-target="#ventana-usuario"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-pencil-line">
+                                                                        <path d="M13 21h8" />
+                                                                        <path d="m15 5 4 4" />
+                                                                        <path
+                                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                                    </svg>Editar</button>
+                                                                <button class="btn-fantasma btn-fantasma-peligro"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-user-x">
+                                                                        <path d="M2 21a8 8 0 0 1 11.873-7" />
+                                                                        <circle cx="10" cy="8" r="5" />
+                                                                        <path d="m17 17 5 5" />
+                                                                        <path d="m22 17-5 5" />
+                                                                    </svg>Desactivar</button>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -263,8 +315,29 @@
                                                         <td>
                                                             <!-- ACCIONES ALINEADAS A LA DERECHA: EDITAR ABRE LA VENTANA, ACTIVAR/DESACTIVAR CAMBIA EL ESTADO -->
                                                             <div class="d-flex justify-content-end gap-1">
-                                                                <button class="btn-fantasma" data-bs-toggle="modal" data-bs-target="#ventana-usuario"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil-line"><path d="M13 21h8"/><path d="m15 5 4 4"/><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>Editar</button>
-                                                                <button class="btn-fantasma btn-fantasma-peligro"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-x"><path d="M2 21a8 8 0 0 1 11.873-7"/><circle cx="10" cy="8" r="5"/><path d="m17 17 5 5"/><path d="m22 17-5 5"/></svg>Desactivar</button>
+                                                                <button class="btn-fantasma" data-bs-toggle="modal"
+                                                                    data-bs-target="#ventana-usuario"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-pencil-line">
+                                                                        <path d="M13 21h8" />
+                                                                        <path d="m15 5 4 4" />
+                                                                        <path
+                                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                                    </svg>Editar</button>
+                                                                <button class="btn-fantasma btn-fantasma-peligro"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-user-x">
+                                                                        <path d="M2 21a8 8 0 0 1 11.873-7" />
+                                                                        <circle cx="10" cy="8" r="5" />
+                                                                        <path d="m17 17 5 5" />
+                                                                        <path d="m22 17-5 5" />
+                                                                    </svg>Desactivar</button>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -277,8 +350,29 @@
                                                         <td>
                                                             <!-- ACCIONES ALINEADAS A LA DERECHA: EDITAR ABRE LA VENTANA, ACTIVAR/DESACTIVAR CAMBIA EL ESTADO -->
                                                             <div class="d-flex justify-content-end gap-1">
-                                                                <button class="btn-fantasma" data-bs-toggle="modal" data-bs-target="#ventana-usuario"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil-line"><path d="M13 21h8"/><path d="m15 5 4 4"/><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>Editar</button>
-                                                                <button class="btn-fantasma btn-fantasma-peligro"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-check"><path d="m16 11 2 2 4-4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Activar</button>
+                                                                <button class="btn-fantasma" data-bs-toggle="modal"
+                                                                    data-bs-target="#ventana-usuario"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-pencil-line">
+                                                                        <path d="M13 21h8" />
+                                                                        <path d="m15 5 4 4" />
+                                                                        <path
+                                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                                    </svg>Editar</button>
+                                                                <button class="btn-fantasma btn-fantasma-peligro"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-user-check">
+                                                                        <path d="m16 11 2 2 4-4" />
+                                                                        <path
+                                                                            d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                                                        <circle cx="9" cy="7" r="4" />
+                                                                    </svg>Activar</button>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -289,9 +383,21 @@
                                         <div class="pie-tabla d-flex justify-content-between align-items-center">
                                             <span>Mostrando 4 de 4</span>
                                             <div class="d-flex gap-1">
-                                                <button class="btn-pagina" disabled aria-label="Anterior"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg></button>
+                                                <button class="btn-pagina" disabled aria-label="Anterior"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-chevron-left">
+                                                        <path d="m15 18-6-6 6-6" />
+                                                    </svg></button>
                                                 <button class="btn-pagina btn-pagina-activa">1</button>
-                                                <button class="btn-pagina" disabled aria-label="Siguiente"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></button>
+                                                <button class="btn-pagina" disabled aria-label="Siguiente"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-chevron-right">
+                                                        <path d="m9 18 6-6-6-6" />
+                                                    </svg></button>
                                             </div>
                                         </div>
                                     </div>
@@ -355,20 +461,35 @@
                             <div class="col-12 col-md-6">
                                 <div class="campo d-flex flex-column">
                                     <label class="etiqueta">Rol</label>
-                                    <select class="entrada"><option>Administrador</option><option>Gerente de sede</option><option>Cocinero</option><option>Mesero</option><option>Repartidor</option><option>Cliente</option></select>
+                                    <select class="entrada">
+                                        <option>Administrador</option>
+                                        <option>Gerente de sede</option>
+                                        <option>Cocinero</option>
+                                        <option>Mesero</option>
+                                        <option>Repartidor</option>
+                                        <option>Cliente</option>
+                                    </select>
                                 </div>
                             </div>
                             <!-- LA SEDE NO APARECE SI EL ROL ES CLIENTE O ADMINISTRADOR (LO CONTROLA EL JAVASCRIPT) -->
                             <div class="col-12 col-md-6">
                                 <div class="campo d-flex flex-column">
                                     <label class="etiqueta">Sede</label>
-                                    <select class="entrada"><option>Sin sede</option><option>Planta de producción</option><option>Coffee Park Centro</option><option>Coffee Park Norte</option></select>
+                                    <select class="entrada">
+                                        <option>Sin sede</option>
+                                        <option>Planta de producción</option>
+                                        <option>Coffee Park Centro</option>
+                                        <option>Coffee Park Norte</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="campo d-flex flex-column">
                                     <label class="etiqueta">Estado</label>
-                                    <select class="entrada"><option>Activo</option><option>Inactivo</option></select>
+                                    <select class="entrada">
+                                        <option>Activo</option>
+                                        <option>Inactivo</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -392,7 +513,13 @@
                             <div class="col-12 col-md-6">
                                 <div class="campo d-flex flex-column">
                                     <label class="etiqueta">Tipo de documento</label>
-                                    <select class="entrada"><option>CC</option><option>CE</option><option>TI</option><option>PP</option><option>NIT</option></select>
+                                    <select class="entrada">
+                                        <option>CC</option>
+                                        <option>CE</option>
+                                        <option>TI</option>
+                                        <option>PP</option>
+                                        <option>NIT</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
@@ -416,7 +543,8 @@
                         </div>
                     </div>
                     <!-- AVISO AMBAR -->
-                    <div class="aviso-ambar">Un usuario con operaciones registradas no puede cambiar de sede; cree otro usuario para la nueva sede.</div>
+                    <div class="aviso-ambar">Un usuario con operaciones registradas no puede cambiar de sede; cree otro
+                        usuario para la nueva sede.</div>
                 </form>
                 <!-- PIE DE LA VENTANA: BOTONES (EN CELULAR UNO DEBAJO DEL OTRO, DESDE 576PX A LA DERECHA) -->
                 <div class="d-flex flex-column-reverse flex-sm-row justify-content-sm-end gap-2">
