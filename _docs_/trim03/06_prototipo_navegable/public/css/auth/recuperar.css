@@ -1,104 +1,243 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0
 }
 
-.contenedor-global {
-    display: flex;
-    background: #fdfcf7;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+body {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  color: #321525;
+  background: #FCF8F9
 }
 
-.tarjeta-blanca {
-    max-width: 360px;
-    padding: 30px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgb(0, 0, 0, 0.08);
+.pantalla-completa {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.logo22-img, .texto, .email, .enviar-instrucciones, .volver-inicio {
-    /* border: 1px dashed gray; */
-    margin-bottom: 15px;
+@media (min-width: 1024px) {
+  .pantalla-completa {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
 }
 
-.logo22-img {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 15px auto;
-    border-radius: 50%;
-    display: flex;
-    background-color: #c25910; 
-    justify-content: center; 
-    align-items: center;
+:root {
+  --bs-primary: #741b3d;
+  --bs-primary-rgb: 116, 27, 61;
+  --bs-body-bg: #fcf8f9;
+  --bs-body-color: #321525;
+  --bs-border-color: rgba(116, 27, 61, 0.14);
+  --bs-body-font-family: Inter, system-ui, sans-serif;
+}
+
+/* PANEL IZQUIERDO */
+.bg-vino-oscuro {
+  background-color: #350b1a !important;
+}
+
+.bola-a {
+  top: -96px;
+  left: -96px;
+  width: 320px;
+  height: 320px;
+  background: rgba(116, 27, 61, .5);
+}
+
+.bola-b {
+  top: 33.333%;
+  right: -80px;
+  width: 288px;
+  height: 288px;
+  background: rgba(242, 124, 134, .2);
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+}
+
+.nombre {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 900;
+  color: #fff
+}
+
+.eslogan {
+  font-size: 12px;
+  line-height: 16px;
+  color: #F6B4B8
+}
+
+.mensaje-cent {
+  max-width: 576px
+}
+
+.etiqueta {
+  letter-spacing: .25em;
+  color: #F27C86;
+}
+
+.titulo {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: .95;
+}
+
+.titulo-2 {
+  color: #F27C86;
 }
 
 .texto {
-    height: auto;   
-    text-align: center;
+  font-size: 18px;
+  line-height: 1.625;
+  color: rgba(246, 180, 184, .8);
+  max-width: 448px;
 }
 
-h1 {
-    font-size: 1.4rem;
-    margin-bottom: 6px;
+.pie-pag {
+  font-size: 12px;
+  line-height: 16px;
+  color: white;
+  opacity: 0.4;
 }
 
-p {
-    color: #6b7280;
-    font-size: 0.9rem;
-}
-.email {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    
+/* PANEL DERECHO */
+
+.panel-der {
+  background: #FCF8F9;
+  padding: 40px 20px;
 }
 
-.email input {
-    padding: 12px;
-    background-color: #f3f4f6;
-    font-size: 0.9rem;
-    border-radius: 8px;
-    border: none;
+@media (min-width: 640px) {
+  .panel-der {
+    padding: 40px;
+  }
 }
 
-label {
-    text-align: left;
-    font-weight: bold;
-    font-size: 0.85rem;
+.caja-der {
+  width: 100%;
+  max-width: 576px;
 }
 
-.enviar-instrucciones {
-    width: 100%;
-    height: 45px;
-    background-color: #0b0b12;
-    border-radius: 8px;
-    color: white;
-    border: none;
-    cursor: pointer;
+.volv-ini {
+  color: var(--bs-primary);
+  margin-bottom: 44px;
 }
 
-.volver-inicio {
-    height: 40px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
+.icono-mensaje {
+  width: 56px;
+  height: 56px;
+  background-color: #FCE8EA;
+  color: var(--bs-primary);
+  margin-bottom: 20px;
 }
 
-a {
-    text-decoration: none;
-    color: #374151;
-    cursor: pointer;
+.titulo-recuperar, 
+.titulo-clav-actu /* VISTA CONTRASEÑA ACTUALIZADA */{
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 900;
+  color: var(--bs-body-color);
 }
 
-form {
-    display: flex; flex-direction: column; gap: 16px;
+.descripcion {
+  line-height: 20px;
+  color: #7A6873;
+  margin-bottom: 24px;
+}
+
+.correo-acceso {
+  font-size: 14px;
+  font-weight: 600;
+  color: #321525;
+  margin-bottom: 1px;
+  line-height: 20px;
+}
+
+.campo-correo-acceso {
+  width: 100%;
+  height: 48px;
+  padding: 0px 16px 0px 16px;
+  font-size: 14px;
+  border: 0px;
+  border-radius: 12px;
+  background: #F2EEF1;
+  margin-bottom: 20px;
+}
+
+.btn-env-enl, 
+.btn-act-clave /* VISTA CONTRASEÑA ACTUALIZADA */{
+  width: 100%;
+  height: 48px;
+  background: var(--bs-primary);
+  color: white;
+  border: 0px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* PANEL DERECHO - VISTA NUEVA CONTRASEÑA */
+
+.paso {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: #96244F;
+}
+
+.nuev-clav {
+  font-size: 14px;
+  font-weight: 600;
+  color: #321525;
+  margin-bottom: 1px;
+  line-height: 20px;
+}
+
+.camp-nuev-clav,
+.camp-confir-clav {
+  width: 100%;
+  height: 48px;
+  padding: 0px 16px 0px 16px;
+  font-size: 14px;
+  border: 0px;
+  border-radius: 12px;
+  background: #F2EEF1;
+}
+
+.camp-nuev-clav {
+  margin-bottom: 12px;
+}
+
+.camp-confir-clav {
+  margin-bottom: 16px;
+}
+
+/* PANEL DERECHO - VISTA CONTRASEÑA ACTUALIZADA */
+
+.icono-exito {
+  width: 80px;
+  height: 80px;
+  background-color: #DBFCE7;
+  color: #008236;
+  margin-bottom: 20px;
+}
+
+.descripcion-exito {
+  margin-bottom: 28px;
+}
+
+.btn-ini-sesion {
+  width: 100%;
+  height: 48px;
+  background: var(--bs-primary);
+  color: white;
+  border: 0px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
 }

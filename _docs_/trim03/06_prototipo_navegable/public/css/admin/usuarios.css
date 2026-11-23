@@ -1,0 +1,442 @@
+/* CONTENIDO MODULO DE USUARIOS: VISTA USUARIOS DUBERNEY */
+
+/* ANCHO MAXIMO DEL CONTENIDO (SE CENTRA CON mx-auto) */
+.cont-int {
+    max-width: 1440px;
+}
+
+/* TEXTO PEQUENO GRIS (MIGAS DE PAN) */
+.text {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--texto-gris);
+}
+
+/* TITULO DE LA VISTA */
+.titulo-usuarios {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 36px;
+    color: var(--vino-oscuro);
+}
+
+/* DESCRIPCION DEBAJO DEL TITULO */
+.subtitulo-usuarios {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--texto-gris);
+}
+
+/* BOTON NUEVO USUARIO (44PX DE ALTO) */
+.btn-nuevo-usuario {
+    height: 44px;
+    padding: 0px 12px;
+    background: var(--bs-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+/* HOVER: EL VINO SE ACLARA UN POCO */
+.btn-nuevo-usuario:hover {
+    background-color: rgba(116, 27, 61, 0.9);
+}
+
+/* FOCO: ANILLO DE 3PX (SE VE AL NAVEGAR CON TECLADO) */
+.btn-nuevo-usuario:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* SEPARACION ENTRE LA BARRA DE PESTANAS Y SU CONTENIDO */
+.tab-content {
+    margin-top: 20px;
+}
+
+/* BARRA DE PESTANAS: SOLO LA SOMBRA (EL RESTO ES BOOTSTRAP) */
+.barra-pestana {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+}
+
+/* CADA PESTANA MIDE LO QUE MIDE SU TEXTO */
+.barra-pestana button {
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--bs-body-color);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    white-space: nowrap;
+    background: transparent;
+}
+
+/* PESTANA SELECCIONADA: FONDO BLANCO */
+.barra-pestana button.active {
+    background: #ffffff;
+}
+
+/* FOCO CON TECLADO */
+.barra-pestana button:focus-visible {
+    border-color: var(--vino-medio);
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, .5);
+    outline: 1px solid #96244F;
+}
+
+/* TARJETA LISTA DE USUARIOS */
+
+.tarjeta-usuarios {
+    color: #0A0A0A;
+    border: 1px solid var(--bs-border-color);
+}
+
+/* ENCABEZADO DE LA TARJETA */
+.encabezado-usuarios {
+    padding: 24px 24px 0;
+    gap: 6px;
+}
+
+/* TITULO DE LA TARJETA */
+.titulo-usuarios-tarjeta {
+    font-size: 16px;
+    line-height: 16px;
+    color: #0A0A0A;
+}
+
+/* ESPACIO INTERNO DEL CUERPO DE LA TARJETA */
+.tarjeta-contenido {
+    padding: 0 24px 24px;
+}
+
+/* FILTROS: 1 COLUMNA EN CELULAR Y DESDE 1024PX BUSCADOR + 3 LISTAS EN UNA FILA */
+.filtros-usuarios {
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+@media (min-width: 1024px) {
+    .filtros-usuarios {
+        grid-template-columns: 1fr 190px 190px 160px;
+    }
+}
+
+.filtros-usuarios .entrada {
+    height: 40px;
+}
+
+/* BUSCADOR: LUPA A LA IZQUIERDA DENTRO DEL CAMPO */
+.buscador svg {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: var(--texto-gris);
+    pointer-events: none;
+}
+
+.buscador .entrada {
+    padding-left: 40px;
+}
+
+/* CAJA CON BORDE QUE ENCIERRA LA TABLA */
+.contenedor-tabla {
+    border: 1px solid var(--bs-border-color);
+}
+
+/* TEXTO BASE DE LA TABLA */
+.tabla-contenido {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--bs-body-color);
+}
+
+/* CADA FILA: ALTO MINIMO Y LINEA INFERIOR */
+.tabla-contenido tr {
+    height: 40px;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* TITULOS DE COLUMNA */
+.tabla-contenido th {
+    padding: 0 8px;
+    font-weight: 500;
+}
+
+/* CELDAS */
+.tabla-contenido td {
+    padding: 8px;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: #0A0A0A;
+}
+
+/* LA ULTIMA FILA NO LLEVA LINEA INFERIOR */
+.tabla-contenido tbody tr:last-child {
+    border-bottom: 0;
+}
+
+/* FILA AL PASAR EL MOUSE */
+.tabla-contenido tr:hover {
+    background: rgba(242, 238, 241, .5);
+}
+
+/* USUARIOS: EL NOMBRE (1RA COLUMNA) EN NEGRITA */
+.tabla-usuarios td:first-child {
+    font-weight: 600;
+}
+
+/* USUARIOS: LA COLUMNA ACCIONES (ULTIMA) ALINEADA A LA DERECHA */
+.tabla-usuarios th:last-child {
+    text-align: right;
+}
+
+/* INSIGNIAS DE ESTADO: FORMA, TAMANO Y BORDE */
+.estado-activo,
+.estado-inactivo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+/* ACTIVO: VERDE */
+.estado-activo {
+    color: #008236;
+    background: #F0FDF4;
+    border-color: #B9F8CF;
+}
+
+/* INACTIVO: GRIS */
+.estado-inactivo {
+    color: #45556C;
+    background: #F1F5F9;
+    border-color: #E2E8F0;
+}
+
+/* BOTONES FANTASMA PEQUENOS (EDITAR, DESACTIVAR): SIN FONDO NI BORDE */
+.btn-fantasma {
+    height: 32px;
+    padding: 0 12px;
+    background: transparent;
+    color: var(--bs-body-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-fantasma:hover {
+    background: var(--acento);
+    color: #741B3D;
+}
+
+/* DESACTIVAR / ACTIVAR: LETRA ROJA */
+.btn-fantasma-peligro {
+    color: #C10007;
+}
+
+.btn-fantasma-peligro:hover {
+    background: #FEF2F2;
+    color: #C10007;
+}
+
+.btn-fantasma:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* PIE DE LA TABLA: CONTADOR Y PAGINACION */
+.pie-tabla {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--texto-gris);
+}
+
+/* BOTONES CUADRADOS DE LA PAGINACION (36 X 36) */
+.btn-pagina {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: #FCF8F9;
+    color: var(--bs-body-color);
+    border: 1px solid var(--bs-border-color);
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-pagina:hover:not(:disabled) {
+    background: var(--acento);
+    color: #741B3D;
+}
+
+/* PAGINA ACTUAL: LETRA VINO Y NEGRITA */
+.btn-pagina-activa {
+    color: #741B3D;
+    font-weight: 700;
+}
+
+.btn-pagina:disabled {
+    opacity: .5;
+}
+
+/* VENTANA NUEVO / EDITAR USUARIO */
+
+/* ANCHO MAXIMO DE LA VENTANA (SE APLICA DESDE 576PX) */
+.ventana-768 {
+    --bs-modal-width: 768px;
+}
+
+/* CAJA DE LA VENTANA: FONDO, BORDE, ESQUINAS, ESPACIO INTERNO Y SOMBRA */
+.ventana {
+    gap: 16px;
+    padding: 24px;
+    background: #FCF8F9;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+}
+
+/* ALTO MAXIMO 92% DE LA PANTALLA CON BARRA VERTICAL */
+.ventana-alta {
+    max-height: 92vh;
+    overflow-y: auto;
+}
+
+/* TITULO DE LA VENTANA */
+.ventana-titulo {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--bs-body-color);
+}
+
+/* BOTON X: ARRIBA A LA DERECHA */
+.ventana-cerrar {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border: 0;
+    color: var(--bs-body-color);
+    opacity: .7;
+}
+
+.ventana-cerrar:hover {
+    opacity: 1;
+}
+
+/* CAJA DE CADA BLOQUE (ACCESO, INFORMACION COMPLEMENTARIA) */
+.caja-seccion {
+    padding: 16px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 16px;
+}
+
+/* TITULO DEL BLOQUE */
+.titulo-seccion {
+    margin: 0 0 16px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+/* CAMPO: ETIQUETA Y CONTROL SEPARADOS 6PX */
+.campo {
+    gap: 6px;
+}
+
+/* ETIQUETA DE CADA CAMPO */
+.etiqueta {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+}
+
+/* CAMPOS (INPUT Y SELECT) */
+.entrada {
+    width: 100%;
+    height: 36px;
+    padding: 4px 12px;
+    background: #F3F3F5;
+    color: var(--bs-body-color);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.entrada:focus-visible {
+    outline: none;
+    border-color: var(--vino-medio);
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* AVISO AMBAR */
+.aviso-ambar {
+    padding: 12px;
+    background: #FFFBEB;
+    border: 1px solid #FEF3C6;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #973C00;
+}
+
+/* BOTONES DEL PIE DE LA VENTANA (36PX DE ALTO) */
+.btn-primario,
+.btn-cancelar {
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.btn-primario {
+    background: var(--bs-primary);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-primario:hover {
+    background-color: rgba(116, 27, 61, 0.9);
+}
+
+.btn-cancelar {
+    background: #FCF8F9;
+    color: var(--bs-body-color);
+    border: 1px solid var(--bs-border-color);
+}
+
+.btn-cancelar:hover {
+    background: var(--acento);
+    color: #741B3D;
+}
+
+.btn-primario:focus-visible,
+.btn-cancelar:focus-visible {
+    outline: none;
+    border-color: var(--vino-medio);
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
