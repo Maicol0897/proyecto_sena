@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/development
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/admin/panel.css">
     <link rel="stylesheet" href="../css/admin/usuarios.css">
     <title>Usuarios - BakeAdmin</title>
+<<<<<<< HEAD
 </head>
 
 <body>
@@ -678,350 +682,541 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
+=======
+>>>>>>> origin/development
 </head>
 
 <body>
-
-   <!-- NAVEGADOR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-2 border-0 sticky-top shadow-sm">
-        <div class="container-fluid px-4 border-0">
-            <!-- Brand / Logo + Título -->
-            <a class="navbar-brand d-flex align-items-center gap-2 me-4" href="#">
-                <img src="../img/logo.png" alt="BakeAdmin" class="rounded-3"
-                    style="width: 45px; height: 45px; object-fit: cover;">
-                <div class="lh-1">
-                    <span class="fw-bold text-dark d-block fs-5">BakeAdmin</span>
-                    <small class="text-muted fs-7">Gestión Operativa</small>
+    <!-- MODULO USUARIOS: VISTA USUARIOS DUBERNEY-->
+    <!-- CONTENEDOR GENERAL: MENU LATERAL A UN LADO Y EL CONTENIDO AL OTRO -->
+    <div class="d-flex min-vh-100">
+        <!-- MENU LATERAL (SIDEBAR): FIJO A LA IZQUIERDA, SOLO SE VE DESDE 992PX -->
+        <aside class="panel-menu position-fixed top-0 bottom-0 start-0 d-none d-lg-flex flex-column text-white">
+            <!-- LOGO Y NOMBRE DE LA MARCA -->
+            <div class="panel-marca d-flex align-items-center">
+                <img src="../img/logo.png" alt="Coffee Park" class="panel-logo flex-shrink-0 rounded-4">
+                <div>
+                    <p class="panel-marca-nombre mb-0">BakeAdmin</p>
+                    <p class="panel-marca-sub mb-0">Coffee Park</p>
                 </div>
-            </a>
-
-            <!-- Botón Toggle para vista móvil -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Contenido Navbar -->
-            <div class="collapse navbar-collapse" id="navbarContent">
-
-                <!-- Enlaces de navegación (Izquierda/Centro) -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
-                    <li class="nav-item">
-                        <a class="nav-link active d-flex align-items-center gap-2 fw-medium text-secondary" href="../admin/dashboard.html">
-                            <i class="bi bi-grid-1x2"></i> Dashboard
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center gap-2 fw-medium text-secondary"
-                            href="../admin/usuarios.html">
-                            <i class="fas fa-user-friends"></i> Usuarios
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center gap-2 fw-medium text-secondary"
-                            href="../admin/compras.html">
-                            <i class="fas fa-shopping-cart"></i>Compras
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center gap-2 fw-medium text-secondary"
-                            href="../admin/domicilios.html">
-                            <i class="fas fa-truck"></i> Domicilios
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center gap-2 fw-medium text-secondary"
-                            href="../admin/produccion.html">
-                            <i class="bi bi-person-workspace"></i> Produccion
-                        </a>
-                    </li>
-                </ul>
-
-                <!-- Zona Derecha: Sincronizado + Menú de Usuario -->
-                <div class="d-flex align-items-center gap-3 ms-auto">
-
-                    <!-- Badge Sincronizado -->
-                    <span
-                        class="badge bg-success rounded-pill px-3 py-2 fw-normal d-inline-flex align-items-center gap-1 fs-6">
-                        <i class="bi bi-cloud-check-fill"></i> Sincronizado
+            </div>
+            <!-- ENLACES DE NAVEGACION ENTRE VISTAS -->
+            <nav class="panel-nav flex-grow-1 d-flex flex-column gap-1">
+                <a href="dashboard.html" class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="flex-shrink-0">
+                        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                        <path
+                            d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    </svg>Inicio
+                </a>
+                <a href="usuarios.html"
+                    class="panel-enlace panel-enlace-activo d-flex align-items-center rounded-4 text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="flex-shrink-0">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                        <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                        <circle cx="9" cy="7" r="4" />
+                    </svg>Usuarios
+                </a>
+                <a href="compras.html" class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="flex-shrink-0">
+                        <circle cx="8" cy="21" r="1" />
+                        <circle cx="19" cy="21" r="1" />
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                    </svg>Compras
+                </a>
+                <a href="produccion.html" class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="flex-shrink-0">
+                        <path
+                            d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z" />
+                        <path d="M6 17h12" />
+                    </svg>Producción
+                </a>
+                <a href="domicilios.html" class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="flex-shrink-0">
+                        <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                        <path d="M15 18H9" />
+                        <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                        <circle cx="17" cy="18" r="2" />
+                        <circle cx="7" cy="18" r="2" />
+                    </svg>Domicilios
+                </a>
+            </nav>
+            <div class="panel-pie">
+                <button class="panel-contraer w-100 d-flex align-items-center rounded-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="flex-shrink-0">
+                        <path d="m15 18-6-6 6-6" />
+                    </svg>Contraer menú
+                </button>
+                <p class="panel-version mt-2 mb-0">BakeAdmin v2.0 · 2026</p>
+            </div>
+        </aside>
+        <div class="panel-colum d-flex flex-column flex-grow-1">
+            <!-- BARRA SUPERIOR: SEDE, NOTIFICACIONES, USUARIO Y CERRAR SESION -->
+            <header class="panel-barra sticky-top d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <p class="panel-seccion mb-0 fw-semibold">USUARIOS</p>
+                    <p class="panel-sede mb-0">Todas las sedes</p>
+                </div>
+                <div class="panel-acciones ms-auto d-flex align-items-center">
+                    <span class="pastilla-sincronizado d-inline-flex align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-cloud-check preview-icon">
+                            <path d="m17 15-5.5 5.5L9 18" />
+                            <path d="M5.516 16.07A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 3.501 7.327" />
+                        </svg>Sincronizado
                     </span>
-
-                    <!-- Menú Desplegable Perfil / Cerrar Sesión -->
-                    <div class="dropdown">
-                        <button class="btn p-0 border-0 d-flex align-items-center" type="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <div class="rounded-circle text-white d-flex align-items-center justify-content-center fw-bold shadow-sm"
-                                style="width: 40px; height: 40px; background-color: #C05621; font-size: 0.9rem; cursor: pointer;">
-                                AC
-                            </div>
+                    <button
+                        class="btn-campana position-relative d-flex align-items-center justify-content-center flex-shrink-0"
+                        aria-label="Notificaciones, 4 sin leer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-bell">
+                            <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+                            <path
+                                d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" />
+                        </svg>
+                        <span
+                            class="campana-contador position-absolute d-flex align-items-center justify-content-center">4</span>
+                    </button>
+                    <div class="text-end d-none d-md-block">
+                        <p class="panel-usuario mb-0">Laura Administradora</p>
+                        <p class="panel-rol mb-0">Administrador</p>
+                    </div>
+                    <!-- TEMPORAL EL BOTON SE ENCIERRA EN ENLACE PARA QUE SE COMPORTE COMO EN LA NAVEGACION -->
+                    <a href="login.html" class="text-decoration-none">
+                        <button class="btn-cerrar-sesion d-flex align-items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-log-out preview-icon">
+                                <path d="m16 17 5-5-5-5" />
+                                <path d="M21 12H9" />
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                            </svg>
+                            <span class="d-none d-sm-inline">Cerrar sesión</span>
                         </button>
-
-                        <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
-                            <li>
-                                <div class="px-3 py-2 border-bottom">
-                                    <p class="mb-0 fw-bold text-dark">Mi Perfil</p>
-                                    <small class="text-muted">usuario@bakeadmin.com</small>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-                                    <i class="bi bi-person text-secondary"></i> Ver Perfil
-                                </a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center gap-2 py-2 text-danger"
-                                    href="../auth/login.html">Cerrar Sesión</a>
-                            </li>
-                        </ul>
-                    </div>
-
+                    </a>
                 </div>
-
-            </div>
+            </header>
+            <!-- CONTENIDO PRINCIPAL DE LA VISTA -->
+            <main class="flex-grow-1">
+                <div class="cont-int mx-auto">
+                    <!-- MIGAS DE PAN (RUTA DONDE ESTA EL USUARIO) -->
+                    <p class="text mb-3">Inicio<span class="mx-1">/</span>Usuarios</p>
+                    <!-- ENCABEZADO: TITULO, DESCRIPCION Y BOTON NUEVO USUARIO -->
+                    <div
+                        class="encabezado d-flex flex-column gap-3 flex-sm-row justify-content-sm-between align-items-sm-end">
+                        <div class="d-flex flex-column">
+                            <h1 class="titulo-usuarios mb-0">Usuarios y seguridad</h1>
+                            <p class="subtitulo-usuarios mt-1 mb-0">Administra accesos, permisos y sedes de Coffee Park.
+                            </p>
+                        </div>
+                        <!-- ABRE LA VENTANA NUEVO USUARIO -->
+                        <button class="btn-nuevo-usuario d-inline-flex align-items-center justify-content-center gap-2"
+                            data-bs-toggle="modal" data-bs-target="#ventana-usuario">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-plus preview-icon">
+                                <path d="M5 12h14" />
+                                <path d="M12 5v14" />
+                            </svg>Nuevo usuario</button>
+                    </div>
+                    <!-- PESTANAS: LA BARRA CON LOS 3 BOTONES Y DEBAJO EL CONTENIDO DE CADA UNA -->
+                    <div class="pestanas d-flex flex-column gap-2 mt-4">
+                        <!-- BARRA DE PESTANAS: SE AJUSTA AL ANCHO DE SUS BOTONES (align-self-start) Y SI NO CABEN SE PARTEN CON flex-wrap -->
+                        <div class="barra-pestana align-self-start mw-100 d-flex flex-wrap p-1 rounded-4 bg-white"
+                            role="tablist">
+                            <button type="button" role="tab" class="active" data-bs-toggle="tab"
+                                data-bs-target="#pestana-usuarios">Usuarios</button>
+                            <button type="button" role="tab" data-bs-toggle="tab" data-bs-target="#pestana-roles">Roles
+                                y permisos</button>
+                            <button type="button" role="tab" data-bs-toggle="tab"
+                                data-bs-target="#pestana-sedes">Sedes</button>
+                        </div>
+                        <!-- PANELES: SOLO SE VE UNO A LA VEZ (EL QUE TIENE active) -->
+                        <div class="tab-content">
+                            <!-- PESTANA 1: USUARIOS -->
+                            <div class="tab-pane active" id="pestana-usuarios">
+                                <!-- TARJETA LISTA DE USUARIOS -->
+                                <div class="tarjeta-usuarios bg-white rounded-4 d-flex flex-column gap-4">
+                                    <!-- ENCABEZADO: SOLO TITULO (EL BOTON NUEVO USUARIO ESTA ARRIBA, EN EL ENCABEZADO DE LA VISTA) -->
+                                    <div class="encabezado-usuarios d-grid align-items-center justify-content-between">
+                                        <div>
+                                            <p class="titulo-usuarios-tarjeta fw-medium mb-0">Lista de usuarios</p>
+                                        </div>
+                                    </div>
+                                    <!-- CONTENIDO E INFORMACION DE LA TARJETA -->
+                                    <div class="tarjeta-contenido d-flex flex-column gap-3">
+                                        <!-- FILTROS: 1 COLUMNA EN CELULAR Y DESDE 1024PX BUSCADOR + 3 LISTAS EN UNA FILA -->
+                                        <div class="filtros-usuarios d-grid">
+                                            <!-- BUSCADOR: LA LUPA VA ENCIMA DEL CAMPO (position-absolute) Y EL TEXTO SE CORRE CON padding-left -->
+                                            <div class="buscador position-relative">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-search">
+                                                    <circle cx="11" cy="11" r="8" />
+                                                    <path d="m21 21-4.3-4.3" />
+                                                </svg>
+                                                <input type="text" class="entrada"
+                                                    placeholder="Buscar por nombre o correo…"
+                                                    aria-label="Buscar usuario">
+                                            </div>
+                                            <select class="entrada" aria-label="Filtrar por rol">
+                                                <option>Todos los roles</option>
+                                                <option>Administrador</option>
+                                                <option>Gerente de sede</option>
+                                                <option>Cocinero</option>
+                                                <option>Mesero</option>
+                                                <option>Repartidor</option>
+                                                <option>Cliente</option>
+                                            </select>
+                                            <select class="entrada" aria-label="Filtrar por sede">
+                                                <option>Todas las sedes</option>
+                                                <option>Sin sede</option>
+                                                <option>Planta de producción</option>
+                                                <option>Coffee Park Centro</option>
+                                                <option>Coffee Park Norte</option>
+                                            </select>
+                                            <select class="entrada" aria-label="Filtrar por estado">
+                                                <option>Todos</option>
+                                                <option>Activo</option>
+                                                <option>Inactivo</option>
+                                            </select>
+                                        </div>
+                                        <div class="contenedor-tabla rounded-4 overflow-x-auto">
+                                            <!-- TABLA DE USUARIOS (tabla-usuarios = ESTILOS SOLO DE ESTA TABLA) -->
+                                            <table class="tabla-contenido tabla-usuarios w-100">
+                                                <thead>
+                                                    <tr class="tabla-encabezados fw-medium text-nowrap align-middle">
+                                                        <th>Nombre completo</th>
+                                                        <th>Correo</th>
+                                                        <th>Rol</th>
+                                                        <th>Sede</th>
+                                                        <th>Estado</th>
+                                                        <th>Acciones</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Laura Martínez</td>
+                                                        <td>admin@bakeadmin.com</td>
+                                                        <td>Administrador</td>
+                                                        <td>Sin sede</td>
+                                                        <td><span class="estado-activo">Activo</span></td>
+                                                        <td>
+                                                            <!-- ACCIONES ALINEADAS A LA DERECHA: EDITAR ABRE LA VENTANA, ACTIVAR/DESACTIVAR CAMBIA EL ESTADO -->
+                                                            <div class="d-flex justify-content-end gap-1">
+                                                                <button class="btn-fantasma" data-bs-toggle="modal"
+                                                                    data-bs-target="#ventana-usuario"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-pencil-line">
+                                                                        <path d="M13 21h8" />
+                                                                        <path d="m15 5 4 4" />
+                                                                        <path
+                                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                                    </svg>Editar</button>
+                                                                <button class="btn-fantasma btn-fantasma-peligro"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-user-x">
+                                                                        <path d="M2 21a8 8 0 0 1 11.873-7" />
+                                                                        <circle cx="10" cy="8" r="5" />
+                                                                        <path d="m17 17 5 5" />
+                                                                        <path d="m22 17-5 5" />
+                                                                    </svg>Desactivar</button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Andrés Rojas</td>
+                                                        <td>gerente@bakeadmin.com</td>
+                                                        <td>Gerente de sede</td>
+                                                        <td>Coffee Park Centro</td>
+                                                        <td><span class="estado-activo">Activo</span></td>
+                                                        <td>
+                                                            <!-- ACCIONES ALINEADAS A LA DERECHA: EDITAR ABRE LA VENTANA, ACTIVAR/DESACTIVAR CAMBIA EL ESTADO -->
+                                                            <div class="d-flex justify-content-end gap-1">
+                                                                <button class="btn-fantasma" data-bs-toggle="modal"
+                                                                    data-bs-target="#ventana-usuario"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-pencil-line">
+                                                                        <path d="M13 21h8" />
+                                                                        <path d="m15 5 4 4" />
+                                                                        <path
+                                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                                    </svg>Editar</button>
+                                                                <button class="btn-fantasma btn-fantasma-peligro"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-user-x">
+                                                                        <path d="M2 21a8 8 0 0 1 11.873-7" />
+                                                                        <circle cx="10" cy="8" r="5" />
+                                                                        <path d="m17 17 5 5" />
+                                                                        <path d="m22 17-5 5" />
+                                                                    </svg>Desactivar</button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>María Gómez</td>
+                                                        <td>cajera@bakeadmin.com</td>
+                                                        <td>Cajera</td>
+                                                        <td>Coffee Park Centro</td>
+                                                        <td><span class="estado-activo">Activo</span></td>
+                                                        <td>
+                                                            <!-- ACCIONES ALINEADAS A LA DERECHA: EDITAR ABRE LA VENTANA, ACTIVAR/DESACTIVAR CAMBIA EL ESTADO -->
+                                                            <div class="d-flex justify-content-end gap-1">
+                                                                <button class="btn-fantasma" data-bs-toggle="modal"
+                                                                    data-bs-target="#ventana-usuario"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-pencil-line">
+                                                                        <path d="M13 21h8" />
+                                                                        <path d="m15 5 4 4" />
+                                                                        <path
+                                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                                    </svg>Editar</button>
+                                                                <button class="btn-fantasma btn-fantasma-peligro"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-user-x">
+                                                                        <path d="M2 21a8 8 0 0 1 11.873-7" />
+                                                                        <circle cx="10" cy="8" r="5" />
+                                                                        <path d="m17 17 5 5" />
+                                                                        <path d="m22 17-5 5" />
+                                                                    </svg>Desactivar</button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Carlos Pérez</td>
+                                                        <td>domiciliario@bakeadmin.com</td>
+                                                        <td>Repartidor</td>
+                                                        <td>Coffee Park Centro</td>
+                                                        <td><span class="estado-inactivo">Inactivo</span></td>
+                                                        <td>
+                                                            <!-- ACCIONES ALINEADAS A LA DERECHA: EDITAR ABRE LA VENTANA, ACTIVAR/DESACTIVAR CAMBIA EL ESTADO -->
+                                                            <div class="d-flex justify-content-end gap-1">
+                                                                <button class="btn-fantasma" data-bs-toggle="modal"
+                                                                    data-bs-target="#ventana-usuario"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-pencil-line">
+                                                                        <path d="M13 21h8" />
+                                                                        <path d="m15 5 4 4" />
+                                                                        <path
+                                                                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                                                                    </svg>Editar</button>
+                                                                <button class="btn-fantasma btn-fantasma-peligro"><svg
+                                                                        xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-user-check">
+                                                                        <path d="m16 11 2 2 4-4" />
+                                                                        <path
+                                                                            d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                                                        <circle cx="9" cy="7" r="4" />
+                                                                    </svg>Activar</button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- PIE DE LA TABLA: CONTADOR A LA IZQUIERDA Y PAGINACION A LA DERECHA -->
+                                        <div class="pie-tabla d-flex justify-content-between align-items-center">
+                                            <span>Mostrando 4 de 4</span>
+                                            <div class="d-flex gap-1">
+                                                <button class="btn-pagina" disabled aria-label="Anterior"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-chevron-left">
+                                                        <path d="m15 18-6-6 6-6" />
+                                                    </svg></button>
+                                                <button class="btn-pagina btn-pagina-activa">1</button>
+                                                <button class="btn-pagina" disabled aria-label="Siguiente"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-chevron-right">
+                                                        <path d="m9 18 6-6-6-6" />
+                                                    </svg></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- PESTANA 2: ROLES Y PERMISOS -->
+                            <div class="tab-pane" id="pestana-roles">
+                                <!-- MODULO USUARIOS: VISTA ROLES Y PERMISOS MAICOL -->
+                            </div>
+                            <!-- PESTANA 3: SEDES -->
+                            <div class="tab-pane" id="pestana-sedes">
+                                <!-- MODULO USUARIOS: VISTA SEDES SANTIAGO -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- PIE DE PAGINA -->
+            <footer class="text-center">BakeAdmin v2.0 · Coffee Park · Operación offline habilitada</footer>
         </div>
-    </nav>
-
-    <!-- ========================================================= -->
-    <!-- CONTENIDO PRINCIPAL                                       -->
-    <!-- ========================================================= -->
-    <div class="container-fluid px-4 py-4">
-
-        <!-- CABECERA DEL MÓDULO -->
-        <div class="d-flex justify-content-between align-items-start mb-4 flex-wrap gap-2">
-            <div>
-                <h2 class="fw-bold text-dark mb-0 fs-3">Gestión de Usuarios</h2>
-                <p class="text-muted mb-0 fs-6">Administra el personal de BakeAdmin</p>
-            </div>
-            <button class="btn btn-dark-custom d-flex align-items-center gap-2" data-bs-toggle="modal"
-                data-bs-target="#modalUsuario" onclick="prepararCreacion()">
-                <i class="bi bi-person-plus-fill"></i>
-                <span>Nuevo Usuario</span>
-            </button>
-        </div>
-
-        <!-- ========================================================= -->
-        <!-- SECCIÓN 1: PERSONAL REGISTRADO (TABLA DE USUARIOS)       -->
-        <!-- ========================================================= -->
-        <div class="card card-main p-4 mb-4">
-            <div class="mb-3">
-                <h5 class="fw-bold text-dark mb-0 fs-5">Personal Registrado</h5>
-                <small class="text-muted" id="totalCount">5 empleados en total</small>
-            </div>
-
-            <!-- BUSCADOR DE USUARIOS -->
-            <div class="input-search-container d-flex align-items-center gap-2 mb-4">
-                <i class="bi bi-search text-muted"></i>
-                <input type="text" class="form-control border-0 shadow-none p-0" id="inputBuscar"
-                    placeholder="Buscar por nombre, email o rol..." onkeyup="filtrarUsuarios()">
-            </div>
-
-            <!-- TABLA DE DATOS -->
-            <div class="table-responsive">
-                <table class="table table-custom align-middle mb-0" id="tablaUsuarios">
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Email</th>
-                            <th>Rol</th>
-                            <th>Fecha Ingreso</th>
-                            <th>Estado</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="fw-bold text-dark col-nombre">Admin BakeAdmin</td>
-                            <td class="text-muted col-email">admin@bakeadmin.com</td>
-                            <td class="col-rol"><span class="badge badge-rol">Administrador</span></td>
-                            <td class="text-secondary">2024-01-15</td>
-                            <td>
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="form-check form-switch mb-0">
-                                        <input class="form-check-input switch-estado" type="checkbox" role="switch"
-                                            checked onchange="toggleEstado(this)">
-                                    </div>
-                                    <span class="badge badge-estado badge-activo-custom">Activo</span>
-                                </div>
-                            </td>
-                            <td>
-                                <button class="btn btn-action-icon" title="Editar" onclick="editarUsuario(this)"><i class="bi bi-pencil-square"></i></button>
-                                <button class="btn btn-action-icon" title="Bloquear / Desbloquear" onclick="toggleBloqueo(this)"><i class="bi bi-lock"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="fw-bold text-dark col-nombre">María Cajera</td>
-                            <td class="text-muted col-email">cajera@bakeadmin.com</td>
-                            <td class="col-rol"><span class="badge badge-rol">Cajera</span></td>
-                            <td class="text-secondary">2024-02-10</td>
-                            <td>
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="form-check form-switch mb-0">
-                                        <input class="form-check-input switch-estado" type="checkbox" role="switch"
-                                            checked onchange="toggleEstado(this)">
-                                    </div>
-                                    <span class="badge badge-estado badge-activo-custom">Activo</span>
-                                </div>
-                            </td>
-                            <td>
-                                <button class="btn btn-action-icon" title="Editar" onclick="editarUsuario(this)"><i class="bi bi-pencil-square"></i></button>
-                                <button class="btn btn-action-icon" title="Bloquear / Desbloquear" onclick="toggleBloqueo(this)"><i class="bi bi-lock"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="fw-bold text-dark col-nombre">Juan Panadero</td>
-                            <td class="text-muted col-email">operario@bakeadmin.com</td>
-                            <td class="col-rol"><span class="badge badge-rol">Operario</span></td>
-                            <td class="text-secondary">2024-03-05</td>
-                            <td>
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="form-check form-switch mb-0">
-                                        <input class="form-check-input switch-estado" type="checkbox" role="switch"
-                                            checked onchange="toggleEstado(this)">
-                                    </div>
-                                    <span class="badge badge-estado badge-activo-custom">Activo</span>
-                                </div>
-                            </td>
-                            <td>
-                                <button class="btn btn-action-icon" title="Editar" onclick="editarUsuario(this)"><i class="bi bi-pencil-square"></i></button>
-                                <button class="btn btn-action-icon" title="Bloquear / Desbloquear" onclick="toggleBloqueo(this)"><i class="bi bi-lock"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="fw-bold text-dark col-nombre">Carlos Domiciliario</td>
-                            <td class="text-muted col-email">domiciliario@bakeadmin.com</td>
-                            <td class="col-rol"><span class="badge badge-rol">Domiciliario</span></td>
-                            <td class="text-secondary">2024-03-20</td>
-                            <td>
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="form-check form-switch mb-0">
-                                        <input class="form-check-input switch-estado" type="checkbox" role="switch"
-                                            checked onchange="toggleEstado(this)">
-                                    </div>
-                                    <span class="badge badge-estado badge-activo-custom">Activo</span>
-                                </div>
-                            </td>
-                            <td>
-                                <button class="btn btn-action-icon" title="Editar" onclick="editarUsuario(this)"><i class="bi bi-pencil-square"></i></button>
-                                <button class="btn btn-action-icon" title="Bloquear / Desbloquear" onclick="toggleBloqueo(this)"><i class="bi bi-lock"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="fw-bold text-dark col-nombre">Pedro Inactivo</td>
-                            <td class="text-muted col-email">inactivo@bakeadmin.com</td>
-                            <td class="col-rol"><span class="badge badge-rol">Operario</span></td>
-                            <td class="text-secondary">2023-12-01</td>
-                            <td>
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="form-check form-switch mb-0">
-                                        <input class="form-check-input switch-estado" type="checkbox" role="switch"
-                                            onchange="toggleEstado(this)">
-                                    </div>
-                                    <span class="badge badge-estado badge-inactivo-custom">Inactivo</span>
-                                </div>
-                            </td>
-                            <td>
-                                <button class="btn btn-action-icon" title="Editar" onclick="editarUsuario(this)"><i class="bi bi-pencil-square"></i></button>
-                                <button class="btn btn-action-icon" title="Bloquear / Desbloquear" onclick="toggleBloqueo(this)"><i class="bi bi-lock"></i></button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- ========================================================= -->
-        <!-- SECCIÓN 2: MATRIZ DE PERMISOS                             -->
-        <!-- ========================================================= -->
-        <div class="card card-main p-4 mb-5">
-            <div class="mb-3">
-                <h5 class="fw-bold text-dark mb-0 fs-5">Matriz de Permisos</h5>
-                <small class="text-muted">Permisos por rol en el sistema</small>
-            </div>
-
-            <div class="table-responsive">
-                <table class="table table-custom align-middle text-center mb-0">
-                    <thead>
-                        <tr>
-                            <th class="text-start">Permiso</th>
-                            <th>Admin</th>
-                            <th>Cajera</th>
-                            <th>Operario</th>
-                            <th>Domiciliario</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="text-start fw-medium text-dark">Gestionar Usuarios</td>
-                            <td><i class="bi bi-check-square-fill icon-permiso-check"></i></td>
-                            <td><i class="bi bi-x-lg icon-permiso-cross"></i></td>
-                            <td><i class="bi bi-x-lg icon-permiso-cross"></i></td>
-                            <td><i class="bi bi-x-lg icon-permiso-cross"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="text-start fw-medium text-dark">Crear Pedidos</td>
-                            <td><i class="bi bi-check-square-fill icon-permiso-check"></i></td>
-                            <td><i class="bi bi-check-square-fill icon-permiso-check"></i></td>
-                            <td><i class="bi bi-x-lg icon-permiso-cross"></i></td>
-                            <td><i class="bi bi-x-lg icon-permiso-cross"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="text-start fw-medium text-dark">Gestionar Producción</td>
-                            <td><i class="bi bi-check-square-fill icon-permiso-check"></i></td>
-                            <td><i class="bi bi-x-lg icon-permiso-cross"></i></td>
-                            <td><i class="bi bi-check-square-fill icon-permiso-check"></i></td>
-                            <td><i class="bi bi-x-lg icon-permiso-cross"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="text-start fw-medium text-dark">Ver Domicilios</td>
-                            <td><i class="bi bi-check-square-fill icon-permiso-check"></i></td>
-                            <td><i class="bi bi-check-square-fill icon-permiso-check"></i></td>
-                            <td><i class="bi bi-x-lg icon-permiso-cross"></i></td>
-                            <td><i class="bi bi-check-square-fill icon-permiso-check"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="text-start fw-medium text-dark">Gestionar Compras</td>
-                            <td><i class="bi bi-check-square-fill icon-permiso-check"></i></td>
-                            <td><i class="bi bi-x-lg icon-permiso-cross"></i></td>
-                            <td><i class="bi bi-x-lg icon-permiso-cross"></i></td>
-                            <td><i class="bi bi-x-lg icon-permiso-cross"></i></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
     </div>
-
-    <!-- ========================================================= -->
-    <!-- MODAL DE FORMULARIO (CREAR / EDITAR USUARIO)             -->
-    <!-- ========================================================= -->
-    <div class="modal fade" id="modalUsuario" tabindex="-1" aria-labelledby="modalUsuarioLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 shadow">
-                <div class="modal-header border-0 pb-0">
-                    <div>
-                        <h5 class="modal-title fw-bold" id="modalUsuarioLabel">Registrar Nuevo Empleado</h5>
-                        <p class="text-muted fs-7 mb-0" id="modalUsuarioSub">Completa la información del nuevo empleado</p>
+    <!-- VENTANA: NUEVO / EDITAR USUARIO -->
+    <div class="modal fade" id="ventana-usuario" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ventana-768">
+            <div class="modal-content ventana ventana-alta d-flex flex-column">
+                <!-- BOTON X (CIERRA LA VENTANA CON data-bs-dismiss) -->
+                <button type="button" class="ventana-cerrar d-flex align-items-center justify-content-center p-0"
+                    data-bs-dismiss="modal" aria-label="Cerrar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+                <h2 class="ventana-titulo mb-0">Nuevo usuario</h2>
+                <!-- FORMULARIO: 3 BLOQUES UNO DEBAJO DEL OTRO -->
+                <form class="d-flex flex-column gap-4">
+                    <!-- BLOQUE ACCESO: DATOS PARA ENTRAR AL SISTEMA -->
+                    <div class="caja-seccion">
+                        <p class="titulo-seccion">Acceso</p>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <div class="campo d-flex flex-column">
+                                    <label class="etiqueta">Correo (login)</label>
+                                    <input type="email" class="entrada" placeholder="correo@bakeadmin.com">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="campo d-flex flex-column">
+                                    <label class="etiqueta">Contraseña</label>
+                                    <input type="password" class="entrada" placeholder="••••••••">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="campo d-flex flex-column">
+                                    <label class="etiqueta">Correo de recuperación</label>
+                                    <input type="email" class="entrada" placeholder="recuperacion@correo.com">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="campo d-flex flex-column">
+                                    <label class="etiqueta">Rol</label>
+                                    <select class="entrada">
+                                        <option>Administrador</option>
+                                        <option>Gerente de sede</option>
+                                        <option>Cocinero</option>
+                                        <option>Mesero</option>
+                                        <option>Repartidor</option>
+                                        <option>Cliente</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- LA SEDE NO APARECE SI EL ROL ES CLIENTE O ADMINISTRADOR (LO CONTROLA EL JAVASCRIPT) -->
+                            <div class="col-12 col-md-6">
+                                <div class="campo d-flex flex-column">
+                                    <label class="etiqueta">Sede</label>
+                                    <select class="entrada">
+                                        <option>Sin sede</option>
+                                        <option>Planta de producción</option>
+                                        <option>Coffee Park Centro</option>
+                                        <option>Coffee Park Norte</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="campo d-flex flex-column">
+                                    <label class="etiqueta">Estado</label>
+                                    <select class="entrada">
+                                        <option>Activo</option>
+                                        <option>Inactivo</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <button type="button" class="btn-close align-self-start" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body pt-3">
-                    <form id="formUsuario" novalidate onsubmit="guardarUsuario(event)">
-                        <input type="hidden" id="editRowIndex" value="-1">
-
-                        <div class="mb-3">
-                            <label for="usuarioNombre" class="form-label fw-semibold">Nombre Completo</label>
-                            <input type="text" class="form-control" id="usuarioNombre" placeholder="Ej: Ana García" required>
-                            <div class="invalid-feedback">Por favor ingrese el nombre del usuario.</div>
+                    <!-- BLOQUE INFORMACION COMPLEMENTARIA: DATOS PERSONALES -->
+                    <div class="caja-seccion">
+                        <p class="titulo-seccion">Información complementaria</p>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <div class="campo d-flex flex-column">
+                                    <label class="etiqueta">Nombres</label>
+                                    <input type="text" class="entrada" placeholder="Nombres">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="campo d-flex flex-column">
+                                    <label class="etiqueta">Apellidos</label>
+                                    <input type="text" class="entrada" placeholder="Apellidos">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="campo d-flex flex-column">
+                                    <label class="etiqueta">Tipo de documento</label>
+                                    <select class="entrada">
+                                        <option>CC</option>
+                                        <option>CE</option>
+                                        <option>TI</option>
+                                        <option>PP</option>
+                                        <option>NIT</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="campo d-flex flex-column">
+                                    <label class="etiqueta">Número de documento</label>
+                                    <input type="text" class="entrada" placeholder="1234567890">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="campo d-flex flex-column">
+                                    <label class="etiqueta">Teléfono</label>
+                                    <input type="tel" class="entrada" placeholder="300 000 0000">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="campo d-flex flex-column">
+                                    <label class="etiqueta">Dirección</label>
+                                    <input type="text" class="entrada" placeholder="Dirección">
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="mb-3">
-                            <label for="usuarioEmail" class="form-label fw-semibold">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="usuarioEmail" placeholder="ana.garcia@bakeadmin.com" required>
-                            <div class="invalid-feedback">Por favor ingrese un correo válido.</div>
-                        </div>
+<<<<<<< HEAD
 
                         <div class="mb-3">
                             <label for="usuarioRol" class="form-label fw-semibold">Rol</label>
@@ -1044,10 +1239,22 @@
                         </div>
                     </form>
 >>>>>>> origin/development
+=======
+                    </div>
+                    <!-- AVISO AMBAR -->
+                    <div class="aviso-ambar">Un usuario con operaciones registradas no puede cambiar de sede; cree otro
+                        usuario para la nueva sede.</div>
+                </form>
+                <!-- PIE DE LA VENTANA: BOTONES (EN CELULAR UNO DEBAJO DEL OTRO, DESDE 576PX A LA DERECHA) -->
+                <div class="d-flex flex-column-reverse flex-sm-row justify-content-sm-end gap-2">
+                    <button type="button" class="btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn-primario">Guardar</button>
+>>>>>>> origin/development
                 </div>
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <!-- JAVASCRIPT DE BOOTSTRAP: HACE FUNCIONAR LAS PESTANAS Y LAS VENTANAS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -1068,6 +1275,10 @@
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/admin/usuarios.js"></script>
+>>>>>>> origin/development
+=======
+    <!-- JAVASCRIPT DE BOOTSTRAP: HACE FUNCIONAR LAS PESTANAS Y LAS VENTANAS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 >>>>>>> origin/development
 </body>
 
