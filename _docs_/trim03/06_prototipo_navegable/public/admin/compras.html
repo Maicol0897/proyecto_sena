@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 <head>
     <meta charset="UTF-8">
@@ -895,18 +897,958 @@
                                     <th>Cantidad</th>
                                     <th>Precio</th>
                                     <th>Subtotal</th>
+=======
+=======
+
+>>>>>>> origin/development
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/admin/panel.css">
+    <link rel="stylesheet" href="../css/admin/compras.css">
+    <title>Compras a proveedores - BakeAdmin</title>
+</head>
+
+<body>
+    <!-- CONTENEDOR GENERAL: MENU LATERAL A UN LADO Y EL CONTENIDO AL OTRO -->
+    <div class="d-flex min-vh-100">
+        <!-- MENU LATERAL (SIDEBAR): FIJO A LA IZQUIERDA, SOLO SE VE DESDE 992PX -->
+        <aside class="panel-menu position-fixed top-0 bottom-0 start-0 d-none d-lg-flex flex-column text-white">
+            <!-- LOGO Y NOMBRE DE LA MARCA -->
+            <div class="panel-marca d-flex align-items-center">
+                <img src="../img/logo.png" alt="Coffee Park" class="panel-logo flex-shrink-0 rounded-4">
+                <div>
+                    <p class="panel-marca-nombre mb-0">BakeAdmin</p>
+                    <p class="panel-marca-sub mb-0">Coffee Park</p>
+                </div>
+            </div>
+            <!-- ENLACES DE NAVEGACION ENTRE VISTAS -->
+            <nav class="panel-nav flex-grow-1 d-flex flex-column gap-1">
+                <a href="dashboard.html" class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="flex-shrink-0">
+                        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                        <path
+                            d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    </svg>Inicio
+                </a>
+                <a href="usuarios.html" class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="flex-shrink-0">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                        <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                        <circle cx="9" cy="7" r="4" />
+                    </svg>Usuarios
+                </a>
+                <a href="compras.html"
+                    class="panel-enlace panel-enlace-activo d-flex align-items-center rounded-4 text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="flex-shrink-0">
+                        <circle cx="8" cy="21" r="1" />
+                        <circle cx="19" cy="21" r="1" />
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                    </svg>Compras
+                </a>
+                <a href="produccion.html" class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="flex-shrink-0">
+                        <path
+                            d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z" />
+                        <path d="M6 17h12" />
+                    </svg>Producción
+                </a>
+                <a href="domicilios.html" class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="flex-shrink-0">
+                        <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                        <path d="M15 18H9" />
+                        <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                        <circle cx="17" cy="18" r="2" />
+                        <circle cx="7" cy="18" r="2" />
+                    </svg>Domicilios
+                </a>
+            </nav>
+            <div class="panel-pie">
+                <button class="panel-contraer w-100 d-flex align-items-center rounded-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="flex-shrink-0">
+                        <path d="m15 18-6-6 6-6" />
+                    </svg>Contraer menú
+                </button>
+                <p class="panel-version mt-2 mb-0">BakeAdmin v2.0 · 2026</p>
+            </div>
+        </aside>
+        <div class="panel-colum d-flex flex-column flex-grow-1">
+            <!-- BARRA SUPERIOR: SEDE, NOTIFICACIONES, USUARIO Y CERRAR SESION -->
+            <header class="panel-barra sticky-top d-flex align-items-center">
+                <div class="d-flex flex-column">
+                    <p class="panel-seccion mb-0 fw-semibold">COMPRAS</p>
+                    <p class="panel-sede mb-0">Todas las sedes</p>
+                </div>
+                <div class="panel-acciones ms-auto d-flex align-items-center">
+                    <span class="pastilla-sincronizado d-inline-flex align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-cloud-check preview-icon">
+                            <path d="m17 15-5.5 5.5L9 18" />
+                            <path d="M5.516 16.07A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 3.501 7.327" />
+                        </svg>Sincronizado
+                    </span>
+                    <button
+                        class="btn-campana position-relative d-flex align-items-center justify-content-center flex-shrink-0"
+                        aria-label="Notificaciones, 4 sin leer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-bell">
+                            <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+                            <path
+                                d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" />
+                        </svg>
+                        <span
+                            class="campana-contador position-absolute d-flex align-items-center justify-content-center">4</span>
+                    </button>
+                    <div class="text-end d-none d-md-block">
+                        <p class="panel-usuario mb-0">Laura Administradora</p>
+                        <p class="panel-rol mb-0">Administrador</p>
+                    </div>
+                    <!-- TEMPORAL EL BOTON SE ENCIERRA EN ENLACE PARA QUE SE COMPORTE COMO EN LA NAVEGACION -->
+                    <a href="login.html" class="text-decoration-none">
+                        <button class="btn-cerrar-sesion d-flex align-items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-log-out preview-icon">
+                                <path d="m16 17 5-5-5-5" />
+                                <path d="M21 12H9" />
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                            </svg>
+                            <span class="d-none d-sm-inline">Cerrar sesión</span>
+                        </button>
+                    </a>
+                </div>
+            </header>
+            <!-- CONTENIDO PRINCIPAL DE LA VISTA -->
+            <main class="flex-grow-1">
+                <div class="cont-int mx-auto">
+                    <!-- MIGAS DE PAN (RUTA DONDE ESTA EL USUARIO) -->
+                    <p class="text mb-3">Inicio<span class="mx-1">/</span>Compras</p>
+                    <!-- ENCABEZADO: TITULO, DESCRIPCION Y BOTON NUEVA ORDEN -->
+                    <div
+                        class="encabezado d-flex flex-column gap-3 flex-sm-row justify-content-sm-between align-items-sm-end">
+                        <div class="d-flex flex-column">
+                            <h1 class="titulo-compras mb-0">Compras a proveedores</h1>
+                            <p class="subtitulo-compras mt-1 mb-0">Controla inventario, órdenes, recepción y
+                                facturación.</p>
+                        </div>
+                        <!-- ABRE LA VENTANA CREAR ORDEN DE COMPRA -->
+                        <button class="btn-nueva-orden d-inline-flex align-items-center justify-content-center gap-2"
+                            data-bs-toggle="modal" data-bs-target="#ventana-crear-orden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-plus preview-icon">
+                                <path d="M5 12h14" />
+                                <path d="M12 5v14" />
+                            </svg>Nueva orden</button>
+                    </div>
+                    <!-- PESTANAS: LA BARRA CON LOS 6 BOTONES Y DEBAJO EL CONTENIDO DE CADA UNA -->
+                    <div class="pestanas d-flex flex-column gap-2 mt-4">
+                        <!-- BARRA DE PESTANAS (CADA BOTON ABRE SU PANEL CON data-bs-target) -->
+                        <div class="barra-pestana w-100 d-flex p-1 rounded-4 bg-white overflow-x-auto" role="tablist">
+                            <button type="button" role="tab" class="active" data-bs-toggle="tab"
+                                data-bs-target="#pestana-alerta">Alertas</button>
+                            <button type="button" role="tab" data-bs-toggle="tab"
+                                data-bs-target="#pestana-proveedor">Proveedores</button>
+                            <button type="button" role="tab" data-bs-toggle="tab"
+                                data-bs-target="#pestana-insumo">Insumos</button>
+                            <button type="button" role="tab" data-bs-toggle="tab"
+                                data-bs-target="#pestana-ordenes">Órdenes</button>
+                            <button type="button" role="tab" data-bs-toggle="tab"
+                                data-bs-target="#pestana-recepcion">Recepción</button>
+                            <button type="button" role="tab" data-bs-toggle="tab"
+                                data-bs-target="#pestana-facturacion">Facturación</button>
+                        </div>
+                        <!-- PANELES: SOLO SE VE UNO A LA VEZ (EL QUE TIENE active) -->
+                        <div class="tab-content">
+                            <!-- PESTANA 1: ALERTAS -->
+                            <div class="tab-pane active" id="pestana-alerta">
+                                <div class="d-flex flex-column gap-3">
+                                    <!-- LAS 4 TARJETAS DE COLORES (1 COLUMNA EN CELULAR, 4 DESDE 768PX) -->
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-3">
+                                            <!-- TARJETA ROJA: SIN STOCK -->
+                                            <div class="tarjeta-1 h-100">
+                                                <p class="texto-etiqueta mb-0">SIN STOCK</p>
+                                                <p class="valor mt-2 mb-0">1</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-3">
+                                            <!-- TARJETA AMBAR: BAJO MINIMO -->
+                                            <div class="tarjeta-2 h-100">
+                                                <p class="texto-etiqueta mb-0">BAJO MÍNIMO</p>
+                                                <p class="valor mt-2 mb-0">1</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-3">
+                                            <!-- TARJETA AZUL: EN CAMINO -->
+                                            <div class="tarjeta-3 h-100">
+                                                <p class="texto-etiqueta mb-0">EN CAMINO</p>
+                                                <p class="valor mt-2 mb-0">10000 und.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-3">
+                                            <!-- TARJETA VINO: SEDE -->
+                                            <div class="tarjeta-4 h-100">
+                                                <p class="texto-etiqueta mb-0">SEDE</p>
+                                                <p class="valor mt-2 mb-0">Coffee Park Centro</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- TARJETA SEMOFORO DE INVENTARIO -->
+                                    <div class="tarjeta-semaforo bg-white rounded-4 d-flex flex-column gap-4">
+                                        <!-- ENCABEZADO: TITULO, DESCRIPCION Y BOTON CREAR ORDEN -->
+                                        <div
+                                            class="encabezado-semaforo d-grid align-items-center justify-content-between">
+                                            <div>
+                                                <p class="titulo-semaforo fw-medium mb-0">Semáforo de inventario</p>
+                                                <p class="descripcion-semaforo mt-1 mb-0">Cantidades en g, ml o und.</p>
+                                            </div>
+                                            <!-- ABRE LA VENTANA CREAR ORDEN DE COMPRA -->
+                                            <button
+                                                class="crear-orden-sugerido d-inline-flex align-items-center justify-content-center gap-2"
+                                                data-bs-toggle="modal" data-bs-target="#ventana-crear-orden">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-shopping-cart preview-icon">
+                                                    <path
+                                                        d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+                                                    <path
+                                                        d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" />
+                                                    <circle cx="18" cy="20" r="2" />
+                                                    <circle cx="8" cy="20" r="2" />
+                                                </svg>Crear orden con lo sugerido
+                                            </button>
+                                        </div>
+                                        <!-- CONTENIDO E INFORMACION DE LA TARJETA -->
+                                        <div class="tarjeta-contenido">
+                                            <div class="contenedor-tabla rounded-4 overflow-x-auto">
+                                                <!-- TABLA DEL SEMAFORO (tabla-semaforo = ESTILOS SOLO DE ESTA TABLA) -->
+                                                <table class="tabla-contenido tabla-semaforo w-100">
+                                                    <thead>
+                                                        <tr
+                                                            class="tabla-encabezados fw-medium text-nowrap align-middle">
+                                                            <th>Insumo</th>
+                                                            <th>Estado</th>
+                                                            <th>Stock actual</th>
+                                                            <th>En camino</th>
+                                                            <th>Mínimo</th>
+                                                            <th>Máximo</th>
+                                                            <th>Sugerido</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <!-- CADA FILA ES UN INSUMO; LA INSIGNIA DE ESTADO CAMBIA DE COLOR SEGUN LA CLASE -->
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Harina de trigo<p>Molinos Andinos S.A.S.</p>
+                                                            </td>
+                                                            <td><span class="bajo-min">BAJO MÍNIMO</span></td>
+                                                            <td>12.000 g</td>
+                                                            <td>0 g</td>
+                                                            <td>30.000 g</td>
+                                                            <td>90.000 g</td>
+                                                            <td>78.000 g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Levadura<p>Molinos Andinos S.A.S.</p>
+                                                            </td>
+                                                            <td><span class="ok">OK</span></td>
+                                                            <td>2.600 g</td>
+                                                            <td>0 g</td>
+                                                            <td>2.000 g</td>
+                                                            <td>6.000 g</td>
+                                                            <td>3.400 g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Leche entera<p>Lácteos La Sabana</p>
+                                                            </td>
+                                                            <td><span class="sin-stock">SIN STOCK</span></td>
+                                                            <td>0 ml</td>
+                                                            <td>10.000 ml</td>
+                                                            <td>20.000 ml</td>
+                                                            <td>60.000 ml</td>
+                                                            <td>50.000 ml</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Huevos<p>Lácteos La Sabana</p>
+                                                            </td>
+                                                            <td><span class="sobre-max">SOBRE MÁXIMO</span></td>
+                                                            <td>410 und</td>
+                                                            <td>0 und</td>
+                                                            <td>120 und</td>
+                                                            <td>360 und</td>
+                                                            <td>0 und</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- PESTANA 2: PROVEEDORES -->
+                            <div class="tab-pane" id="pestana-proveedor">
+                                <!-- TARJETA PROVEEDORES -->
+                                <div class="tarjeta-proveedores bg-white rounded-4 d-flex flex-column gap-4">
+                                    <!-- ENCABEZADO: TITULO Y BOTON NUEVO PROVEEDOR (ABRE SU VENTANA) -->
+                                    <div class="encabezado-proveedores d-grid align-items-center justify-content-between">
+                                        <div>
+                                            <p class="titulo-proveedores fw-medium mb-0">Proveedores</p>
+                                        </div>
+                                        <button
+                                            class="nuevo-proveedor d-inline-flex align-items-center justify-content-center gap-2"
+                                            data-bs-toggle="modal" data-bs-target="#ventana-proveedor">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-plus preview-icon">
+                                                <path d="M5 12h14" />
+                                                <path d="M12 5v14" />
+                                            </svg>Nuevo proveedor
+                                        </button>
+                                    </div>
+                                    <!-- CONTENIDO E INFORMACION DE LA TARJETA -->
+                                    <div class="tarjeta-contenido">
+                                        <div class="contenedor-tabla rounded-4 overflow-x-auto">
+                                            <!-- TABLA DE PROVEEDORES (tabla-proveedores = ESTILOS SOLO DE ESTA TABLA) -->
+                                            <table class="tabla-contenido tabla-proveedores w-100">
+                                                <thead>
+                                                    <tr class="tabla-encabezados fw-medium text-nowrap align-middle">
+                                                        <th>NIT</th>
+                                                        <th>Nombre</th>
+                                                        <th>Correo</th>
+                                                        <th>Teléfono</th>
+                                                        <th>Estado</th>
+                                                        <th>Insumos que ofrece</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>900.234.110-8</td>
+                                                        <td>Molinos Andinos S.A.S.</td>
+                                                        <td>pedidos@molinosandinos.co</td>
+                                                        <td>601 555 0130</td>
+                                                        <td><span class="estado-activo">Activo</span></td>
+                                                        <td>
+                                                            <div>Harina de trigo · $ 4/g</div>
+                                                            <div>Levadura · $ 18/g</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>901.880.221-2</td>
+                                                        <td>Lácteos La Sabana</td>
+                                                        <td><span class="dato-secundario">Sin correo</span></td>
+                                                        <td>601 555 0220</td>
+                                                        <td><span class="estado-activo">Activo</span></td>
+                                                        <td>
+                                                            <div>Leche entera · $ 5/ml</div>
+                                                            <div>Huevos · $ 620/und</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>800.115.900-4</td>
+                                                        <td>Empaques del Café</td>
+                                                        <td>ventas@empaques.co</td>
+                                                        <td>601 555 0310</td>
+                                                        <td><span class="estado-inactivo">Inactivo</span></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- PESTANA 3: INSUMOS -->
+                            <div class="tab-pane" id="pestana-insumo">
+                                <!-- TARJETA INSUMOS -->
+                                <div class="tarjeta-insumos bg-white rounded-4 d-flex flex-column gap-4">
+                                    <!-- ENCABEZADO: TITULO Y BOTON NUEVO INSUMO (ABRE SU VENTANA) -->
+                                    <div class="encabezado-insumos d-grid align-items-center justify-content-between">
+                                        <div>
+                                            <p class="titulo-insumos fw-medium mb-0">Catálogo de insumos</p>
+                                        </div>
+                                        <button
+                                            class="nuevo-insumo d-inline-flex align-items-center justify-content-center gap-2"
+                                            data-bs-toggle="modal" data-bs-target="#ventana-insumo">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-plus preview-icon">
+                                                <path d="M5 12h14" />
+                                                <path d="M12 5v14" />
+                                            </svg>Nuevo insumo
+                                        </button>
+                                    </div>
+                                    <!-- CONTENIDO E INFORMACION DE LA TARJETA -->
+                                    <div class="tarjeta-contenido">
+                                        <div class="contenedor-tabla rounded-4 overflow-x-auto">
+                                            <!-- TABLA DE INSUMOS (EL COSTO ES CALCULADO, POR ESO LLEVA CANDADO) -->
+                                            <table class="tabla-contenido tabla-insumos w-100">
+                                                <thead>
+                                                    <tr class="tabla-encabezados fw-medium text-nowrap align-middle">
+                                                        <th>Nombre</th>
+                                                        <th>Unidad</th>
+                                                        <th>Stock mínimo</th>
+                                                        <th>Stock máximo</th>
+                                                        <th><span class="d-inline-flex align-items-center gap-1">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-lock">
+                                                        <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                                    </svg>Costo de la última compra (calculado)
+                                                </span></th>
+                                                        <th>Estado</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Harina de trigo</td>
+                                                        <td>g</td>
+                                                        <td>30.000</td>
+                                                        <td>90.000</td>
+                                                        <td>$ 4/g</td>
+                                                        <td><span class="estado-activo">Activo</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Levadura</td>
+                                                        <td>g</td>
+                                                        <td>2.000</td>
+                                                        <td>6.000</td>
+                                                        <td>$ 18/g</td>
+                                                        <td><span class="estado-activo">Activo</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Leche entera</td>
+                                                        <td>ml</td>
+                                                        <td>20.000</td>
+                                                        <td>60.000</td>
+                                                        <td>$ 5/ml</td>
+                                                        <td><span class="estado-activo">Activo</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Huevos</td>
+                                                        <td>und</td>
+                                                        <td>120</td>
+                                                        <td>360</td>
+                                                        <td>$ 620/und</td>
+                                                        <td><span class="estado-activo">Activo</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- PESTANA 4: ORDENES -->
+                            <div class="tab-pane" id="pestana-ordenes">
+                                <!-- TARJETA ORDENES -->
+                                <div class="tarjeta-ordenes bg-white rounded-4 d-flex flex-column gap-4">
+                                    <!-- ENCABEZADO: SOLO TITULO (ESTA TARJETA NO LLEVA BOTON) -->
+                                    <div class="encabezado-ordenes d-grid align-items-center justify-content-between">
+                                        <div>
+                                            <p class="titulo-ordenes fw-medium mb-0">Órdenes de compra</p>
+                                        </div>
+                                    </div>
+                                    <!-- CONTENIDO E INFORMACION DE LA TARJETA -->
+                                    <div class="tarjeta-contenido d-flex flex-column gap-3">
+                                        <!-- FILTROS: 1 COLUMNA EN CELULAR Y DESDE 768PX BUSCADOR + 2 LISTAS -->
+                                        <div class="filtros-ordenes d-grid">
+                                            <input type="text" class="entrada" placeholder="Buscar número o proveedor…" aria-label="Buscar orden">
+                                            <select class="entrada" aria-label="Filtrar por estado">
+                                                <option>Todos los estados</option>
+                                                <option>Borrador</option>
+                                                <option>Enviada</option>
+                                                <option>Pendiente de factura</option>
+                                                <option>Facturada</option>
+                                                <option>Cancelada</option>
+                                                <option>Rechazada</option>
+                                            </select>
+                                            <select class="entrada" aria-label="Filtrar por proveedor">
+                                                <option>Todos los proveedores</option>
+                                                <option>Molinos Andinos S.A.S.</option>
+                                                <option>Lácteos La Sabana</option>
+                                                <option>Empaques del Café</option>
+                                            </select>
+                                        </div>
+                                        <div class="contenedor-tabla rounded-4 overflow-x-auto">
+                                            <!-- TABLA DE ORDENES (numero en monoespaciada, total en negrita) -->
+                                            <table class="tabla-contenido tabla-ordenes w-100">
+                                                <thead>
+                                                    <tr class="tabla-encabezados fw-medium text-nowrap align-middle">
+                                                        <th>Número</th>
+                                                        <th>Proveedor</th>
+                                                        <th>Fecha</th>
+                                                        <th>Estado</th>
+                                                        <th>Total calculado</th>
+                                                        <th>Acciones</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="numero-orden">OC-2026-0041</td>
+                                                        <td>Molinos Andinos S.A.S.</td>
+                                                        <td>28/06/2026</td>
+                                                        <td><span class="estado-borrador">Borrador</span></td>
+                                                        <td class="total">$ 327.600</td>
+                                                        <td>
+                                                            <!-- ACCIONES: SOLO LAS ORDENES EN BORRADOR SE PUEDEN ENVIAR O CANCELAR -->
+                                                            <div class="d-flex gap-2">
+                                                                <button class="btn-tabla-primario" data-bs-toggle="modal" data-bs-target="#ventana-enviar-orden">Enviar orden</button>
+                                                                <button class="btn-tabla-contorno">Cancelar orden</button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="numero-orden">OC-2026-0040</td>
+                                                        <td>Lácteos La Sabana</td>
+                                                        <td>27/06/2026</td>
+                                                        <td><span class="estado-enviada">Enviada</span></td>
+                                                        <td class="total">$ 314.400</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="numero-orden">OC-2026-0039</td>
+                                                        <td>Molinos Andinos S.A.S.</td>
+                                                        <td>26/06/2026</td>
+                                                        <td><span class="estado-pendiente">Pendiente de factura</span></td>
+                                                        <td class="total">$ 45.000</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- PESTANA 5: RECEPCION -->
+                            <div class="tab-pane" id="pestana-recepcion">
+                                <!-- TARJETA RECEPCION -->
+                                <div class="tarjeta-recepcion bg-white rounded-4 d-flex flex-column gap-4">
+                                    <!-- ENCABEZADO: TITULO Y DESCRIPCION (SIN BOTON) -->
+                                    <div class="encabezado-recepcion d-grid align-items-center justify-content-between">
+                                        <div>
+                                            <p class="titulo-recepcion fw-medium mb-0">Recepción de pedidos</p>
+                                            <p class="descripcion-semaforo mt-1 mb-0">Órdenes enviadas de Coffee Park Centro.</p>
+                                        </div>
+                                    </div>
+                                    <!-- CONTENIDO E INFORMACION DE LA TARJETA -->
+                                    <div class="tarjeta-contenido">
+                                        <div class="contenedor-tabla rounded-4 overflow-x-auto">
+                                            <!-- TABLA DE RECEPCION (LA ULTIMA COLUMNA NO LLEVA TITULO) -->
+                                            <table class="tabla-contenido tabla-recepcion w-100">
+                                                <thead>
+                                                    <tr class="tabla-encabezados fw-medium text-nowrap align-middle">
+                                                        <th>Número</th>
+                                                        <th>Proveedor</th>
+                                                        <th>Fecha</th>
+                                                        <th>Líneas</th>
+                                                        <th>Estado</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="numero-orden">OC-2026-0040</td>
+                                                        <td>Lácteos La Sabana</td>
+                                                        <td>27/06/2026</td>
+                                                        <td>2</td>
+                                                        <td><span class="estado-enviada">Enviada</span></td>
+                                                        <td>
+                                                            <!-- SI LA ORDEN ESTA ENVIADA SE MUESTRA EL BOTON QUE ABRE LA VENTANA DE RECEPCION -->
+                                                            <button class="btn-tabla-contorno d-inline-flex align-items-center gap-2" data-bs-toggle="modal"
+                                                                data-bs-target="#ventana-recepcion">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                                    class="lucide lucide-package preview-icon">
+                                                                    <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
+                                                                    <path d="M12 22V12" />
+                                                                    <path d="m3.3 7 8.7 5 8.7-5" />
+                                                                </svg>Revisar líneas
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="numero-orden">OC-2026-0039</td>
+                                                        <td>Molinos Andinos S.A.S.</td>
+                                                        <td>26/06/2026</td>
+                                                        <td>1</td>
+                                                        <td><span class="estado-pendiente">Pendiente de factura</span></td>
+                                                        <!-- SI YA SE RECIBIO SE MUESTRA QUIEN LA RECIBIO Y CUANDO -->
+                                                        <td><span class="dato-secundario">María Gómez · 27/06/2026 09:42</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- PESTANA 6: FACTURACION -->
+                            <div class="tab-pane" id="pestana-facturacion">
+                                <!-- TARJETA FACTURACION -->
+                                <div class="tarjeta-facturacion bg-white rounded-4 d-flex flex-column gap-4">
+                                    <!-- ENCABEZADO: SOLO TITULO (SIN BOTON) -->
+                                    <div class="encabezado-facturacion d-grid align-items-center justify-content-between">
+                                        <div>
+                                            <p class="titulo-facturacion fw-medium mb-0">Órdenes pendientes de factura</p>
+                                        </div>
+                                    </div>
+                                    <!-- CONTENIDO E INFORMACION DE LA TARJETA -->
+                                    <div class="tarjeta-contenido">
+                                        <div class="contenedor-tabla rounded-4 overflow-x-auto">
+                                            <!-- TABLA DE FACTURACION (LA ULTIMA COLUMNA NO LLEVA TITULO) -->
+                                            <table class="tabla-contenido tabla-facturacion w-100">
+                                                <thead>
+                                                    <tr class="tabla-encabezados fw-medium text-nowrap align-middle">
+                                                        <th>Número</th>
+                                                        <th>Proveedor</th>
+                                                        <th>Sede</th>
+                                                        <th>Fecha de recepción</th>
+                                                        <th>Total recibido</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="numero-orden">OC-2026-0039</td>
+                                                        <td>Molinos Andinos S.A.S.</td>
+                                                        <td>Coffee Park Centro</td>
+                                                        <td>27/06/2026 09:42</td>
+                                                        <td class="total">$ 45.000</td>
+                                                        <td>
+                                                            <!-- ABRE LA VENTANA CONFIRMAR FACTURACION (SI YA ESTA FACTURADA AQUI IRIA LA INSIGNIA estado-facturada) -->
+                                                            <button class="btn-tabla-contorno d-inline-flex align-items-center gap-2" data-bs-toggle="modal"
+                                                                data-bs-target="#ventana-facturacion">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                                    class="lucide lucide-file-text preview-icon">
+                                                                    <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+                                                                    <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+                                                                    <path d="M10 9H8" />
+                                                                    <path d="M16 13H8" />
+                                                                    <path d="M16 17H8" />
+                                                                </svg>Marcar como facturada
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+            <!-- PIE DE PAGINA -->
+            <footer class="text-center">BakeAdmin v2.0 · Coffee Park · Operación offline habilitada</footer>
+        </div>
+    </div>
+    <!-- VENTANA: NUEVO PROVEEDOR -->
+    <div class="modal fade" id="ventana-proveedor" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ventana-512">
+            <div class="modal-content ventana d-flex flex-column">
+                <!-- BOTON X (CIERRA LA VENTANA CON data-bs-dismiss) -->
+                <button type="button" class="ventana-cerrar d-flex align-items-center justify-content-center p-0"
+                    data-bs-dismiss="modal" aria-label="Cerrar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+                <h2 class="ventana-titulo mb-0">Nuevo proveedor</h2>
+                <!-- FORMULARIO: LOS CAMPOS VAN UNO DEBAJO DEL OTRO CON gap-3 -->
+                <form class="d-flex flex-column gap-3">
+                    <div class="d-flex flex-column gap-2">
+                        <label class="etiqueta">NIT</label>
+                        <input type="text" class="entrada" placeholder="900.000.000-0">
+                    </div>
+                    <div class="d-flex flex-column gap-2">
+                        <label class="etiqueta">Nombre</label>
+                        <input type="text" class="entrada" placeholder="Nombre del proveedor">
+                    </div>
+                    <div class="d-flex flex-column gap-2">
+                        <label class="etiqueta">Correo (opcional)</label>
+                        <input type="email" class="entrada" placeholder="correo@proveedor.co">
+                        <p class="ayuda mb-0">Sin correo, la orden solo puede enviarse como PDF manual.</p>
+                    </div>
+                    <div class="d-flex flex-column gap-2">
+                        <label class="etiqueta">Teléfono</label>
+                        <input type="tel" class="entrada" placeholder="601 000 0000">
+                    </div>
+                    <div class="d-flex flex-column gap-2">
+                        <label class="etiqueta">Estado</label>
+                        <select class="entrada"><option>Activo</option><option>Inactivo</option></select>
+                    </div>
+                </form>
+                <!-- PIE DE LA VENTANA: BOTONES (EN CELULAR UNO DEBAJO DEL OTRO, DESDE 576PX A LA DERECHA) -->
+                <div class="d-flex flex-column-reverse flex-sm-row justify-content-sm-end gap-2">
+                    <button type="button" class="btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn-primario">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- VENTANA: NUEVO INSUMO -->
+    <div class="modal fade" id="ventana-insumo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ventana-512">
+            <div class="modal-content ventana d-flex flex-column">
+                <!-- BOTON X (CIERRA LA VENTANA CON data-bs-dismiss) -->
+                <button type="button" class="ventana-cerrar d-flex align-items-center justify-content-center p-0"
+                    data-bs-dismiss="modal" aria-label="Cerrar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+                <h2 class="ventana-titulo mb-0">Nuevo insumo</h2>
+                <!-- FORMULARIO: LOS CAMPOS VAN UNO DEBAJO DEL OTRO CON gap-3 -->
+                <form class="d-flex flex-column gap-3">
+                    <div class="d-flex flex-column gap-2">
+                        <label class="etiqueta">Nombre</label>
+                        <input type="text" class="entrada" placeholder="Nombre del insumo">
+                    </div>
+                    <div class="d-flex flex-column gap-2">
+                        <label class="etiqueta">Unidad de medida</label>
+                        <select class="entrada"><option>g</option><option>ml</option><option>und</option></select>
+                    </div>
+                    <div class="d-flex flex-column gap-2">
+                        <label class="etiqueta">Stock mínimo</label>
+                        <input type="number" class="entrada" min="0" placeholder="0">
+                    </div>
+                    <div class="d-flex flex-column gap-2">
+                        <label class="etiqueta">Stock máximo</label>
+                        <input type="number" class="entrada" min="0" placeholder="0">
+                        <!-- ERROR: SE MUESTRA SOLO SI EL MAXIMO ES MENOR QUE EL MINIMO (LO ACTIVA EL JAVASCRIPT, POR ESO d-none) -->
+                        <p class="error-campo mb-0 d-none">El máximo no puede ser menor que el mínimo.</p>
+                    </div>
+                    <div class="d-flex flex-column gap-2">
+                        <label class="etiqueta">Estado</label>
+                        <select class="entrada"><option>Activo</option><option>Inactivo</option></select>
+                    </div>
+                </form>
+                <!-- PIE DE LA VENTANA: BOTONES (EN CELULAR UNO DEBAJO DEL OTRO, DESDE 576PX A LA DERECHA) -->
+                <div class="d-flex flex-column-reverse flex-sm-row justify-content-sm-end gap-2">
+                    <button type="button" class="btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn-primario">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- VENTANA: CREAR ORDEN DE COMPRA -->
+    <div class="modal fade" id="ventana-crear-orden" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ventana-896">
+            <div class="modal-content ventana d-flex flex-column">
+                <!-- BOTON X (CIERRA LA VENTANA CON data-bs-dismiss) -->
+                <button type="button" class="ventana-cerrar d-flex align-items-center justify-content-center p-0"
+                    data-bs-dismiss="modal" aria-label="Cerrar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+                <h2 class="ventana-titulo mb-0">Crear orden de compra</h2>
+                <!-- TARJETA DE DATOS: PROVEEDOR, CREADOR Y SEDE (LOS DOS ULTIMOS BLOQUEADOS CON CANDADO) -->
+                <div class="caja-datos">
+                    <div class="row g-3">
+                        <div class="col-12 col-md-4">
+                            <div class="d-flex flex-column gap-2">
+                                <label class="etiqueta">Proveedor</label>
+                                <select class="entrada"><option>Molinos Andinos S.A.S.</option><option>Lácteos La Sabana</option></select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="d-flex flex-column gap-2">
+                                <label class="etiqueta d-inline-flex align-items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-lock">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>Creador</label>
+                                <input type="text" class="entrada" value="Laura Martínez" disabled>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="d-flex flex-column gap-2">
+                                <label class="etiqueta d-inline-flex align-items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-lock">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>Sede</label>
+                                <input type="text" class="entrada" value="Coffee Park Centro" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- LINEAS: TITULO A LA IZQUIERDA Y BOTON AGREGAR LINEA A LA DERECHA -->
+                <div class="d-flex align-items-center justify-content-between">
+                    <p class="titulo-lineas mb-0">Líneas</p>
+                    <button type="button" class="btn-tabla-contorno d-inline-flex align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-plus preview-icon">
+                            <path d="M5 12h14" />
+                            <path d="M12 5v14" />
+                        </svg>Agregar línea
+                    </button>
+                </div>
+                <!-- UNA LINEA DE LA ORDEN: INSUMO, CANTIDAD, PRECIO Y SUBTOTAL (SI SUPERA EL MAXIMO SE USA caja-linea-error) -->
+                <div class="caja-linea">
+                    <div class="row g-3">
+                        <div class="col-12 col-md-4">
+                            <div class="d-flex flex-column gap-2">
+                                <label class="etiqueta">Insumo</label>
+                                <select class="entrada"><option>Harina de trigo</option><option>Levadura</option></select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="d-flex flex-column gap-2">
+                                <label class="etiqueta">Cantidad pedida</label>
+                                <input type="number" class="entrada" min="0" value="78000">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="d-flex flex-column gap-2">
+                                <label class="etiqueta">Precio pactado</label>
+                                <input type="number" class="entrada" min="0" step="0.1" value="4.2">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2">
+                            <div class="d-flex flex-column gap-2">
+                                <label class="etiqueta d-inline-flex align-items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-lock">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>Subtotal</label>
+                                <input type="text" class="entrada" value="$ 327.600" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PIE DE LA VENTANA: BOTONES (EN CELULAR UNO DEBAJO DEL OTRO, DESDE 576PX A LA DERECHA) -->
+                <div class="d-flex flex-column-reverse flex-sm-row justify-content-sm-end gap-2">
+                    <button type="button" class="btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn-primario">Guardar borrador</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- VENTANA: ENVIAR ORDEN -->
+    <div class="modal fade" id="ventana-enviar-orden" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ventana-672">
+            <div class="modal-content ventana d-flex flex-column">
+                <!-- BOTON X (CIERRA LA VENTANA CON data-bs-dismiss) -->
+                <button type="button" class="ventana-cerrar d-flex align-items-center justify-content-center p-0"
+                    data-bs-dismiss="modal" aria-label="Cerrar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+                <h2 class="ventana-titulo mb-0">Enviar orden OC-2026-0041</h2>
+                <!-- HOJA DE PAPEL: ASI SE VERA LA ORDEN QUE RECIBE EL PROVEEDOR -->
+                <div class="hoja-orden bg-white d-flex flex-column gap-3">
+                    <div class="d-flex justify-content-between align-items-start border-bottom pb-3">
+                        <div>
+                            <p class="hoja-marca mb-0">Coffee Park</p>
+                            <p class="hoja-texto mb-0">Orden de compra</p>
+                        </div>
+                        <p class="numero-orden mb-0">OC-2026-0041</p>
+                    </div>
+                    <div>
+                        <p class="hoja-texto mb-1"><strong>Proveedor:</strong> Molinos Andinos S.A.S.</p>
+                        <p class="hoja-texto mb-0"><strong>Sede:</strong> Coffee Park Centro</p>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="tabla-contenido tabla-hoja w-100">
+                            <thead>
+                                <tr class="tabla-encabezados fw-medium text-nowrap align-middle">
+                                    <th>Insumo</th>
+                                    <th>Cantidad</th>
+<<<<<<< HEAD
+                                    <th>Prioridad</th>
+                                    <th>Fecha</th>
+                                    <th>Observaciones</th>
+                                    <th>Estado</th>
+>>>>>>> origin/development
+=======
+                                    <th>Precio</th>
+                                    <th>Subtotal</th>
+>>>>>>> origin/development
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Harina de trigo</td>
+<<<<<<< HEAD
+<<<<<<< HEAD
                                     <td>78.000 g</td>
                                     <td>$ 4,2</td>
                                     <td>$ 327.600</td>
+=======
+                                    <td>50 kg</td>
+                                    <td><span class="badge-prioridad alta">Alta</span></td>
+                                    <td>2026-06-28</td>
+                                    <td>Stock crítico</td>
+                                    <td><span class="badge-estado pendiente">Pendiente</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Levadura</td>
+                                    <td>500 g</td>
+                                    <td><span class="badge-prioridad media">Media</span></td>
+                                    <td>2026-06-29</td>
+                                    <td>—</td>
+                                    <td><span class="badge-estado pendiente">Pendiente</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Azúcar</td>
+                                    <td>20 kg</td>
+                                    <td><span class="badge-prioridad baja">Baja</span></td>
+                                    <td>2026-06-27</td>
+                                    <td>Compra mensual</td>
+                                    <td><span class="badge-estado pedido">En Pedido</span></td>
+>>>>>>> origin/development
+=======
+                                    <td>78.000 g</td>
+                                    <td>$ 4,2</td>
+                                    <td>$ 327.600</td>
+>>>>>>> origin/development
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/development
                     <p class="hoja-total mb-0 text-end">Total: $ 327.600</p>
                 </div>
                 <!-- DOS BOTONES GRANDES (48PX): 1 COLUMNA EN CELULAR Y 2 DESDE 576PX -->
@@ -917,6 +1859,7 @@
                     </div>
                     <div class="col-12 col-sm-6">
                         <button type="button" class="btn-grande-contorno w-100">Descargar PDF para enviar manualmente</button>
+<<<<<<< HEAD
                     </div>
                 </div>
                 <!-- PIE DE LA VENTANA: BOTONES (EN CELULAR UNO DEBAJO DEL OTRO, DESDE 576PX A LA DERECHA) -->
@@ -1012,4 +1955,116 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
+=======
+                </section>
+            </div>
+        </div>
+        <!-- PEDIDOS -->
+        <div class="tab-pane fade" id="pane-pedidos" role="tabepanel">
+            <section class="contenido-compras">
+                <div class="encabezado-compras d-flex justify-content-between align-items-center">
+                    <div>
+                        <h1>Pedidos de Compra</h1>
+                        <p>Cree pedidos a partir de necesidades y envíelos al proveedor.</p>
+=======
+>>>>>>> origin/development
+                    </div>
+                </div>
+                <!-- PIE DE LA VENTANA: BOTONES (EN CELULAR UNO DEBAJO DEL OTRO, DESDE 576PX A LA DERECHA) -->
+                <div class="d-flex flex-column-reverse flex-sm-row justify-content-sm-end gap-2">
+                    <button type="button" class="btn-cancelar" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- VENTANA: RECEPCION DE LA ORDEN -->
+    <div class="modal fade" id="ventana-recepcion" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ventana-768">
+            <div class="modal-content ventana d-flex flex-column">
+                <!-- BOTON X (CIERRA LA VENTANA CON data-bs-dismiss) -->
+                <button type="button" class="ventana-cerrar d-flex align-items-center justify-content-center p-0"
+                    data-bs-dismiss="modal" aria-label="Cerrar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+                <h2 class="ventana-titulo mb-0">Recepción OC-2026-0040</h2>
+                <!-- UNA LINEA POR REVISAR: CANTIDAD RECIBIDA Y 3 BOTONES DE RESULTADO -->
+                <div class="caja-recepcion d-flex flex-column gap-3">
+                    <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center gap-2">
+                        <div>
+                            <p class="recepcion-nombre mb-0">Leche entera</p>
+                            <p class="recepcion-pedida mb-0">Cantidad pedida: 50.000 ml</p>
+                        </div>
+                        <!-- CAMPO DESACTIVADO HASTA QUE SE REVISE LA LINEA -->
+                        <input type="number" class="entrada campo-recibida" placeholder="Recibida" disabled>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button type="button" class="btn-tabla-primario">Llegó completo</button>
+                        <button type="button" class="btn-tabla-contorno">Llegó parcial</button>
+                        <button type="button" class="btn-tabla-contorno texto-peligro">No llegó</button>
+                    </div>
+                </div>
+                <!-- UNA LINEA POR REVISAR: CANTIDAD RECIBIDA Y 3 BOTONES DE RESULTADO -->
+                <div class="caja-recepcion d-flex flex-column gap-3">
+                    <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center gap-2">
+                        <div>
+                            <p class="recepcion-nombre mb-0">Huevos</p>
+                            <p class="recepcion-pedida mb-0">Cantidad pedida: 100 und</p>
+                        </div>
+                        <!-- CAMPO DESACTIVADO HASTA QUE SE REVISE LA LINEA -->
+                        <input type="number" class="entrada campo-recibida" placeholder="Recibida" disabled>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button type="button" class="btn-tabla-primario">Llegó completo</button>
+                        <button type="button" class="btn-tabla-contorno">Llegó parcial</button>
+                        <button type="button" class="btn-tabla-contorno texto-peligro">No llegó</button>
+                    </div>
+                </div>
+                <!-- FRANJA AZUL: SOLO APARECE CUANDO TODAS LAS LINEAS ESTAN REVISADAS (d-none HASTA ENTONCES) -->
+                <div class="franja-estado d-none">Orden en Pendiente de factura</div>
+                <!-- PIE DE LA VENTANA: BOTONES (EN CELULAR UNO DEBAJO DEL OTRO, DESDE 576PX A LA DERECHA) -->
+                <div class="d-flex flex-column-reverse flex-sm-row justify-content-sm-end gap-2">
+                    <button type="button" class="btn-cancelar" data-bs-dismiss="modal">Cerrar</button>
+                    <!-- DESACTIVADO HASTA REVISAR TODAS LAS LINEAS -->
+                    <button type="button" class="btn-primario" disabled>Finalizar recepción</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- VENTANA: CONFIRMAR FACTURACION -->
+    <div class="modal fade" id="ventana-facturacion" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ventana-512">
+            <div class="modal-content ventana d-flex flex-column">
+                <!-- BOTON X (CIERRA LA VENTANA CON data-bs-dismiss) -->
+                <button type="button" class="ventana-cerrar d-flex align-items-center justify-content-center p-0"
+                    data-bs-dismiss="modal" aria-label="Cerrar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+                <h2 class="ventana-titulo mb-0">Confirmar facturación</h2>
+                <p class="texto-ventana mb-0">¿Desea marcar la orden <strong>OC-2026-0039</strong> como facturada? Este cambio quedará registrado.</p>
+                <!-- PIE DE LA VENTANA: BOTONES (EN CELULAR UNO DEBAJO DEL OTRO, DESDE 576PX A LA DERECHA) -->
+                <div class="d-flex flex-column-reverse flex-sm-row justify-content-sm-end gap-2">
+                    <button type="button" class="btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn-primario">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JAVASCRIPT DE BOOTSTRAP: HACE FUNCIONAR LAS PESTANAS Y LAS VENTANAS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<<<<<<< HEAD
+>>>>>>> origin/development
+=======
+
+>>>>>>> origin/development
 </html>
