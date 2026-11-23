@@ -1,0 +1,223 @@
+:root {
+    --bs-primary: #741b3d;
+    --bs-primary-rgb: 116, 27, 61;
+    --bs-body-bg: #fcf8f9;
+    --bs-body-color: #321525;
+    --bs-border-color: rgba(116, 27, 61, 0.14);
+    --bs-body-font-family: Inter, system-ui, sans-serif;
+    --vino-oscuro: #350B1A;
+    --coral: #F27C86;
+    --vino-medio: #96244F;
+    --texto-gris: #7A6873;
+    --acento: #FCE8EA;
+    --rosa: #F6B4B8;
+}
+
+.panel-menu {
+    width: 256px;
+    height: 100vh;
+    background: var(--vino-oscuro);
+    z-index: 50;
+}
+
+.panel-marca {
+    height: 80px;
+    padding: 0px 16px;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, .10);
+}
+
+.panel-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.panel-marca-nombre {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 900;
+}
+
+.panel-marca-sub {
+    font-size: 11px;
+    line-height: 16.5px;
+    color: var(--rosa);
+}
+
+.panel-nav {
+    padding: 12px;
+}
+
+.panel-enlace,
+.panel-contraer {
+    min-height: 44px;
+    padding: 0px 12px;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.panel-enlace {
+    font-weight: 600;
+    color: rgba(255, 255, 255, .75);
+}
+
+.panel-enlace:not(.panel-enlace-activo):hover {
+    background: rgba(255, 255, 255, .10);
+    color: #ffffff;
+}
+
+.panel-enlace-activo {
+    background: var(--coral);
+    color: var(--vino-oscuro);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .10), 0 1px 2px -1px rgba(0, 0, 0, .10);
+}
+
+.panel-pie {
+    padding: 12px;
+    border-top: 1px solid rgba(255, 255, 255, .10);
+}
+
+.panel-contraer {
+    border: 0;
+    background: transparent;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .70);
+}
+
+.panel-contraer:hover {
+    background: rgba(255, 255, 255, .10);
+}
+
+.panel-version {
+    padding: 0px 12px;
+    font-size: 10px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, .35);
+}
+
+@media (min-width: 992px) {
+    .panel-colum {
+        margin-left: 256px;
+    }
+}
+
+.panel-colum {
+    min-width: 0px;
+}
+
+.panel-barra {
+    height: 80px;
+    background: rgba(255, 255, 255, .95);
+    border-bottom: 1px solid var(--bs-border-color);
+    padding: 0px 16px 0px 16px;
+}
+
+@media (min-width: 768px) {
+    .panel-barra {
+        padding: 0px 32px 0px 32px;
+    }
+}
+
+.panel-seccion {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    color: #96244F;
+}
+
+.panel-sede {
+    font-size: 14px;
+    line-height: 20px;
+    color: #7A6873;
+}
+
+.panel-acciones {
+    gap: 12px;
+}
+
+.pastilla-sincronizado {
+    background-color: #16A34A;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.panel-usuario {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.panel-rol {
+    font-size: 12px;
+    line-height: 16px;
+    color: #7A6873;
+}
+
+.btn-campana {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 16px;
+    background: #ffffff;
+    color: var(--bs-body-color);
+}
+
+.btn-campana:hover {
+    background: var(--acento);
+}
+
+.campana-contador {
+    top: -4px;
+    right: -4px;
+    min-width: 20px;
+    min-height: 20px;
+    padding: 0px 4px;
+    border-radius: 9999px;
+    background: var(--coral);
+    color: var(--vino-oscuro);
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 900;
+    box-shadow: 0 0 0 2px #ffffff;
+}
+
+.btn-cerrar-sesion {
+    height: 44px;
+    border: 1px solid var(--bs-primary);
+    color: var(--bs-primary);
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    background: #FCF8F9;
+    padding: 0px 12px;
+}
+
+.btn-cerrar-sesion:hover {
+    background: var(--acento);
+}
+
+main {
+    padding: 24px 16px;
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 24px 32px;
+    }
+}
+
+footer {
+    border-top: 1px solid var(--bs-border-color);
+    padding: 16px 32px;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--texto-gris);
+}

@@ -1,234 +1,258 @@
-/* ==========================================
-   ESTILOS GENERALES Y FUENTES
-   ========================================== */
+:root {
+  --bs-primary: #741B3D;
+  --bs-primary-rgb: 116, 27, 61;
+  --bs-body-bg: #FCF8F9;
+  --bs-body-color: #321525;
+  --bs-border-color: rgba(116, 27, 61, 0.14);
+  --bs-body-font-family: 'Inter', system-ui, sans-serif;
+}
+
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: #f8f9fa;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  color: #321525;
+  background-color: #FCF8F9;
 }
 
-/* ==========================================
-   BARRA DE NAVEGACIÓN (NAVBAR)
-   ========================================== */
-.navbar-custom {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+.fw-black {
+  font-weight: 900 !important;
 }
 
-/* Ajustes del contenedor del logo */
-.logo-box {
-  width: 40px;
-  height: 40px;
+.text-vino-oscuro {
+  color: #350B1A !important;
 }
 
-.logo-img {
-  object-fit: cover;
+.text-vino {
+  color: #741B3D !important;
 }
 
-.text-subtitle {
-  font-size: 0.75rem;
+.text-gris {
+  color: #7A6873 !important;
 }
 
-/* Enlaces del menú de navegación */
-.navbar-nav .nav-link {
-  color: #6c757d;
-  transition: color 0.2s ease-in-out;
-  padding: 0.5rem 0.75rem;
+.bg-vino {
+  background-color: #741B3D !important;
 }
 
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link:hover {
-  color: #111827;
+.bg-acento {
+  background-color: #FCE8EA !important;
+}
+
+.bg-campo {
+  background-color: #F2EEF1 !important;
+}
+
+.btn-primary {
+  background-color: #741B3D;
+  border-color: #741B3D;
+}
+
+.btn-primary:hover {
+  background-color: #350B1A;
+  border-color: #350B1A;
+}
+
+/* Pestañas de Domicilios */
+.nav-pills .nav-link {
+  color: #7A6873;
   font-weight: 600;
-}
-
-
-/* ==========================================
-   BOTÓN SINCRONIZADO Y AVATAR
-   ========================================== */
-.btn-sincronizado {
-  background-color: #00c853;
-  /* Verde vibrante exacto a la imagen */
-  border: none;
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 6px 16px;
-  box-shadow: 0 2px 4px rgba(0, 200, 83, 0.2);
-  transition: all 0.2s ease-in-out;
-  color: #ffffff;
-}
-
-/* Avatar del usuario con tono terracota/naranja */
-.user-avatar {
-  width: 40px;
-  height: 40px;
-  background-color: #d97706;
-  font-size: 0.9rem;
-  cursor: pointer;
-  user-select: none;
-  transition: opacity 0.2s ease;
-  color: #ffffff;
-}
-
-.user-avatar:hover {
-  opacity: 0.9;
-}
-
-
-/* ==========================================
-   ESTILOS DE LAS TARJETAS DE CAJAS SUPERIORES
-   (Adaptado exacto al diseño de Figma)
-   ========================================== */
-
-/* Estilo base para todas las tarjetas */
-.one_card,
-.two_card,
-.thre_card,
-.four_card,
-.five_card {
-  height: 80px;
   border-radius: 12px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
   border: 1px solid transparent;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.one_card:hover,
-.two_card:hover,
-.thre_card:hover,
-.four_card:hover,
-.five_card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+.nav-pills .nav-link:hover {
+  background-color: transparent;
+
 }
 
-/* 1. Total Hoy (Gris claro / Neutro) */
-.one_card {
-  background-color: #f8f9fa !important;
-  border-color: #f1f3f5 !important;
-}
-.one_card h3, .one_card .data-valor {
-  color: #495057 !important;
-  font-weight: 700;
-}
-.one_card p, .one_card .data-label {
-  color: #868e96 !important;
-  font-weight: 500;
+.nav-pills .nav-link.active,
+.nav-pills .nav-link.active:hover,
+.nav-pills .nav-link.active:focus {
+  background-color: transparent !important;
+  color: #741B3D !important;
+  border-color: transparent;
+  box-shadow: none;
 }
 
-/* 2. Pendientes (Crema / Amarillo Pastel) */
-.two_card {
-  background-color: #fffbeb !important;
-  border-color: #fef3c7 !important;
-}
-.two_card h3, .two_card .data-valor {
-  color: #d97706 !important;
-  font-weight: 700;
-}
-.two_card p, .two_card .data-label {
-  color: #a16207 !important;
-  font-weight: 500;
+/* Pestaña 1: Tablero de 5 cajones */
+.tablero-domicilios {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  min-width: 1160px;
 }
 
-/* 3. Preparación (Azul Pastel) */
-.thre_card {
-  background-color: #eff6ff !important;
-  border-color: #dbeafe !important;
-}
-.thre_card h3, .thre_card .data-valor {
-  color: #2563eb !important;
-  font-weight: 700;
-}
-.thre_card p, .thre_card .data-label {
-  color: #3b82f6 !important;
-  font-weight: 500;
-}
-
-/* 4. En Camino (Morado Pastel) */
-.four_card {
-  background-color: #faf5ff !important;
-  border-color: #f3e8ff !important;
-}
-.four_card h3, .four_card .data-valor {
-  color: #9333ea !important;
-  font-weight: 700;
-}
-.four_card p, .four_card .data-label {
-  color: #a855f7 !important;
-  font-weight: 500;
-}
-
-/* 5. Entregados (Verde Pastel) */
-.five_card {
-  background-color: #f0fdf4 !important;
-  border-color: #dcfce7 !important;
-}
-.five_card h3, .five_card .data-valor {
-  color: #16a34a !important;
-  font-weight: 700;
-}
-.five_card p, .five_card .data-label {
-  color: #22c55e !important;
-  font-weight: 500;
-}
-
-/* Botón Nuevo Pedido (Naranja Figma) */
-.btn-pedido {
-  background-color: #ff9800;
+.cajon-domicilio {
+  min-height: 520px;
+  background-color: rgba(255, 255, 255, 0.65);
   border: none;
-  color: #ffffff;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.punto-estado {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.punto-pendiente {
+  background-color: #FFB900;
+}
+
+.punto-aceptado {
+  background-color: #50A2FF;
+}
+
+.punto-preparacion {
+  background-color: #F27C86;
+}
+
+.punto-despachado {
+  background-color: #C27AFF;
+}
+
+.punto-entregado {
+  background-color: #00C950;
+}
+
+.cajon-vacio {
+  border: 1px dashed rgba(116, 27, 61, 0.14);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  font-size: 12px;
+  color: #7A6873;
+}
+
+.tarjeta-pedido .btn-outline-secondary,
+.tarjeta-pedido .btn-outline-secondary:hover,
+.tarjeta-pedido .btn-outline-secondary:focus,
+.tarjeta-pedido .btn-outline-secondary:focus-visible,
+.tarjeta-pedido .btn-outline-secondary:active {
+  background-color: #FFFFFF !important;
+  color: #321525 !important;
+  border-color: rgba(116, 27, 61, 0.14) !important;
+  border-radius: 9999px !important;
+  box-shadow: none !important;
+}
+
+.tarjeta-pedido .btn-cancelar-pedido,
+.tarjeta-pedido .btn-cancelar-pedido:hover,
+.tarjeta-pedido .btn-cancelar-pedido:focus,
+.tarjeta-pedido .btn-cancelar-pedido:focus-visible,
+.tarjeta-pedido .btn-cancelar-pedido:active {
+  color: #C10007 !important;
+  background-color: transparent !important;
+  border-color: rgba(116, 27, 61, 0.14) !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+.direccion-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.repartidor-pill {
+  background-color: #FAF5FF;
+  color: #8200DB;
+  border-radius: 12px;
+  padding: 8px;
+  font-size: 12px;
   font-weight: 600;
-  border-radius: 8px;
-  height: 40px;
-  padding: 0 18px;
-  box-shadow: 0 2px 4px rgba(255, 152, 0, 0.2);
-  transition: all 0.2s ease-in-out;
 }
 
-.btn-pedido:hover {
-  background-color: #f57c00;
-  color: #ffffff;
+/* Insignias de estado en pedidos */
+.badge-aceptado {
+  background-color: #EFF6FF;
+  color: #1447E6;
+  border: 1px solid #BEDBFF;
 }
 
-
-/* ==========================================
-   MENÚ DESPLEGABLE DE AVATAR Y UTILIDADES
-   ========================================== */
-.cursor-pointer {
-  cursor: pointer;
+.badge-preparacion {
+  background-color: #FDF2F8;
+  color: #741B3D;
+  border: 1px solid #FBCFE8;
 }
 
-#menuPerfil {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
+.badge-despachado {
+  background-color: #FAF5FF;
+  color: #8200DB;
+  border: 1px solid #E9D4FF;
 }
 
-#menuPerfil .dropdown-item:hover {
-  background-color: #f8f9fa;
+.badge-entregado {
+  background-color: #F0FDF4;
+  color: #008236;
+  border: 1px solid #B9F8CF;
 }
 
-
-/* ==========================================
-   LÍNEA DE PROGRESO Y PASOS (STEPPER - SEGUIMIENTO)
-   ========================================== */
-.step-item .step-icon {
-  background-color: #ffffff;
-  border: 2px solid #e2e8f0;
-  color: #94a3b8;
-  font-size: 0.9rem;
+.badge-cancelado {
+  background-color: #FEF2F2;
+  color: #C10007;
+  border: 1px solid #FFC9C9;
 }
 
-.step-item .step-label {
-  color: #94a3b8;
-  font-size: 0.75rem;
+/* Pestaña 2: Carga de repartidores */
+.circulo-moto {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #FCE8EA;
+  color: #741B3D;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Estado Activo / Completado del Stepper */
-.step-item.active .step-icon {
-  background-color: #ff9800;
-  border-color: #ff9800;
-  color: #ffffff;
-  box-shadow: 0 0 0 4px rgba(255, 152, 0, 0.2);
+/* Pestaña 3: Gráfico de barras por día */
+.grafico-barras {
+  height: 256px;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 16px;
+  border-left: 1px solid rgba(116, 27, 61, 0.14);
+  border-bottom: 1px solid rgba(116, 27, 61, 0.14);
 }
 
-.step-item.active .step-label {
-  color: #d97706;
+.barra-dia-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.barra-dia {
+  width: 100%;
+  max-width: 56px;
+  border-radius: 12px 12px 0 0;
+  background-color: #741B3D;
+}
+
+.barra-dia-1 {
+  height: 66px;
+}
+
+.barra-dia-2 {
+  height: 83px;
+}
+
+.barra-dia-3 {
+  height: 56px;
+}
+
+.barra-dia-4 {
+  height: 98px;
 }

@@ -4,118 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Cuenta - BakeAdmin</title>
-    <link rel="icon" type="image/x-icon" href="../img/logo-bake.png">
-
-    <!-- 1. Bootstrap 5 CSS local -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-
-    <!-- 2. Tu CSS personalizado para el registro -->
+    <title>AUTOREGISTRO-BA</title>
+    <!--LOGO DE PESTAÑA-->
+    <link rel="shortcut icon" href="../img/logo-bake.png">
+    <!--BOOTSTRAP Y CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/auth/registro.css">
-
-    <!-- Iconos de Bootstrap (CDN opcional si tienes internet, o puedes usar tu propio icono/SVG) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    <!-- Contenedor de Alerta Flotante -->
-    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100;">
-        <div id="toastExito" class="toast align-items-center text-white bg-success border-0 rounded-3 shadow"
-            role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="d-flex">
-                <div class="toast-body d-flex align-items-center fs-6">
-                    <i class="bi bi-check-circle-fill fs-4 me-2"></i>
-                    <span>¡Cuenta creada con éxito! Redirigiendo...</span>
+    <div class="pantalla-completa">
+        <!--PARTE IZQUIERDA-->
+        <section
+            class="d-none d-lg-flex flex-column justify-content-between bg-vino-oscuro text-white p-5 position-relative overflow-hidden">
+            <div class="bola-a"></div>
+            <div class="bola-b"></div>
+            <div class="d-flex align-items-center gap-3 position-relative">
+                <img src="../img/logo.png" alt="logo BakeAdmin" class="logo">
+                <div>
+                    <div class="nombre">BakeAdmin</div>
+                    <div class="eslogan">Coffe Park</div>
                 </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
-                    aria-label="Close"></button>
             </div>
-        </div>
-    </div>
-    <!-- Contenedor principal centrado -->
-    <div class="container d-flex justify-content-center align-items-center min-vh-100">
-
-        <!-- Tarjeta de registro -->
-        <div class="card registro-card border-0 shadow-sm p-4 text-center rounded-4">
-
-            <!-- Icono de la taza -->
-            <div
-                class="registro-icon mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle text-white">
-                <i class="bi bi-cup-hot-fill fs-4"></i>
-            </div>
-            <!-- Encabezado de la tarjeta -->
-            <h4 class="fw-bold text-dark mb-1">Crear Cuenta</h4>
-            <p class="text-muted small mb-4">Regístrate en BakeAdmin</p>
-
-            <form id="formCrearCuenta" novalidate>
-                <!-- 1. Nombre Completo -->
-                <div class="mb-3 text-start">
-                    <label for="nombre" class="form-label small text-dark fw-bold mb-1">Nombre Completo</label>
-                    <input type="text" id="nombre" name="nombre" class="form-control bg-light border-0"
-                        placeholder="Tu nombre" required>
-                    <div class="invalid-feedback small" id="errorNombre">
-                        Ingresa un nombre válido (solo letras y espacios).
-                    </div>
-                </div>
-
-                <!-- 2. Correo Electrónico -->
-                <div class="mb-3 text-start">
-                    <label for="correo" class="form-label small text-dark fw-bold mb-1">Correo Electrónico</label>
-                    <input type="email" id="correo" name="correo" class="form-control bg-light border-0"
-                        placeholder="correo@ejemplo.com" required>
-                    <div class="invalid-feedback small" id="errorCorreo">
-                        Ingresa un correo válido (ejemplo: correo@ejemplo.com).
-                    </div>
-                </div>
-
-                <!-- 3. Teléfono -->
-                <div class="mb-3 text-start">
-                    <label for="telefono" class="form-label small text-dark fw-bold mb-1">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" class="form-control bg-light border-0"
-                        placeholder="300 123 4567" required>
-                    <div class="invalid-feedback small" id="errorTelefono">
-                        Ingresa un número de teléfono válido (7 a 10 dígitos).
-                    </div>
-                </div>
-
-                <!-- 4. Contraseña -->
-                <div class="mb-3 text-start">
-                    <label for="password" class="form-label small text-dark fw-bold mb-1">Contraseña</label>
-                    <input type="password" id="password" name="password" class="form-control bg-light border-0"
-                        placeholder="Mínimo 8 caracteres" required>
-                    <div class="invalid-feedback small" id="errorPassword">
-                        La contraseña debe tener al menos 8 caracteres.
-                    </div>
-                </div>
-
-                <!-- 5. Confirmar Contraseña -->
-                <div class="mb-3 text-start">
-                    <label for="confirm_password" class="form-label small text-dark fw-bold mb-1">Confirmar
-                        Contraseña</label>
-                    <input type="password" id="confirm_password" name="confirm_password"
-                        class="form-control bg-light border-0" placeholder="Repite tu contraseña" required>
-                    <div class="invalid-feedback small" id="errorConfirm">
-                        Las contraseñas no coinciden.
-                    </div>
-                </div>
-
-                <!-- Botón de envío -->
-                <button type="submit" id="btnCrearCuenta" class="btn btn-dark w-100 py-2 rounded-3 fw-semibold mb-3">
-                    Crear Cuenta
-                </button>
-
-                <p class="small text-muted mb-0">
-                    ¿Ya tienes cuenta? <a href="../auth/login.html" class="text-dark fw-bold text-decoration-none">Inicia sesión aquí</a>
+            <div class="mensaje-cent my-auto position-relative">
+                <div class="etiqueta mb-3">GESTION OPERATIVA</div>
+                <h1 class="titulo mb-0">
+                    <span class="d-block">TU PANADERIA</span>
+                    <span class="d-block titulo-2">TU CONTROL</span>
+                </h1>
+                <p class="texto mt-4 mb-0">
+                    Gestion produccion , pedidos , domicilios y compras desde un solo lugar.
                 </p>
-                <button type="button" class="btn btn-link text-muted small mt-2" id="btnVolver">
-                    <a href="../auth/login.html" class="text-dark fw-bold">VOLVER</a>
-                </button>
-            </form>
-        </div>
+            </div>
+            <div class="pie-pag position-relative">Coffe Park Colombia </div>
+        </section>
+        <!--PARTE DERECHA-CREAR CUENTA-->
+        <section class="panel-der">
+            <div class="caja-der">
+                <a href="login.html" class="volv-ini">VOLVER</a>
+                <h2 class="titulo-registro">Crear Cuenta</h2>
+                <p class="descripcion">Registrate como cliente de Coffe Park</p>
+                <form class="form-registro">
+                    <!--CAJA 1:ACCESO-->
+                    <section class="caja-seccion">
+                        <h3 class="titulo-seccion">Acceso</h3>
+                        <div class="grilla-campos">
+                            <div class="grupo-campo">
+                                <label for="correo" class="etiqueta-campo">Correo</label>
+                                <input type="email" id="correo" class="input-registro">
+                            </div>
+                            <div class="grupo-campo">
+                                <label for="clave" class="etiqueta-campo">Contraseña</label>
+                                <input type="password" id="clave" class="input-registro">
+                            </div>
+                            <div class="grupo-campo">
+                                <label for="correo-rec" class="etiqueta-campo">Correo de recuperación</label>
+                                <input type="email" id="correo-rec" class="input-registro">
+                            </div>
+                        </div>
+                    </section>
+                    <!--Caja 2:Informacion Personal-->
+                    <section class="caja-seccion">
+                        <h3 class="titulo-seccion">Informacion Personal</h3>
+                        <div class="grilla-campos">
+                            <div class="grupo-campo">
+                                <label for="nombres" class="etiqueta-campo">Nombre</label>
+                                <input type="text" id="nombres" class="input-registro">
+                            </div>
+                            <div class="grupo-campo">
+                                <label for="apellidos" class="etiqueta-campo">Apellidos</label>
+                                <input type="text" id="apellidos" class="input-registro">
+                            </div>
+                            <div class="grupo-campo">
+                                <label for="tipo-doc" class="etiqueta-campo">Tipo de documento</label>
+                                <select id="tipo-doc" class="input-registro">
+                                    <option value="CC">CC</option>
+                                    <option value="CE">CE</option>
+                                    <option value="TI">TI</option>
+                                    <option value="PP">PP</option>
+                                    <option value="NIT">NIT</option>
+                                </select>
+                            </div>
+                            <div class="grupo-campo">
+                                <label for="num-doc" class="etiqueta-campo">Numero de Documento</label>
+                                <input type="text" id="num-doc" class="input-registro">
+                            </div>
+                            <div class="grupo-campo">
+                                <label for="telefono" class="etiqueta-campo">telefono</label>
+                                <input type="text" id="telefono" class="input-registro">
+                            </div>
+                            <div class="grupo-campo campo-ancho-completo">
+                                <label for="direccion" class="etiqueta-campo">Direccion</label>
+                                <input type="text" id="direccion" class="input-registro">
+                            </div>
+                        </div>
+                    </section>
+                    <button type="submit" class="btn-crear-cuenta">Crear Cuenta</button>
+                    <p class="pie-registro">
+                        ¿Ya tienes cuenta? <a href="./login.html" class="enlace-login">Iniciar Sesion</a>
+                    </p>
+                </form>
+            </div>
+        </section>
     </div>
-    <!--Scripts de Bootstrap y JavaScript-->
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/auth/registro.js"></script>
 </body>
 
 </html>
