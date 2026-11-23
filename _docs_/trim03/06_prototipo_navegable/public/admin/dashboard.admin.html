@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- rutas relativas -->
+    <link rel="shortcut icon" href="../img/logo-bake.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/admin/dashboard.admin.css">
+</head>
+
+<body>
+    <aside class="panel-menu position-fixed top-0 bottom-0 start-0 d-none d-lg-flex flex-column text-white">
+        <!-- LOGO Y NOMBRE DE LA MARCA -->
+        <div class="panel-marca d-flex align-items-center">
+            <img src="../img/logo.png" alt="Coffee Park" class="panel-logo flex-shrink-0 rounded-4">
+            <div>
+                <p class="panel-marca-nombre mb-0">BakeAdmin</p>
+                <p class="panel-marca-sub mb-0">Coffee Park</p>
+            </div>
+        </div>
+        <!-- ENLACES DE NAVEGACION ENTRE VISTAS -->
+        <nav class="panel-nav flex-grow-1 d-flex flex-column gap-1">
+            <a href="dashboard.html"
+                class="panel-enlace panel-enlace-activo d-flex align-items-center rounded-4 text-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="flex-shrink-0">
+                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                    <path
+                        d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                </svg>Inicio
+            </a>
+            <a href="usuarios.html" class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="flex-shrink-0">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    <circle cx="9" cy="7" r="4" />
+                </svg>Usuarios
+            </a>
+            <a href="compras.html" class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="flex-shrink-0">
+                    <circle cx="8" cy="21" r="1" />
+                    <circle cx="19" cy="21" r="1" />
+                    <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                </svg>Compras
+            </a>
+            <a href="../admin/produccion.html"
+                class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="flex-shrink-0">
+                    <path
+                        d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z" />
+                    <path d="M6 17h12" />
+                </svg>Producción
+            </a>
+            <a href="domicilios.html" class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="flex-shrink-0">
+                    <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                    <path d="M15 18H9" />
+                    <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                    <circle cx="17" cy="18" r="2" />
+                    <circle cx="7" cy="18" r="2" />
+                </svg>Domicilios
+            </a>
+        </nav>
+        <div class="panel-pie">
+            <button class="panel-contraer w-100 d-flex align-items-center rounded-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="flex-shrink-0">
+                    <path d="m15 18-6-6 6-6" />
+                </svg>Contraer menú
+            </button>
+            <p class="panel-version mt-2 mb-0">BakeAdmin v2.0 · 2026</p>
+        </div>
+    </aside>
+
+    <!-- COLUMNA DERECHA -->
+    <div class="columna-derecha min-vh-100 d-flex flex-column flex-grow-1">
+
+        <!-- BARRA SUPERIOR -->
+        <header
+            class="barra-superior sticky-top d-flex align-items-center justify-content-between gap-2 bg-white border-bottom px-3 px-md-4">
+            <div class="min-w-0">
+                <p class="texto-menu-vino m-0 text-uppercase fw-semibold text-truncate">Inicio</p>
+                <small class="texto-gris d-block text-truncate">Todas las Sedes</small>
+            </div>
+
+            <div class="d-flex align-items-center flex-wrap justify-content-end gap-2 gap-md-3 ms-auto">
+                <span class="pastilla-sync badge rounded-pill d-inline-flex align-items-center gap-1">
+                    <i class="bi bi-cloud"></i>
+                    <span>Sincronizado</span>
+                </span>
+
+                <!-- campana + panel de notificaciones -->
+                <div class="dropdown">
+                    <button
+                        class="boton-campana btn border rounded-4 bg-white d-flex align-items-center justify-content-center p-0"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notificaciones">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+                            <path
+                                d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" />
+                        </svg>
+                    </button>
+
+                    <div class="dropdown-menu dropdown-menu-end p-0 rounded-4 shadow panel-notificaciones">
+                        <div class="p-3 border-bottom">
+                            <p class="titulo-panel m-0 fw-semibold">Notificaciones</p>
+                            <small class="texto-gris d-block">Todo está al día</small>
+                        </div>
+                        <div class="d-flex flex-column align-items-center text-center p-4">
+                            <div
+                                class="circulo-campana rounded-circle d-flex align-items-center justify-content-center texto-gris">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+                                    <path
+                                        d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" />
+                                </svg>
+                            </div>
+                            <p class="titulo-panel m-0 mt-3 fw-semibold small">Sin notificaciones</p>
+                            <small class="texto-gris">Inicia sesión para recibir novedades de tus pedidos.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-none d-md-block text-end">
+                    <p class="fw-bold small m-0">Maicol Esneider Ortiz Lopez</p>
+                    <small class="texto-invitado d-block">Administrador</small>
+                </div>
+
+                <a href="../auth/login.html"
+                    class="boton-salir btn btn-outline-primary rounded-3 d-inline-flex align-items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m16 17 5-5-5-5" />
+                        <path d="M21 12H9" />
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                    </svg>
+                    Cerrar sesión
+                </a>
+            </div>
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="flex-grow-1 w-100 py-4 px-3 px-md-4">
+            <div class="contenido-interno mx-auto d-flex flex-column gap-4">
+
+                <nav aria-label="breadcrumb">
+                    <ol class="migas breadcrumb mb-0">
+                        <li class="breadcrumb-item">Inicio</li>
+                        <li class="breadcrumb-item active">Menú</li>
+                    </ol>
+                </nav>
+
+                <!-- contenido buenos dias -->
+                <div>
+                    <p class="small fw-semibold text-vino-medio mb-1">Resumen General</p>
+                    <h1 class="h1 fw-black text-vino-oscuro mb-1">Buenos días, Laura Administradora</h1>
+                    <p class="small text-gris mb-0">Visión consolidada de la operación de Coffee Park. · 30/06/2026</p>
+                </div>
+
+                <!-- tarjetas de presentacion -->
+                <div class="tarjetas">
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6 col-md-6 col-xl-3">
+                            <div class="card bg-white border rounded-4">
+                                <div class="card-body d-flex justify-content-between align-items-start gap-3">
+                                    <div aria-label="tarjetas-numeros">
+                                        <p class="text-gris fs-6">Usuarios Activos</p>
+                                        <h2 class="fs-3">28</h2>
+                                    </div>
+                                    <!-- tarjeta 1 -->
+                                    <div
+                                        class="icono-tarjeta bg-acento text-vino rounded-4 d-flex align-items-center justify-content-center flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-users preview-icon">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                            <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                            <circle cx="9" cy="7" r="4" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tarjeta 2 -->
+                        <div class="col-12 col-sm-6 col-md-6 col-xl-3">
+                            <div class="card bg-white border rounded-4">
+                                <div class="card-body d-flex justify-content-between align-items-start gap-3">
+                                    <div aria-label="tarjetas-numeros">
+                                        <p class="text-gris fs-6">Alertas de inventario</p>
+                                        <h2 class="fs-3">4</h2>
+                                    </div>
+                                    <div
+                                        class="icono-tarjeta bg-acento text-vino rounded-4 d-flex align-items-center justify-content-center flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-triangle-exclamation-point preview-icon">
+                                            <path
+                                                d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
+                                            <path d="M12 9v4" />
+                                            <path d="M12 17h.01" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tarjeta 3 -->
+                        <div class="col-12 col-sm-6 col-md-6 col-xl-3">
+                            <div class="card bg-white border rounded-4">
+                                <div class="card-body d-flex justify-content-between align-items-start gap-3">
+                                    <div aria-label="tarjetas-numeros">
+                                        <p class="text-gris fs-6">Pedidos en Curso</p>
+                                        <h2 class="fs-3">12</h2>
+                                    </div>
+                                    <div
+                                        class="icono-tarjeta bg-acento text-vino rounded-4 d-flex align-items-center justify-content-center flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-truck preview-icon">
+                                            <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                                            <path d="M15 18H9" />
+                                            <path
+                                                d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                                            <circle cx="17" cy="18" r="2" />
+                                            <circle cx="7" cy="18" r="2" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tarjeta 4 -->
+                        <div class="col-12 col-sm-6 col-md-6 col-xl-3">
+                            <div class="card bg-white border rounded-4">
+                                <div class="card-body d-flex justify-content-between align-items-start gap-3">
+                                    <div aria-label="tarjetas-numeros">
+                                        <p class="text-gris fs-6">Pendientes de factura</p>
+                                        <h2 class="fs-3">3</h2>
+                                    </div>
+                                    <div
+                                        class="icono-tarjeta bg-acento text-vino rounded-4 d-flex align-items-center justify-content-center flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-clock-2 preview-icon">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="M12 6v6l4-2" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-12 col-lg-7">
+                        <div class="card bg-white border rounded-4">
+                            <div class="card-body p-3 p-md-4 d-flex flex-column gap-3">
+                                <p class="card-title mb-0">Alertas Pendientes</p>
+
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="card bg-white border rounded-4">
+                                        <div
+                                            class="card-body d-flex flex-wrap align-items-center justify-content-between gap-2 p-3">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-triangle-exclamation-point preview-icon text-vino flex-shrink-0">
+                                                    <path
+                                                        d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
+                                                    <path d="M12 9v4" />
+                                                    <path d="M12 17h.01" />
+                                                </svg>
+                                                <p class="mb-0">Harina de trigo está bajo el mínimo en Coffee Park
+                                                    Centro</p>
+                                            </div>
+                                            <a href="#"
+                                                class="btn btn-light border btn-sm rounded-3 d-inline-flex align-items-center gap-2">Revisar
+                                                Inventario</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card bg-white border rounded-4">
+                                        <div
+                                            class="card-body d-flex flex-wrap align-items-center justify-content-between gap-2 p-3">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-file-text preview-icon text-vino">
+                                                    <path
+                                                        d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+                                                    <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+                                                    <path d="M10 9H8" />
+                                                    <path d="M16 13H8" />
+                                                    <path d="M16 17H8" />
+                                                </svg>
+                                                <p class="mb-0">La orden OC-2026-0039 está pendiente de factura</p>
+                                            </div>
+                                            <a href="#"
+                                                class="btn btn-light border btn-sm rounded-3 d-inline-flex align-items-center gap-2">Ir
+                                                a Facturación</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card bg-white border rounded-4">
+                                        <div
+                                            class="card-body d-flex flex-wrap align-items-center justify-content-between gap-2 p-3">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-truck preview-icon text-vino">
+                                                    <path
+                                                        d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                                                    <path d="M15 18H9" />
+                                                    <path
+                                                        d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                                                    <circle cx="17" cy="18" r="2" />
+                                                    <circle cx="7" cy="18" r="2" />
+                                                </svg>
+                                                <p class="mb-0">El traslado TR-2026-0088 está en tránsito</p>
+                                            </div>
+                                            <a href="../admin/produccion.html"
+                                                class="btn btn-light border btn-sm rounded-3 d-inline-flex align-items-center gap-2">Ver
+                                                Traslado</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-5">
+                        <div class="card bg-white border rounded-4">
+                            <div class="card-body p-3 p-md-4 d-flex flex-column gap-3">
+                                <p class="card-title mb-0">Accesos rápidos</p>
+
+                                <div class="d-flex flex-column gap-3">
+                                    <a href="usuarios.html"
+                                        class="btn btn-light bg-white border rounded-4 text-dark text-decoration-none p-3 d-flex align-items-center justify-content-between gap-2">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-users flex-shrink-0" aria-hidden="true">
+                                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                                <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                                <circle cx="9" cy="7" r="4" />
+                                            </svg>
+                                            <span class="fw-normal">Gestionar usuarios</span>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-right flex-shrink-0" aria-hidden="true">
+                                            <path d="M5 12h14" />
+                                            <path d="m12 5 7 7-7 7" />
+                                        </svg>
+                                    </a>
+
+                                    <a href="compras.html"
+                                        class="btn btn-light bg-white border rounded-4 text-dark text-decoration-none p-3 d-flex align-items-center justify-content-between gap-2">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-shopping-cart flex-shrink-0" aria-hidden="true">
+                                                <circle cx="8" cy="21" r="1" />
+                                                <circle cx="19" cy="21" r="1" />
+                                                <path
+                                                    d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                                            </svg>
+                                            <span class="fw-normal">Revisar compras</span>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-right flex-shrink-0" aria-hidden="true">
+                                            <path d="M5 12h14" />
+                                            <path d="m12 5 7 7-7 7" />
+                                        </svg>
+                                    </a>
+
+                                    <a href="../admin/produccion.html"
+                                        class="btn btn-light bg-white border rounded-4 text-dark text-decoration-none p-3 d-flex align-items-center justify-content-between gap-2">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-chef-hat flex-shrink-0" aria-hidden="true">
+                                                <path
+                                                    d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z" />
+                                                <path d="M6 17h12" />
+                                            </svg>
+                                            <span class="fw-normal">Ir a producción</span>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-right flex-shrink-0" aria-hidden="true">
+                                            <path d="M5 12h14" />
+                                            <path d="m12 5 7 7-7 7" />
+                                        </svg>
+                                    </a>
+
+                                    <a href="domicilios.html"
+                                        class="btn btn-light bg-white border rounded-4 text-dark text-decoration-none p-3 d-flex align-items-center justify-content-between gap-2">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-truck flex-shrink-0" aria-hidden="true">
+                                                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                                                <path d="M15 18H9" />
+                                                <path
+                                                    d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                                                <circle cx="17" cy="18" r="2" />
+                                                <circle cx="7" cy="18" r="2" />
+                                            </svg>
+                                            <span class="fw-normal">Ver domicilios</span>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-right flex-shrink-0" aria-hidden="true">
+                                            <path d="M5 12h14" />
+                                            <path d="m12 5 7 7-7 7" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+
+    </div>
+
+    <!-- JavaScript de Bootstrap (solamente 1 script al final) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

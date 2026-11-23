@@ -1,0 +1,485 @@
+/* COLORES Y FUENTE BASE (guía 0.3)
+   Aquí configuramos las variables de Bootstrap para que la interfaz
+   tenga la paleta vino/rosa de BakeAdmin y la fuente Inter. */
+:root {
+    --bs-primary: #741B3D;
+    --bs-primary-rgb: 116, 27, 61;
+    --bs-body-bg: #FCF8F9;
+    --bs-body-color: #321525;
+    --bs-border-color: rgba(116, 27, 61, .14);
+    --bs-body-font-family: Inter, system-ui, sans-serif;
+}
+
+/* Clases propias que Bootstrap no trae para los textos y colores del proyecto */
+.fw-black {
+    font-weight: 900;
+}
+
+.text-vino {
+    color: #741B3D;
+}
+
+.text-coral {
+    color: #F27C86;
+}
+
+.texto-gris {
+    color: #7A6873;
+}
+
+/* Fondo acento (cajas de ícono y selección) */
+.bg-acento {
+    background-color: #FCE8EA;
+}
+
+.texto-12 {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.texto-10 {
+    font-size: 10px;
+    line-height: 16px;
+}
+
+/* Sobrescribimos .btn-primary porque el CDN de Bootstrap viene con azul por defecto */
+.btn-primary {
+    --bs-btn-bg: #741B3D;
+    --bs-btn-border-color: #741B3D;
+    --bs-btn-hover-bg: #350B1A;
+    --bs-btn-hover-border-color: #350B1A;
+    --bs-btn-active-bg: #350B1A;
+    --bs-btn-active-border-color: #350B1A;
+    --bs-btn-disabled-bg: #741B3D;
+    --bs-btn-disabled-border-color: #741B3D;
+}
+
+/* BARRA LATERAL (M.2)
+   Menú lateral fijo en color vino oscuro para navegar en el sistema.*/
+.barra-lateral {
+    width: 256px;
+    height: 100vh;
+    background-color: #350B1A;
+    z-index: 50;
+}
+
+/* Caja del logo de Coffee Park / BakeAdmin con el mismo alto de la barra superior */
+.logo-cofi {
+    gap: 12px;
+    height: 80px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.logo-cofi img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+/* Subtítulo rosado debajo de BakeAdmin */
+.texto-rosa {
+    font-size: 11px;
+    color: #F6B4B8;
+}
+
+/* Estilo del enlace activo ("Menú") en tono coral */
+.enlace-menu {
+    gap: 12px;
+    min-height: 44px;
+    padding: 0 12px;
+    background-color: #F27C86;
+    color: #350B1A;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+.enlace-menu:hover {
+    color: #350B1A;
+}
+
+/* Texto pequeño de versión al final del sidebar */
+.pie-texto {
+    font-size: 10px;
+    line-height: 16px;
+    padding: 0 12px;
+}
+
+/*COLUMNA DERECHA Y BARRA SUPERIOR (M.3 y M.4)
+   Solo desde 992px (lg) dejamos margin-left de 256px, porque ahí se ve la barra lateral.
+   En celular y tablet la barra se esconde y no debe quedar hueco a la izquierda.*/
+@media (min-width: 992px) {
+    .columna-derecha {
+        margin-left: 256px;
+    }
+}
+
+.barra-superior {
+    height: 80px;
+}
+
+/* Título superior de la sección actual */
+.texto-menu-vino {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: .05em;
+    color: #96244F;
+}
+
+/* Etiqueta verde de estado "Sincronizado" */
+.pastilla-sync {
+    background-color: #00C950;
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    padding: 2px 8px;
+}
+
+.texto-invitado {
+    font-size: 12px;
+    color: #7A6873;
+}
+
+/* Tamaño táctil del botón de notificaciones */
+.boton-campana {
+    width: 44px;
+    height: 44px;
+}
+
+/* Botón salir con borde vino y cambio de fondo al pasar el mouse */
+.boton-salir {
+    height: 44px;
+    --bs-btn-color: #741B3D;
+    --bs-btn-border-color: #741B3D;
+    --bs-btn-hover-bg: #FCE8EA;
+    --bs-btn-hover-border-color: #741B3D;
+    --bs-btn-hover-color: #741B3D;
+    --bs-btn-active-bg: #FCE8EA;
+    --bs-btn-active-border-color: #741B3D;
+    --bs-btn-active-color: #741B3D;
+}
+
+/* PANEL DE NOTIFICACIONES
+   Menú desplegable que se abre al dar clic en la campana.*/
+.panel-notificaciones {
+    max-width: 384px;
+    width: calc(100vw - 24px);
+}
+
+.titulo-panel {
+    color: #350B1A;
+}
+
+/* Círculo gris donde va el ícono cuando no hay notificaciones */
+.circulo-campana {
+    width: 48px;
+    height: 48px;
+    background-color: #F1EEF0;
+}
+
+/*CONTENIDO PRINCIPAL (M.5)*/
+.contenido-interno {
+    max-width: 1440px;
+}
+
+/* Migas de pan (Inicio / Menú) */
+.migas {
+    font-size: 12px;
+    line-height: 16px;
+    color: #7A6873;
+    --bs-breadcrumb-item-padding-x: 4px;
+    --bs-breadcrumb-divider-color: #7A6873;
+    --bs-breadcrumb-item-active-color: #7A6873;
+}
+
+/* Espacio abajo para que el botón flotante del carrito no tape las últimas tarjetas */
+.pagina-menu {
+    padding-bottom: 80px;
+}
+
+/* 9.1 CARTEL VINO
+   Banner principal de bienvenida del menú.*/
+.cartel-menu {
+    background-color: #350B1A;
+    border-radius: 24px;
+}
+
+/* Círculo decorativo que se recorta en la esquina superior derecha por overflow-hidden */
+.bola-cartel {
+    top: -48px;
+    right: -48px;
+    width: 144px;
+    height: 144px;
+    background-color: rgba(242, 124, 134, .2);
+}
+
+.cartel-etiqueta {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: .18em;
+    color: #F27C86;
+}
+
+.cartel-titulo {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+/* 9.2 BUSCADOR */
+.buscador-campo {
+    height: 48px;
+}
+
+/* 9.3 CATEGORÍAS
+   Botones para filtrar productos; flex-shrink evita que se aplasten en pantallas pequeñas.*/
+.categoria {
+    min-height: 44px;
+    padding: 0 16px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.categoria.btn-light {
+    --bs-btn-bg: #fff;
+    --bs-btn-hover-bg: #FCE8EA;
+    --bs-btn-hover-color: #741B3D;
+}
+
+/* 9.4 TÍTULO DE LA LISTA*/
+.titulo-lista {
+    line-height: 28px;
+}
+
+/* 9.5 TARJETAS DE PRODUCTO
+   Usamos grid con dos columnas: foto a la izquierda y datos del producto a la derecha.*/
+.tarjeta-producto {
+    grid-template-columns: 116px minmax(0, 1fr);
+    min-height: 136px;
+}
+
+/* Baja la opacidad para marcar visualmente los productos agotados */
+.no-disponible {
+    opacity: .6;
+}
+
+.tarjeta-texto {
+    padding: 12px;
+}
+
+/* Corta la descripción a máximo 2 líneas para que todas las tarjetas se vean parejas
+   (CORREGIDO: line-clamp debe valer 2, antes tenía una variable de color) */
+.descripcion-producto {
+    font-size: 12px;
+    line-height: 1.625;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Badge pequeño ("Popular" o "Recomendado") encima de la foto */
+.etiqueta-producto {
+    background-color: rgba(255, 255, 255, .9);
+    color: #741B3D;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* Capa oscura encima de la imagen cuando el producto no está disponible */
+.capa-agotado {
+    background-color: rgba(53, 11, 26, .55);
+    font-size: 12px;
+}
+
+/* Botón circular "+" para agregar al carrito */
+.boton-agregar {
+    width: 40px;
+    height: 40px;
+}
+
+/* 9.6 BOTÓN FLOTANTE "VER CARRITO"*/
+.carrito-flotante {
+    max-width: 360px;
+    z-index: 40;
+}
+
+.boton-carrito {
+    height: 56px;
+    padding: 0 16px;
+    box-shadow: 0 10px 35px rgba(53, 11, 26, .28);
+}
+
+/* Círculo donde se muestra la cantidad de productos agregados */
+.burbuja-carrito {
+    width: 28px;
+    height: 28px;
+    background-color: rgba(255, 255, 255, .2);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+/* 9.7 VENTANAS DEL PEDIDO (carrito, tipo, entrega/punto y confirmación)
+   Estilos del modal: lista de productos, datos y confirmación.*/
+.ventana-carrito {
+    --bs-modal-width: 366px;
+    --bs-modal-border-radius: 24px;
+    --bs-modal-padding: 0;
+}
+
+.carrito-cabecera {
+    padding: 20px 20px 16px;
+}
+
+.carrito-cuerpo {
+    padding: 20px;
+    gap: 12px;
+}
+
+.cuerpo-entrega {
+    gap: 20px;
+}
+
+.fila-carrito {
+    padding: 12px;
+    gap: 12px;
+}
+
+.foto-carrito {
+    width: 56px;
+    height: 56px;
+}
+
+/* Botones pequeños para sumar o restar cantidad */
+.boton-circulo {
+    width: 32px;
+    height: 32px;
+}
+
+.cantidad-carrito {
+    width: 28px;
+}
+
+/* Botón rojo para eliminar un ítem del carrito */
+.boton-eliminar {
+    --bs-btn-color: #E7000B;
+    --bs-btn-hover-color: #E7000B;
+    --bs-btn-hover-bg: #FEF2F2;
+    --bs-btn-border-color: transparent;
+    --bs-btn-hover-border-color: transparent;
+}
+
+.insignia-gratis {
+    background-color: #DBFCE7;
+    color: #008236;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.boton-48 {
+    height: 48px;
+}
+
+/* NUEVO — Pantalla "¿Cómo quieres tu pedido?"
+   Tarjeta clicable (Domicilio / En el punto físico). */
+.tarjeta-tipo {
+    color: #321525;
+}
+
+.tarjeta-tipo:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+/* En pantallas menores a 360px las dos tarjetas se apilan una debajo de la otra */
+@media (max-width: 359px) {
+    .col-tipo {
+        width: 100%;
+    }
+}
+
+/* Caja del ícono: 44px según el MD (cajas de ícono) */
+.icono-tipo {
+    width: 44px;
+    height: 44px;
+}
+
+/* NUEVO — Pantalla "Tus datos" (punto físico)
+   Opciones de pago: blancas con borde; la elegida queda rosada con borde vino. */
+.opcion-pago {
+    --bs-btn-color: #321525;
+    --bs-btn-bg: #fff;
+    --bs-btn-border-color: rgba(116, 27, 61, .14);
+    --bs-btn-hover-color: #321525;
+    --bs-btn-hover-bg: #FCE8EA;
+    --bs-btn-hover-border-color: rgba(116, 27, 61, .14);
+    --bs-btn-active-color: #741B3D;
+    --bs-btn-active-bg: #FCE8EA;
+    --bs-btn-active-border-color: #741B3D;
+}
+
+/* Paso 2: formulario de entrega y resumen del pedido */
+.boton-atras {
+    width: 36px;
+    height: 36px;
+    --bs-btn-border-color: transparent;
+    --bs-btn-hover-bg: #F2EEF1;
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-active-bg: #F2EEF1;
+    --bs-btn-active-border-color: transparent;
+}
+
+.grupo-campo {
+    gap: 6px;
+}
+
+.campo-claro,
+.campo-claro:focus {
+    background-color: #F2EEF1;
+}
+
+textarea.campo-claro {
+    min-height: 96px;
+}
+
+.campo-48 {
+    height: 48px;
+}
+
+.texto-error {
+    color: #E7000B;
+}
+
+.resumen-pedido {
+    background-color: #FCE8EA;
+}
+
+/* Paso 3: confirmación de pedido realizado (también se usa para el código del punto físico) */
+.circulo-exito {
+    width: 80px;
+    height: 80px;
+    background-color: #DBFCE7;
+    color: #008236;
+}
+
+.caja-pedido {
+    background-color: #FCE8EA;
+    border-radius: 24px;
+}
+
+.etiqueta-pedido {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    color: #741B3D;
+}
+
+.numero-pedido {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 900;
+    color: #350B1A;
+}
+
+/*PIE DE PÁGINA (M.6)*/
+.pie-pagina {
+    background-color: transparent;
+}
