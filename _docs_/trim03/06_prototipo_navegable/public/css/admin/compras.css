@@ -1,0 +1,1490 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/development
+/* CONTENIDO MODULO DE COMPRAS */
+/* ANCHO MAXIMO DEL CONTENIDO (SE CENTRA CON mx-auto) */
+.cont-int {
+    max-width: 1440px;
+<<<<<<< HEAD
+}
+
+/* TEXTO PEQUENO GRIS (MIGAS DE PAN) */
+.text {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--texto-gris);
+}
+
+/* TITULO DE LA VISTA */
+.titulo-compras {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 36px;
+    color: var(--vino-oscuro);
+}
+
+/* DESCRIPCION DEBAJO DEL TITULO */
+.subtitulo-compras {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--texto-gris);
+}
+
+/* BOTON NUEVA ORDEN (44PX DE ALTO) */
+.btn-nueva-orden {
+    height: 44px;
+    padding: 0px 12px;
+    background: var(--bs-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+/* HOVER: EL VINO SE ACLARA UN POCO */
+.btn-nueva-orden:hover {
+    background-color: rgba(116, 27, 61, 0.9);
+}
+
+/* FOCO: ANILLO DE 3PX (SE VE AL NAVEGAR CON TECLADO) */
+.btn-nueva-orden:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* SEPARACION ENTRE LA BARRA DE PESTANAS Y SU CONTENIDO */
+.tab-content {
+    margin-top: 20px;
+}
+
+/* BARRA DE PESTANAS: SOLO LA SOMBRA (EL RESTO ES BOOTSTRAP) */
+.barra-pestana {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+}
+
+/* CADA PESTANA: flex:1 HACE QUE TODAS MIDAN LO MISMO */
+.barra-pestana button {
+    flex: 1;
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--bs-body-color);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    white-space: nowrap;
+    background: transparent;
+}
+
+/* PESTANA SELECCIONADA: FONDO BLANCO */
+.barra-pestana button.active {
+    background: #ffffff;
+}
+
+/* FOCO CON TECLADO */
+.barra-pestana button:focus-visible {
+    border-color: var(--vino-medio);
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, .5);
+    outline: 1px solid #96244F;
+}
+
+/* LAS 4 TARJETAS DE ALERTAS */
+
+.tarjeta-1,
+.tarjeta-2,
+.tarjeta-3,
+.tarjeta-4 {
+    padding: 20px 20px 24px;
+    border-radius: 16px;
+    border: 1px solid var(--bs-border-color);
+}
+
+/* ETIQUETA DE LA TARJETA DE COLOR (SIN STOCK, BAJO MINIMO...) */
+.texto-etiqueta {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+/* NUMERO GRANDE DE LA TARJETA DE COLOR */
+.valor {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 900;
+}
+
+/* COLORES DE CADA TARJETA: 1 ROJA, 2 AMBAR, 3 AZUL, 4 VINO */
+.tarjeta-1 {
+    background: #FEF2F2;
+    color: #C10007;
+}
+
+.tarjeta-2 {
+    background: #FFFBEB;
+    color: #973C00;
+}
+
+.tarjeta-3 {
+    background: #EFF6FF;
+    color: #1447E6;
+}
+
+.tarjeta-4 {
+    background: #FCE8EA;
+    color: #741B3D;
+}
+
+/* TARJETA SEMAFORO */
+
+/* TARJETAS BLANCAS DE CADA PESTANA (COMPARTEN EL MISMO ESTILO) */
+.tarjeta-semaforo,
+.tarjeta-proveedores,
+.tarjeta-insumos,
+.tarjeta-ordenes,
+.tarjeta-recepcion,
+.tarjeta-facturacion {
+    color: #0A0A0A;
+    border: 1px solid var(--bs-border-color);
+}
+
+/* ENCABEZADO DE LA TARJETA (TITULO + BOTON) */
+.encabezado-semaforo,
+.encabezado-proveedores,
+.encabezado-insumos,
+.encabezado-ordenes,
+.encabezado-recepcion,
+.encabezado-facturacion {
+    padding: 24px 24px 0;
+    gap: 6px;
+}
+
+/* TITULO DE LA TARJETA */
+.titulo-semaforo,
+.titulo-proveedores,
+.titulo-insumos,
+.titulo-ordenes,
+.titulo-recepcion,
+.titulo-facturacion {
+    font-size: 16px;
+    line-height: 16px;
+    color: #0A0A0A;
+}
+
+/* DESCRIPCION DE LA TARJETA */
+.descripcion-semaforo {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--texto-gris);
+}
+
+/* BOTON PRINCIPAL DE LA TARJETA (36PX DE ALTO) */
+.crear-orden-sugerido,
+.nuevo-proveedor,
+.nuevo-insumo {
+    height: 36px;
+    padding: 0 12px;
+    background: var(--bs-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+/* CONTENIDO E INFORMACION DE LA TARJETA */
+
+/* ESPACIO INTERNO DEL CUERPO DE LA TARJETA */
+.tarjeta-contenido {
+    padding: 0 24px 24px;
+}
+
+/* CAJA CON BORDE QUE ENCIERRA LA TABLA */
+.contenedor-tabla {
+    border: 1px solid var(--bs-border-color);
+}
+
+/* TEXTO BASE DE TODAS LAS TABLAS */
+.tabla-contenido {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--bs-body-color);
+}
+
+/* CADA FILA: ALTO MINIMO Y LINEA INFERIOR */
+.tabla-contenido tr {
+    height: 40px;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* TITULOS DE COLUMNA */
+.tabla-contenido th {
+    padding: 0 8px;
+    font-weight: 500;
+}
+
+/* CELDAS */
+.tabla-contenido td {
+    padding: 8px;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: #0A0A0A;
+}
+
+/* LA ULTIMA FILA NO LLEVA LINEA INFERIOR */
+.tabla-contenido tbody tr:last-child {
+    border-bottom: 0;
+}
+
+/* FILA AL PASAR EL MOUSE */
+.tabla-contenido tr:hover {
+    background: rgba(242, 238, 241, .5);
+}
+
+/* PRIMERA COLUMNA EN NEGRITA (SOLO TABLA DEL SEMAFORO) */
+.tabla-semaforo td:first-child {
+    font-weight: 600;
+}
+
+/* TEXTO PEQUENO GRIS DEBAJO DEL NOMBRE (EL PROVEEDOR) */
+.tabla-contenido td p {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: var(--texto-gris);
+    margin-bottom: 0;
+}
+
+/* ULTIMA COLUMNA (SUGERIDO) EN NEGRITA Y VINO (SOLO TABLA DEL SEMAFORO) */
+.tabla-semaforo td:last-child {
+    font-weight: 700;
+    color: var(--bs-primary);
+}
+
+/* BASE DE TODAS LAS INSIGNIAS DE ESTADO (FORMA, TAMANO Y BORDE) */
+.bajo-min,
+.ok,
+.sin-stock,
+.sobre-max,
+.estado-activo,
+.estado-inactivo,
+.estado-borrador,
+.estado-enviada,
+.estado-pendiente,
+.estado-facturada,
+.estado-cancelada,
+.estado-rechazada {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+/* COLORES DE LAS INSIGNIAS DEL SEMAFORO */
+.bajo-min {
+    color: #973C00;
+    background: #FFFBEB;
+    border-color: #FEF3C6;
+}
+
+.ok {
+    color: #008236;
+    background: #F0FDF4;
+    border-color: #B9F8CF;
+}
+
+.sin-stock {
+    color: #C10007;
+    background: #FEF2F2;
+    border-color: #FFC9C9;
+}
+
+.sobre-max {
+    color: #1447E6;
+    background: #EFF6FF;
+    border-color: #BEDBFF;
+}
+
+/* COLORES DE LAS INSIGNIAS DE ESTADO (ACTIVO, INACTIVO Y ESTADOS DE LA ORDEN) */
+
+/* ACTIVO Y FACTURADA: VERDE */
+.estado-activo,
+.estado-facturada {
+    color: #008236;
+    background: #F0FDF4;
+    border-color: #B9F8CF;
+}
+
+/* INACTIVO Y BORRADOR: GRIS */
+.estado-inactivo,
+.estado-borrador {
+    color: #45556C;
+    background: #F1F5F9;
+    border-color: #E2E8F0;
+}
+
+/* ENVIADA: AZUL */
+.estado-enviada {
+    color: #1447E6;
+    background: #EFF6FF;
+    border-color: #BEDBFF;
+}
+
+/* PENDIENTE DE FACTURA: AMBAR */
+.estado-pendiente {
+    color: #973C00;
+    background: #FFFBEB;
+    border-color: #FEF3C6;
+}
+
+/* CANCELADA: ROJO */
+.estado-cancelada {
+    color: #C10007;
+    background: #FEF2F2;
+    border-color: #FFC9C9;
+}
+
+/* RECHAZADA: ROJO FUERTE */
+.estado-rechazada {
+    color: #9F0712;
+    background: #FFE2E2;
+    border-color: #FFA2A2;
+}
+
+/* HOVER Y FOCO DE LOS BOTONES PRINCIPALES DE LA TARJETA */
+.crear-orden-sugerido:hover,
+.nuevo-proveedor:hover,
+.nuevo-insumo:hover {
+    background-color: rgba(116, 27, 61, 0.9);
+}
+
+.crear-orden-sugerido:focus-visible,
+.nuevo-proveedor:focus-visible,
+.nuevo-insumo:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* TABLAS: ESTILOS PROPIOS DE CADA UNA */
+
+/* PROVEEDORES: EL NOMBRE (2DA COLUMNA) EN NEGRITA */
+.tabla-proveedores td:nth-child(2) {
+    font-weight: 600;
+}
+
+/* INSUMOS: EL NOMBRE (1RA COLUMNA) EN NEGRITA */
+.tabla-insumos td:first-child {
+    font-weight: 600;
+}
+
+/* NUMERO DE ORDEN: LETRA MONOESPACIADA Y NEGRITA */
+.numero-orden {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 700;
+}
+
+/* TOTAL: NEGRITA */
+.total {
+    font-weight: 700;
+}
+
+/* TEXTO PEQUENO GRIS (SIN CORREO, QUIEN RECIBIO...) */
+.dato-secundario {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--texto-gris);
+}
+
+/* FILTROS DE ORDENES: 1 COLUMNA EN CELULAR Y DESDE 768PX BUSCADOR + 2 LISTAS */
+.filtros-ordenes {
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+@media (min-width: 768px) {
+    .filtros-ordenes {
+        grid-template-columns: 1fr 220px 240px;
+    }
+}
+
+.filtros-ordenes .entrada {
+    height: 40px;
+}
+
+/* BOTONES PEQUENOS DE LAS TABLAS (32PX DE ALTO) */
+.btn-tabla-primario,
+.btn-tabla-contorno {
+    height: 32px;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.btn-tabla-primario {
+    background: var(--bs-primary);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-tabla-primario:hover {
+    background-color: rgba(116, 27, 61, 0.9);
+}
+
+.btn-tabla-contorno {
+    background: #FCF8F9;
+    color: var(--bs-body-color);
+    border: 1px solid var(--bs-border-color);
+}
+
+.btn-tabla-contorno:hover {
+    background: var(--acento);
+    color: #741B3D;
+}
+
+.btn-tabla-primario:focus-visible,
+.btn-tabla-contorno:focus-visible {
+    outline: none;
+    border-color: var(--vino-medio);
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* LETRA ROJA (BOTON NO LLEGO) */
+.texto-peligro {
+    color: #C10007;
+}
+
+/* VENTANAS (MODALES) */
+
+/* ANCHO MAXIMO DE CADA VENTANA (SE APLICA DESDE 576PX; DEBAJO OCUPA CASI TODO EL ANCHO) */
+.ventana-512 {
+    --bs-modal-width: 512px;
+}
+
+.ventana-672 {
+    --bs-modal-width: 672px;
+}
+
+.ventana-768 {
+    --bs-modal-width: 768px;
+}
+
+.ventana-896 {
+    --bs-modal-width: 896px;
+}
+
+/* CAJA DE LA VENTANA: FONDO, BORDE, ESQUINAS, ESPACIO INTERNO Y SOMBRA */
+.ventana {
+    gap: 16px;
+    padding: 24px;
+    background: #FCF8F9;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+}
+
+/* TITULO DE LA VENTANA */
+.ventana-titulo {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--bs-body-color);
+}
+
+/* BOTON X: ARRIBA A LA DERECHA (position-absolute LA DA ESTA REGLA) */
+.ventana-cerrar {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border: 0;
+    color: var(--bs-body-color);
+    opacity: .7;
+}
+
+.ventana-cerrar:hover {
+    opacity: 1;
+}
+
+/* ETIQUETA DE CADA CAMPO */
+.etiqueta {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+}
+
+/* CAMPOS (INPUT Y SELECT) */
+.entrada {
+    width: 100%;
+    height: 36px;
+    padding: 4px 12px;
+    background: #F3F3F5;
+    color: var(--bs-body-color);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.entrada:focus-visible {
+    outline: none;
+    border-color: var(--vino-medio);
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* CAMPO DESACTIVADO (BLOQUEADO CON CANDADO) */
+.entrada:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+/* TEXTO DE AYUDA DEBAJO DEL CAMPO */
+.ayuda {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--texto-gris);
+}
+
+/* MENSAJE DE ERROR DEBAJO DEL CAMPO */
+.error-campo {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #E7000B;
+}
+
+/* TEXTO DE LA VENTANA CONFIRMAR */
+.texto-ventana {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--texto-gris);
+}
+
+/* BOTONES DEL PIE DE LA VENTANA (36PX DE ALTO) */
+.btn-primario,
+.btn-cancelar {
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.btn-primario {
+    background: var(--bs-primary);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-primario:hover {
+    background-color: rgba(116, 27, 61, 0.9);
+}
+
+.btn-primario:disabled {
+    opacity: .5;
+}
+
+.btn-cancelar {
+    background: #FCF8F9;
+    color: var(--bs-body-color);
+    border: 1px solid var(--bs-border-color);
+}
+
+.btn-cancelar:hover {
+    background: var(--acento);
+    color: #741B3D;
+}
+
+.btn-primario:focus-visible,
+.btn-cancelar:focus-visible {
+    outline: none;
+    border-color: var(--vino-medio);
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* VENTANA CREAR ORDEN */
+
+/* TARJETA DE DATOS (PROVEEDOR, CREADOR, SEDE) */
+.caja-datos {
+    padding: 16px 16px 24px;
+    background: #ffffff;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 16px;
+}
+
+/* TITULO "LINEAS" */
+.titulo-lineas {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+/* CAJA DE UNA LINEA DE LA ORDEN */
+.caja-linea {
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 16px;
+}
+
+/* VENTANA ENVIAR ORDEN */
+
+/* HOJA DE PAPEL */
+.hoja-orden {
+    padding: 24px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+.hoja-marca {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 900;
+    color: #741B3D;
+}
+
+.hoja-texto {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.hoja-total {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 900;
+}
+
+/* BOTONES GRANDES DE 48PX (ENVIAR POR CORREO / DESCARGAR PDF) */
+.btn-grande-primario,
+.btn-grande-contorno {
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.btn-grande-primario {
+    background: var(--bs-primary);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-grande-primario:hover {
+    background-color: rgba(116, 27, 61, 0.9);
+}
+
+.btn-grande-primario:disabled {
+    opacity: .5;
+}
+
+.btn-grande-contorno {
+    background: #FCF8F9;
+    color: var(--bs-body-color);
+    border: 1px solid var(--bs-border-color);
+}
+
+.btn-grande-contorno:hover {
+    background: var(--acento);
+    color: #741B3D;
+}
+
+/* VENTANA RECEPCION */
+
+/* CAJA DE CADA LINEA POR REVISAR */
+.caja-recepcion {
+    padding: 16px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 16px;
+}
+
+.recepcion-nombre {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.recepcion-pedida {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--texto-gris);
+}
+
+/* CAMPO "RECIBIDA" DE 144PX DE ANCHO */
+.campo-recibida {
+    width: 144px;
+}
+
+/* FRANJA AZUL CON EL RESULTADO DE LA ORDEN */
+.franja-estado {
+    padding: 12px;
+    background: #EFF6FF;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #193CB8;
+}
+=======
+/* CONFIGURACIÓN GENERAL */
+body {
+    margin: 0;
+    background-color: #f7f8fc;
+    color: #111827;
+    font-family: 'Inter', sans-serif;
+=======
+>>>>>>> origin/development
+}
+
+/* TEXTO PEQUENO GRIS (MIGAS DE PAN) */
+.text {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--texto-gris);
+}
+
+/* TITULO DE LA VISTA */
+.titulo-compras {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 36px;
+    color: var(--vino-oscuro);
+}
+
+/* DESCRIPCION DEBAJO DEL TITULO */
+.subtitulo-compras {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--texto-gris);
+}
+
+/* BOTON NUEVA ORDEN (44PX DE ALTO) */
+.btn-nueva-orden {
+    height: 44px;
+    padding: 0px 12px;
+    background: var(--bs-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+/* HOVER: EL VINO SE ACLARA UN POCO */
+.btn-nueva-orden:hover {
+    background-color: rgba(116, 27, 61, 0.9);
+}
+
+/* FOCO: ANILLO DE 3PX (SE VE AL NAVEGAR CON TECLADO) */
+.btn-nueva-orden:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* SEPARACION ENTRE LA BARRA DE PESTANAS Y SU CONTENIDO */
+.tab-content {
+    margin-top: 20px;
+}
+
+/* BARRA DE PESTANAS: SOLO LA SOMBRA (EL RESTO ES BOOTSTRAP) */
+.barra-pestana {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+}
+
+/* CADA PESTANA: flex:1 HACE QUE TODAS MIDAN LO MISMO */
+.barra-pestana button {
+    flex: 1;
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--bs-body-color);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    white-space: nowrap;
+    background: transparent;
+}
+
+/* PESTANA SELECCIONADA: FONDO BLANCO */
+.barra-pestana button.active {
+    background: #ffffff;
+}
+
+/* FOCO CON TECLADO */
+.barra-pestana button:focus-visible {
+    border-color: var(--vino-medio);
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, .5);
+    outline: 1px solid #96244F;
+}
+
+/* LAS 4 TARJETAS DE ALERTAS */
+
+.tarjeta-1,
+.tarjeta-2,
+.tarjeta-3,
+.tarjeta-4 {
+    padding: 20px 20px 24px;
+    border-radius: 16px;
+    border: 1px solid var(--bs-border-color);
+}
+
+/* ETIQUETA DE LA TARJETA DE COLOR (SIN STOCK, BAJO MINIMO...) */
+.texto-etiqueta {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+/* NUMERO GRANDE DE LA TARJETA DE COLOR */
+.valor {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 900;
+}
+
+/* COLORES DE CADA TARJETA: 1 ROJA, 2 AMBAR, 3 AZUL, 4 VINO */
+.tarjeta-1 {
+    background: #FEF2F2;
+    color: #C10007;
+}
+
+.tarjeta-2 {
+    background: #FFFBEB;
+    color: #973C00;
+}
+
+.tarjeta-3 {
+    background: #EFF6FF;
+    color: #1447E6;
+}
+
+.tarjeta-4 {
+    background: #FCE8EA;
+    color: #741B3D;
+}
+
+/* TARJETA SEMAFORO */
+
+/* TARJETAS BLANCAS DE CADA PESTANA (COMPARTEN EL MISMO ESTILO) */
+.tarjeta-semaforo,
+.tarjeta-proveedores,
+.tarjeta-insumos,
+.tarjeta-ordenes,
+.tarjeta-recepcion,
+.tarjeta-facturacion {
+    color: #0A0A0A;
+    border: 1px solid var(--bs-border-color);
+}
+
+/* ENCABEZADO DE LA TARJETA (TITULO + BOTON) */
+.encabezado-semaforo,
+.encabezado-proveedores,
+.encabezado-insumos,
+.encabezado-ordenes,
+.encabezado-recepcion,
+.encabezado-facturacion {
+    padding: 24px 24px 0;
+    gap: 6px;
+}
+
+/* TITULO DE LA TARJETA */
+.titulo-semaforo,
+.titulo-proveedores,
+.titulo-insumos,
+.titulo-ordenes,
+.titulo-recepcion,
+.titulo-facturacion {
+    font-size: 16px;
+    line-height: 16px;
+    color: #0A0A0A;
+}
+
+/* DESCRIPCION DE LA TARJETA */
+.descripcion-semaforo {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--texto-gris);
+}
+
+/* BOTON PRINCIPAL DE LA TARJETA (36PX DE ALTO) */
+.crear-orden-sugerido,
+.nuevo-proveedor,
+.nuevo-insumo {
+    height: 36px;
+    padding: 0 12px;
+    background: var(--bs-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+/* CONTENIDO E INFORMACION DE LA TARJETA */
+
+/* ESPACIO INTERNO DEL CUERPO DE LA TARJETA */
+.tarjeta-contenido {
+    padding: 0 24px 24px;
+}
+
+/* CAJA CON BORDE QUE ENCIERRA LA TABLA */
+.contenedor-tabla {
+    border: 1px solid var(--bs-border-color);
+}
+
+/* TEXTO BASE DE TODAS LAS TABLAS */
+.tabla-contenido {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--bs-body-color);
+}
+
+/* CADA FILA: ALTO MINIMO Y LINEA INFERIOR */
+.tabla-contenido tr {
+    height: 40px;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* TITULOS DE COLUMNA */
+.tabla-contenido th {
+    padding: 0 8px;
+    font-weight: 500;
+}
+
+/* CELDAS */
+.tabla-contenido td {
+    padding: 8px;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: #0A0A0A;
+}
+
+/* LA ULTIMA FILA NO LLEVA LINEA INFERIOR */
+.tabla-contenido tbody tr:last-child {
+    border-bottom: 0;
+}
+
+/* FILA AL PASAR EL MOUSE */
+.tabla-contenido tr:hover {
+    background: rgba(242, 238, 241, .5);
+}
+
+/* PRIMERA COLUMNA EN NEGRITA (SOLO TABLA DEL SEMAFORO) */
+.tabla-semaforo td:first-child {
+    font-weight: 600;
+}
+
+/* TEXTO PEQUENO GRIS DEBAJO DEL NOMBRE (EL PROVEEDOR) */
+.tabla-contenido td p {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: var(--texto-gris);
+    margin-bottom: 0;
+}
+<<<<<<< HEAD
+>>>>>>> origin/development
+=======
+
+/* ULTIMA COLUMNA (SUGERIDO) EN NEGRITA Y VINO (SOLO TABLA DEL SEMAFORO) */
+.tabla-semaforo td:last-child {
+    font-weight: 700;
+    color: var(--bs-primary);
+}
+
+/* BASE DE TODAS LAS INSIGNIAS DE ESTADO (FORMA, TAMANO Y BORDE) */
+.bajo-min,
+.ok,
+.sin-stock,
+.sobre-max,
+.estado-activo,
+.estado-inactivo,
+.estado-borrador,
+.estado-enviada,
+.estado-pendiente,
+.estado-facturada,
+.estado-cancelada,
+.estado-rechazada {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+/* COLORES DE LAS INSIGNIAS DEL SEMAFORO */
+.bajo-min {
+    color: #973C00;
+    background: #FFFBEB;
+    border-color: #FEF3C6;
+}
+
+.ok {
+    color: #008236;
+    background: #F0FDF4;
+    border-color: #B9F8CF;
+}
+
+.sin-stock {
+    color: #C10007;
+    background: #FEF2F2;
+    border-color: #FFC9C9;
+}
+
+.sobre-max {
+    color: #1447E6;
+    background: #EFF6FF;
+    border-color: #BEDBFF;
+}
+
+/* COLORES DE LAS INSIGNIAS DE ESTADO (ACTIVO, INACTIVO Y ESTADOS DE LA ORDEN) */
+
+/* ACTIVO Y FACTURADA: VERDE */
+.estado-activo,
+.estado-facturada {
+    color: #008236;
+    background: #F0FDF4;
+    border-color: #B9F8CF;
+}
+
+/* INACTIVO Y BORRADOR: GRIS */
+.estado-inactivo,
+.estado-borrador {
+    color: #45556C;
+    background: #F1F5F9;
+    border-color: #E2E8F0;
+}
+
+/* ENVIADA: AZUL */
+.estado-enviada {
+    color: #1447E6;
+    background: #EFF6FF;
+    border-color: #BEDBFF;
+}
+
+/* PENDIENTE DE FACTURA: AMBAR */
+.estado-pendiente {
+    color: #973C00;
+    background: #FFFBEB;
+    border-color: #FEF3C6;
+}
+
+/* CANCELADA: ROJO */
+.estado-cancelada {
+    color: #C10007;
+    background: #FEF2F2;
+    border-color: #FFC9C9;
+}
+
+/* RECHAZADA: ROJO FUERTE */
+.estado-rechazada {
+    color: #9F0712;
+    background: #FFE2E2;
+    border-color: #FFA2A2;
+}
+
+/* HOVER Y FOCO DE LOS BOTONES PRINCIPALES DE LA TARJETA */
+.crear-orden-sugerido:hover,
+.nuevo-proveedor:hover,
+.nuevo-insumo:hover {
+    background-color: rgba(116, 27, 61, 0.9);
+}
+
+.crear-orden-sugerido:focus-visible,
+.nuevo-proveedor:focus-visible,
+.nuevo-insumo:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* TABLAS: ESTILOS PROPIOS DE CADA UNA */
+
+/* PROVEEDORES: EL NOMBRE (2DA COLUMNA) EN NEGRITA */
+.tabla-proveedores td:nth-child(2) {
+    font-weight: 600;
+}
+
+/* INSUMOS: EL NOMBRE (1RA COLUMNA) EN NEGRITA */
+.tabla-insumos td:first-child {
+    font-weight: 600;
+}
+
+/* NUMERO DE ORDEN: LETRA MONOESPACIADA Y NEGRITA */
+.numero-orden {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 700;
+}
+
+/* TOTAL: NEGRITA */
+.total {
+    font-weight: 700;
+}
+
+/* TEXTO PEQUENO GRIS (SIN CORREO, QUIEN RECIBIO...) */
+.dato-secundario {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--texto-gris);
+}
+
+/* FILTROS DE ORDENES: 1 COLUMNA EN CELULAR Y DESDE 768PX BUSCADOR + 2 LISTAS */
+.filtros-ordenes {
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+@media (min-width: 768px) {
+    .filtros-ordenes {
+        grid-template-columns: 1fr 220px 240px;
+    }
+}
+
+.filtros-ordenes .entrada {
+    height: 40px;
+}
+
+/* BOTONES PEQUENOS DE LAS TABLAS (32PX DE ALTO) */
+.btn-tabla-primario,
+.btn-tabla-contorno {
+    height: 32px;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.btn-tabla-primario {
+    background: var(--bs-primary);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-tabla-primario:hover {
+    background-color: rgba(116, 27, 61, 0.9);
+}
+
+.btn-tabla-contorno {
+    background: #FCF8F9;
+    color: var(--bs-body-color);
+    border: 1px solid var(--bs-border-color);
+}
+
+.btn-tabla-contorno:hover {
+    background: var(--acento);
+    color: #741B3D;
+}
+
+.btn-tabla-primario:focus-visible,
+.btn-tabla-contorno:focus-visible {
+    outline: none;
+    border-color: var(--vino-medio);
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* LETRA ROJA (BOTON NO LLEGO) */
+.texto-peligro {
+    color: #C10007;
+}
+
+/* VENTANAS (MODALES) */
+
+/* ANCHO MAXIMO DE CADA VENTANA (SE APLICA DESDE 576PX; DEBAJO OCUPA CASI TODO EL ANCHO) */
+.ventana-512 {
+    --bs-modal-width: 512px;
+}
+
+.ventana-672 {
+    --bs-modal-width: 672px;
+}
+
+.ventana-768 {
+    --bs-modal-width: 768px;
+}
+
+.ventana-896 {
+    --bs-modal-width: 896px;
+}
+
+/* CAJA DE LA VENTANA: FONDO, BORDE, ESQUINAS, ESPACIO INTERNO Y SOMBRA */
+.ventana {
+    gap: 16px;
+    padding: 24px;
+    background: #FCF8F9;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+}
+
+/* TITULO DE LA VENTANA */
+.ventana-titulo {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--bs-body-color);
+}
+
+/* BOTON X: ARRIBA A LA DERECHA (position-absolute LA DA ESTA REGLA) */
+.ventana-cerrar {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border: 0;
+    color: var(--bs-body-color);
+    opacity: .7;
+}
+
+.ventana-cerrar:hover {
+    opacity: 1;
+}
+
+/* ETIQUETA DE CADA CAMPO */
+.etiqueta {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+}
+
+/* CAMPOS (INPUT Y SELECT) */
+.entrada {
+    width: 100%;
+    height: 36px;
+    padding: 4px 12px;
+    background: #F3F3F5;
+    color: var(--bs-body-color);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.entrada:focus-visible {
+    outline: none;
+    border-color: var(--vino-medio);
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* CAMPO DESACTIVADO (BLOQUEADO CON CANDADO) */
+.entrada:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+/* TEXTO DE AYUDA DEBAJO DEL CAMPO */
+.ayuda {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--texto-gris);
+}
+
+/* MENSAJE DE ERROR DEBAJO DEL CAMPO */
+.error-campo {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #E7000B;
+}
+
+/* TEXTO DE LA VENTANA CONFIRMAR */
+.texto-ventana {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--texto-gris);
+}
+
+/* BOTONES DEL PIE DE LA VENTANA (36PX DE ALTO) */
+.btn-primario,
+.btn-cancelar {
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.btn-primario {
+    background: var(--bs-primary);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-primario:hover {
+    background-color: rgba(116, 27, 61, 0.9);
+}
+
+.btn-primario:disabled {
+    opacity: .5;
+}
+
+.btn-cancelar {
+    background: #FCF8F9;
+    color: var(--bs-body-color);
+    border: 1px solid var(--bs-border-color);
+}
+
+.btn-cancelar:hover {
+    background: var(--acento);
+    color: #741B3D;
+}
+
+.btn-primario:focus-visible,
+.btn-cancelar:focus-visible {
+    outline: none;
+    border-color: var(--vino-medio);
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* VENTANA CREAR ORDEN */
+
+/* TARJETA DE DATOS (PROVEEDOR, CREADOR, SEDE) */
+.caja-datos {
+    padding: 16px 16px 24px;
+    background: #ffffff;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 16px;
+}
+
+/* TITULO "LINEAS" */
+.titulo-lineas {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+/* CAJA DE UNA LINEA DE LA ORDEN */
+.caja-linea {
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 16px;
+}
+
+/* VENTANA ENVIAR ORDEN */
+
+/* HOJA DE PAPEL */
+.hoja-orden {
+    padding: 24px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+.hoja-marca {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 900;
+    color: #741B3D;
+}
+
+.hoja-texto {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.hoja-total {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 900;
+}
+
+/* BOTONES GRANDES DE 48PX (ENVIAR POR CORREO / DESCARGAR PDF) */
+.btn-grande-primario,
+.btn-grande-contorno {
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.btn-grande-primario {
+    background: var(--bs-primary);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-grande-primario:hover {
+    background-color: rgba(116, 27, 61, 0.9);
+}
+
+.btn-grande-primario:disabled {
+    opacity: .5;
+}
+
+.btn-grande-contorno {
+    background: #FCF8F9;
+    color: var(--bs-body-color);
+    border: 1px solid var(--bs-border-color);
+}
+
+.btn-grande-contorno:hover {
+    background: var(--acento);
+    color: #741B3D;
+}
+
+/* VENTANA RECEPCION */
+
+/* CAJA DE CADA LINEA POR REVISAR */
+.caja-recepcion {
+    padding: 16px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 16px;
+}
+
+.recepcion-nombre {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.recepcion-pedida {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--texto-gris);
+}
+
+/* CAMPO "RECIBIDA" DE 144PX DE ANCHO */
+.campo-recibida {
+    width: 144px;
+}
+
+/* FRANJA AZUL CON EL RESULTADO DE LA ORDEN */
+.franja-estado {
+    padding: 12px;
+    background: #EFF6FF;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #193CB8;
+}
+>>>>>>> origin/development

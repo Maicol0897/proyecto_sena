@@ -1,0 +1,258 @@
+:root {
+  --bs-primary: #741B3D;
+  --bs-primary-rgb: 116, 27, 61;
+  --bs-body-bg: #FCF8F9;
+  --bs-body-color: #321525;
+  --bs-border-color: rgba(116, 27, 61, 0.14);
+  --bs-body-font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  color: #321525;
+  background-color: #FCF8F9;
+}
+
+.fw-black {
+  font-weight: 900 !important;
+}
+
+.text-vino-oscuro {
+  color: #350B1A !important;
+}
+
+.text-vino {
+  color: #741B3D !important;
+}
+
+.text-gris {
+  color: #7A6873 !important;
+}
+
+.bg-vino {
+  background-color: #741B3D !important;
+}
+
+.bg-acento {
+  background-color: #FCE8EA !important;
+}
+
+.bg-campo {
+  background-color: #F2EEF1 !important;
+}
+
+.btn-primary {
+  background-color: #741B3D;
+  border-color: #741B3D;
+}
+
+.btn-primary:hover {
+  background-color: #350B1A;
+  border-color: #350B1A;
+}
+
+/* Pestañas de Domicilios */
+.nav-pills .nav-link {
+  color: #7A6873;
+  font-weight: 600;
+  border-radius: 12px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: transparent;
+
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link.active:hover,
+.nav-pills .nav-link.active:focus {
+  background-color: transparent !important;
+  color: #741B3D !important;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Pestaña 1: Tablero de 5 cajones */
+.tablero-domicilios {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  min-width: 1160px;
+}
+
+.cajon-domicilio {
+  min-height: 520px;
+  background-color: rgba(255, 255, 255, 0.65);
+  border: none;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.punto-estado {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.punto-pendiente {
+  background-color: #FFB900;
+}
+
+.punto-aceptado {
+  background-color: #50A2FF;
+}
+
+.punto-preparacion {
+  background-color: #F27C86;
+}
+
+.punto-despachado {
+  background-color: #C27AFF;
+}
+
+.punto-entregado {
+  background-color: #00C950;
+}
+
+.cajon-vacio {
+  border: 1px dashed rgba(116, 27, 61, 0.14);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  font-size: 12px;
+  color: #7A6873;
+}
+
+.tarjeta-pedido .btn-outline-secondary,
+.tarjeta-pedido .btn-outline-secondary:hover,
+.tarjeta-pedido .btn-outline-secondary:focus,
+.tarjeta-pedido .btn-outline-secondary:focus-visible,
+.tarjeta-pedido .btn-outline-secondary:active {
+  background-color: #FFFFFF !important;
+  color: #321525 !important;
+  border-color: rgba(116, 27, 61, 0.14) !important;
+  border-radius: 9999px !important;
+  box-shadow: none !important;
+}
+
+.tarjeta-pedido .btn-cancelar-pedido,
+.tarjeta-pedido .btn-cancelar-pedido:hover,
+.tarjeta-pedido .btn-cancelar-pedido:focus,
+.tarjeta-pedido .btn-cancelar-pedido:focus-visible,
+.tarjeta-pedido .btn-cancelar-pedido:active {
+  color: #C10007 !important;
+  background-color: transparent !important;
+  border-color: rgba(116, 27, 61, 0.14) !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+.direccion-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.repartidor-pill {
+  background-color: #FAF5FF;
+  color: #8200DB;
+  border-radius: 12px;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Insignias de estado en pedidos */
+.badge-aceptado {
+  background-color: #EFF6FF;
+  color: #1447E6;
+  border: 1px solid #BEDBFF;
+}
+
+.badge-preparacion {
+  background-color: #FDF2F8;
+  color: #741B3D;
+  border: 1px solid #FBCFE8;
+}
+
+.badge-despachado {
+  background-color: #FAF5FF;
+  color: #8200DB;
+  border: 1px solid #E9D4FF;
+}
+
+.badge-entregado {
+  background-color: #F0FDF4;
+  color: #008236;
+  border: 1px solid #B9F8CF;
+}
+
+.badge-cancelado {
+  background-color: #FEF2F2;
+  color: #C10007;
+  border: 1px solid #FFC9C9;
+}
+
+/* Pestaña 2: Carga de repartidores */
+.circulo-moto {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #FCE8EA;
+  color: #741B3D;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pestaña 3: Gráfico de barras por día */
+.grafico-barras {
+  height: 256px;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 16px;
+  border-left: 1px solid rgba(116, 27, 61, 0.14);
+  border-bottom: 1px solid rgba(116, 27, 61, 0.14);
+}
+
+.barra-dia-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.barra-dia {
+  width: 100%;
+  max-width: 56px;
+  border-radius: 12px 12px 0 0;
+  background-color: #741B3D;
+}
+
+.barra-dia-1 {
+  height: 66px;
+}
+
+.barra-dia-2 {
+  height: 83px;
+}
+
+.barra-dia-3 {
+  height: 56px;
+}
+
+.barra-dia-4 {
+  height: 98px;
+}
