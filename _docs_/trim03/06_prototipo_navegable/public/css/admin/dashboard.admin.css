@@ -1,0 +1,246 @@
+:root {
+    --bs-primary: #741b3d;
+    --bs-primary-rgb: 116, 27, 61;
+    --bs-body-bg: #fcf8f9;
+    --bs-body-color: #321525;
+    --bs-border-color: rgba(116, 27, 61, 0.14);
+    --bs-body-font-family: Inter, system-ui, sans-serif;
+    --vino-oscuro: #350B1A;
+    --vino: #741B3D;
+    --coral: #F27C86;
+    --vino-medio: #96244F;
+    --texto-gris: #7A6873;
+    --acento: #FCE8EA;
+    --rosa: #F6B4B8;
+}
+
+.panel-menu {
+    width: 256px;
+    height: 100vh;
+    background: var(--vino-oscuro);
+    z-index: 50;
+}
+
+.panel-marca {
+    height: 80px;
+    padding: 0px 16px;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, .10);
+}
+
+.panel-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.panel-marca-nombre {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 900;
+}
+
+.panel-marca-sub {
+    font-size: 11px;
+    line-height: 16.5px;
+    color: var(--rosa);
+}
+
+.panel-nav {
+    padding: 12px;
+}
+
+.panel-nav .panel-enlace {
+    height: 44px;
+    min-height: 44px;
+    max-height: 44px;
+    padding: 0 16px !important;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.panel-contraer {
+    height: 44px;
+    min-height: 44px;
+    padding: 0 14px;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.panel-nav .panel-enlace svg {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    flex-shrink: 0;
+}
+
+.panel-enlace {
+    font-weight: 600;
+    color: rgba(255, 255, 255, .75);
+}
+
+.panel-enlace:not(.panel-enlace-activo):hover {
+    background: rgba(255, 255, 255, .10);
+    color: #ffffff;
+}
+
+.panel-enlace-activo {
+    background: var(--coral);
+    color: var(--vino-oscuro) !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .10), 0 1px 2px -1px rgba(0, 0, 0, .10);
+}
+
+.panel-pie {
+    padding: 12px;
+    border-top: 1px solid rgba(255, 255, 255, .10);
+}
+
+.panel-contraer {
+    border: 0;
+    background: transparent;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .70);
+}
+
+.panel-contraer:hover {
+    background: rgba(255, 255, 255, .10);
+}
+
+.panel-version {
+    padding: 0px 12px;
+    font-size: 10px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, .35);
+}
+
+/* COLUMNA DERECHA Y BARRA SUPERIOR (M.3 y M.4) */
+/* Solo aplicamos margin-left desde 992px (lg) para que en celular/tablet no quede hueco a la izquierda */
+@media (min-width: 992px) {
+    .columna-derecha {
+        margin-left: 256px;
+    }
+}
+
+.barra-superior {
+    height: 80px;
+}
+
+/* Título superior de la sección actual */
+.texto-menu-vino {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: .05em;
+    color: #96244F;
+}
+
+/* Etiqueta verde de estado "Sincronizado" */
+.pastilla-sync {
+    background-color: #00C950;
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    padding: 2px 8px;
+}
+
+.texto-invitado {
+    font-size: 12px;
+    color: #7A6873;
+}
+
+/* Tamaño táctil del botón de notificaciones */
+.boton-campana {
+    width: 44px;
+    height: 44px;
+}
+
+/* Botón salir con borde vino y cambio de fondo al pasar el mouse */
+.boton-salir {
+    height: 44px;
+    --bs-btn-color: #741B3D;
+    --bs-btn-border-color: #741B3D;
+    --bs-btn-hover-bg: #FCE8EA;
+    --bs-btn-hover-border-color: #741B3D;
+    --bs-btn-hover-color: #741B3D;
+    --bs-btn-active-bg: #FCE8EA;
+    --bs-btn-active-border-color: #741B3D;
+    --bs-btn-active-color: #741B3D;
+}
+
+/* PANEL DE NOTIFICACIONES */
+.panel-notificaciones {
+    max-width: 384px;
+    width: calc(100vw - 24px);
+}
+
+.titulo-panel {
+    color: #350B1A;
+}
+
+/* Círculo gris donde va el ícono cuando no hay notificaciones */
+.circulo-campana {
+    width: 48px;
+    height: 48px;
+    background-color: #F1EEF0;
+}
+
+/* CONTENIDO PRINCIPAL (M.5) */
+.contenido-interno {
+    max-width: 1440px;
+}
+
+/* Migas de pan (Inicio / Menú) */
+.migas {
+    font-size: 12px;
+    line-height: 16px;
+    color: #7A6873;
+    --bs-breadcrumb-item-padding-x: 4px;
+    --bs-breadcrumb-divider-color: #7A6873;
+    --bs-breadcrumb-item-active-color: #7A6873;
+}
+
+/* Clases propias de apoyo según la guía */
+.text-vino-oscuro {
+    color: var(--vino-oscuro);
+}
+
+.text-vino {
+    color: var(--vino);
+}
+
+.text-vino-medio {
+    color: var(--vino-medio);
+}
+
+.text-gris {
+    color: var(--texto-gris);
+}
+
+.bg-acento {
+    background-color: var(--acento);
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+/* Espacio abajo para que el botón flotante del carrito no tape las últimas tarjetas */
+.pagina-menu {
+    padding-bottom: 80px;
+}
+
+/* 9.1 CARTEL VINO */
+.cartel-menu {
+    background-color: #350B1A;
+    border-radius: 24px;
+}
+.icono-tarjeta{
+    width: 44px;
+    height: 44px;
+}

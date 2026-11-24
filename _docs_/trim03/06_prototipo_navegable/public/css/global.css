@@ -1,0 +1,17 @@
+/* barra lateral */
+
+.barra-lateral{
+    width:256px;
+    height:100vh;
+    position:fixed;
+    right: auto;
+    top: 0;
+    /* contraida */ width: 76px;
+    /* drawer mobil */ width: 288px;
+    color: #350b1a;
+}
+
+.barra-lateral img {
+    width: 50%;
+    height:auto;
+}

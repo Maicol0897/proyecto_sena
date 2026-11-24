@@ -1,0 +1,443 @@
+/*  1. VARIABLES Y BASE (Guía 0.3) */
+:root {
+    --bs-primary: #741b3d;
+    --bs-primary-rgb: 116, 27, 61;
+    --bs-body-bg: #fcf8f9;
+    --bs-body-color: #321525;
+    --bs-border-color: rgba(116, 27, 61, 0.14);
+    --bs-body-font-family: Inter, system-ui, sans-serif;
+    
+    --vino-oscuro: #350B1A;
+    --vino: #741B3D;
+    --coral: #F27C86;
+    --vino-medio: #96244F;
+    --texto-gris: #7A6873;
+    --acento: #FCE8EA;
+    --rosa: #F6B4B8;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+    font-family: var(--bs-body-font-family);
+    font-size: 16px;
+    color: var(--bs-body-color);
+    background: var(--bs-body-bg);
+}
+
+/* Clases utilitarias de texto */
+.text-vino { color: var(--vino) !important; }
+.text-gris { color: var(--texto-gris) !important; }
+.texto-12 { font-size: 12px; line-height: 16px; }
+.texto-14 { font-size: 14px; line-height: 20px; }
+.fw-black { font-weight: 900 !important; }
+
+
+/* 2. BARRA LATERAL */
+.panel-menu {
+    width: 256px;
+    height: 100vh;
+    background: var(--vino-oscuro);
+    z-index: 50;
+}
+
+.panel-marca {
+    height: 80px;
+    padding: 0px 16px;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, .10);
+}
+
+.panel-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.panel-marca-nombre {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 900;
+}
+
+.panel-marca-sub {
+    font-size: 11px;
+    line-height: 16.5px;
+    color: var(--rosa);
+}
+
+.panel-nav {
+    padding: 12px;
+}
+
+.panel-nav .panel-enlace {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    min-height: 44px;
+    max-height: 44px;
+    padding: 0 16px !important;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.panel-nav .panel-enlace svg {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    flex-shrink: 0;
+}
+
+.panel-enlace {
+    font-weight: 600;
+    color: rgba(255, 255, 255, .75);
+    text-decoration: none;
+}
+
+.panel-enlace:not(.panel-enlace-activo):hover {
+    background: rgba(255, 255, 255, .10);
+    color: #ffffff;
+}
+
+.panel-enlace-activo {
+    background: var(--coral);
+    color: var(--vino-oscuro) !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .10), 0 1px 2px -1px rgba(0, 0, 0, .10);
+}
+
+.panel-pie {
+    padding: 12px;
+    border-top: 1px solid rgba(255, 255, 255, .10);
+}
+
+.panel-contraer {
+    height: 44px;
+    min-height: 44px;
+    padding: 0 14px;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+    border: 0;
+    background: transparent;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .70);
+}
+
+.panel-contraer:hover {
+    background: rgba(255, 255, 255, .10);
+}
+
+.panel-version {
+    padding: 0px 12px;
+    font-size: 10px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, .35);
+}
+
+@media (min-width: 992px) {
+    .columna-derecha { margin-left: 256px; }
+}
+.columna-derecha { min-width: 0; }
+
+
+/* 3. BARRA SUPERIOR Y CONTENIDO*/
+   /* Tamaño táctil del botón de notificaciones */
+.boton-campana {
+    width: 44px;
+    height: 44px;
+}
+
+/* Botón salir con borde vino y cambio de fondo al pasar el mouse */
+.boton-salir {
+    height: 44px;
+    --bs-btn-color: #741B3D;
+    --bs-btn-border-color: #741B3D;
+    --bs-btn-hover-bg: #FCE8EA;
+    --bs-btn-hover-border-color: #741B3D;
+    --bs-btn-hover-color: #741B3D;
+    --bs-btn-active-bg: #FCE8EA;
+    --bs-btn-active-border-color: #741B3D;
+    --bs-btn-active-color: #741B3D;
+}
+
+/* PANEL DE NOTIFICACIONES */
+.panel-notificaciones {
+    max-width: 384px;
+    width: calc(100vw - 24px);
+}
+
+.titulo-panel {
+    color: #350B1A;
+}
+
+/* Círculo gris donde va el ícono cuando no hay notificaciones */
+.circulo-campana {
+    width: 48px;
+    height: 48px;
+    background-color: #F1EEF0;
+}
+
+/* CONTENIDO PRINCIPAL (M.5) */
+.contenido-interno {
+    max-width: 1440px;
+}
+.barra-superior {
+    height: 80px;
+    z-index: 40;
+    background: rgba(255, 255, 255, .95);
+    backdrop-filter: blur(6px);
+}
+
+.pastilla-sync {
+    background: #00C950;
+    color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.boton-salir {
+    height: 44px;
+    border-color: var(--vino) !important;
+    color: var(--vino) !important;
+}
+
+.boton-salir:hover {
+    background-color: var(--vino) !important;
+    color: #fff !important;
+}
+
+.texto-menu-vino {
+    color: var(--vino-medio);
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 16px;
+}
+
+.texto-invitado {
+    color: var(--texto-gris);
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.contenido-interno { max-width: 1440px; }
+
+.migas .breadcrumb-item + .breadcrumb-item::before { content: "/"; color: var(--texto-gris); }
+.migas .breadcrumb-item, .migas .breadcrumb-item a {
+    color: var(--texto-gris);
+    text-decoration: none;
+    font-size: 12px;
+}
+.migas .breadcrumb-item.active { color: var(--vino); font-weight: 600; }
+
+.titulo-vista { font-size: 30px; line-height: 36px; color: var(--vino-oscuro); }
+
+
+/* 4. BOTONES (Guía 0.1) */
+.btn-nuevo-producto, 
+.btn-crear-traslado {
+    background-color: var(--vino) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    height: 36px;
+    padding: 0 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-nuevo-producto:hover, 
+.btn-crear-traslado:hover {
+    background-color: var(--vino-oscuro) !important;
+}
+
+.btn-principal-48 {
+    background-color: var(--vino) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-principal-48:hover {
+    background-color: var(--vino-oscuro) !important;
+}
+
+.btn-recibir {
+    background-color: var(--vino) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.btn-recibir:hover {
+    background-color: var(--vino-oscuro) !important;
+}
+
+.btn-ver-receta {
+    background-color: #ffffff !important;
+    color: var(--bs-body-color) !important;
+    border: 1px solid var(--bs-border-color) !important;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 4px 12px;
+    font-weight: 500;
+}
+.btn-ver-receta:hover {
+    background-color: var(--acento) !important;
+}
+
+
+/* 5. PESTAÑAS Y TARJETAS */
+.pestanas-barra {
+    --bs-nav-pills-link-active-bg: var(--acento);
+    --bs-nav-pills-link-active-color: var(--vino);
+}
+.pestanas-barra .nav-link {
+    flex: 1;
+    height: 36px;
+    border-radius: 12px;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--texto-gris) !important;
+    white-space: nowrap;
+}
+.pestanas-barra .nav-link:hover {
+    background: #F2EEF1 !important;
+    color: var(--bs-body-color) !important;
+}
+.pestanas-barra .nav-link.active {
+    background: var(--acento) !important;
+    color: var(--vino) !important;
+}
+
+.tarjeta {
+    background: #fff;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 12px;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.tarjeta__cabecera {
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.tarjeta__cuerpo {
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.tarjeta__titulo {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+
+/* 6. TABLAS Y CAMPOS */
+.tabla-custom { font-size: 14px; }
+.tabla-custom thead th {
+    height: 40px;
+    padding: 8px;
+    font-weight: 500;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--bs-border-color);
+    background-color: #FAF7F8;
+}
+.tabla-custom tbody td {
+    padding: 8px;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+.tabla-custom tbody tr:last-child td { border-bottom: none; }
+
+.campo-custom {
+    height: 44px;
+    background: #F2EEF1 !important;
+    border: 1px solid var(--bs-border-color) !important;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 0 12px;
+}
+.campo-custom:focus {
+    background: #F2EEF1 !important;
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, .5) !important;
+    border-color: var(--vino) !important;
+    outline: none;
+}
+
+.consumo-fila { border: 1px solid var(--bs-border-color); }
+.consumo-fila--ok { background: rgba(240, 253, 244, .5); border-color: #B9F8CF; }
+.consumo-fila--fail { background: #FEF2F2; border-color: #FFC9C9; }
+
+
+/* 7. INSIGNIAS (BADGES) */
+.badge-azul {
+    background-color: #EFF6FF !important;
+    color: #1447E6 !important;
+    border: 1px solid #BEDBFF !important;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+.badge-verde {
+    background-color: #F0FDF4 !important;
+    color: #008236 !important;
+    border: 1px solid #B9F8CF !important;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+
+/*  8. PIE DE PÁGINA Y RESPONSIVE */
+.pie-pagina { background: var(--bs-body-bg); }
+
+@media (max-width: 991.98px) {
+    .panel-menu { display: none !important; }
+    .barra-superior {
+        height: auto;
+        min-height: 80px;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+@media (max-width: 640px) {
+    .tarjeta { padding: 16px 0; gap: 16px; }
+    .tarjeta__cabecera, .tarjeta__cuerpo { padding: 0 16px; }
+    .pestanas-barra .nav-link { height: 40px; }
+    .titulo-vista { font-size: 24px; line-height: 30px; }
+}
