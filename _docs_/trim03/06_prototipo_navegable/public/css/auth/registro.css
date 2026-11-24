@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
+:root {
+    --bs-primary: #741B3D;
+    --bs-primary-rgb: 116, 27, 61;
+    --bs-body-bg: #FCF8F9;
+    --bs-body-color: #321525;
+    --bs-border-color: rgba(116, 27, 61, 0.14);
+    --bs-focus-ring-color: rgba(150, 36, 79, 0.5);
+    --bs-body-font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 16px;
+    color: #321525;
+    background: #FCF8F9;
+}
+
+/* MOLDE DE DOS PARTES (sección 2.A y 3) */
+.pantalla-completa {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+    .pantalla-completa {
+        grid-template-columns: 1.05fr 0.95fr;
+    }
+}
+
+/* PANEL IZQUIERDO */
+.bg-vino-oscuro {
+    background-color: #350B1A !important;
+}
+
+.bola-a {
+    position: absolute;
+    top: -96px;
+    left: -96px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(116, 27, 61, 0.5);
+    pointer-events: none;
+}
+
+.bola-b {
+    position: absolute;
+    top: 33.333%;
+    right: -80px;
+    width: 288px;
+    height: 288px;
+    border-radius: 50%;
+    background: rgba(242, 124, 134, 0.2);
+    pointer-events: none;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.nombre {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 900;
+    color: #FFFFFF;
+}
+
+.eslogan {
+    font-size: 12px;
+    line-height: 16px;
+    color: #F6B4B8;
+}
+
+.mensaje-cent {
+    max-width: 576px;
+}
+
+.etiqueta {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: #F27C86;
+}
+
+.titulo {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 0.95;
+}
+
+.titulo-2 {
+    color: #F27C86;
+}
+
+.texto {
+    font-size: 18px;
+    line-height: 1.625;
+    color: rgba(246, 180, 184, 0.8);
+    max-width: 448px;
+}
+
+.pie-pag {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* PANEL DERECHO */
+.panel-der {
+    background: #FCF8F9;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@media (min-width: 640px) {
+    .panel-der {
+        padding: 40px;
+    }
+}
+
+.caja-der {
+    width: 100%;
+    max-width: 576px;
+    margin-inline: auto;
+}
+
+.volv-ini {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #741B3D;
+    text-decoration: none;
+    margin-bottom: 24px;
+}
+
+.titulo-registro {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 900;
+    color: #321525;
+    margin: 0;
+}
+
+.descripcion {
+    font-size: 14px;
+    line-height: 20px;
+    color: #7A6873;
+    margin-top: 4px;
+    margin-bottom: 24px;
+}
+
+/* CAJAS BLANCAS DE REGISTRO ("Acceso" e "Información personal") */
+.form-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.caja-seccion {
+    background: #FFFFFF;
+    border: 1px solid rgba(116, 27, 61, 0.14);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.titulo-seccion {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 900;
+    color: #321525;
+    margin-bottom: 16px;
+}
+
+.grilla-campos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 640px) {
+    .grilla-campos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.campo-ancho-completo {
+    grid-column: 1 / -1;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.etiqueta-campo {
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    color: #321525;
+}
+
+.input-registro {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #321525;
+    background: #F2EEF1;
+    border: 1px solid rgba(116, 27, 61, 0.14);
+    border-radius: 8px;
+    outline: none;
+}
+
+.input-registro:focus {
+    box-shadow: 0 0 0 3px black (150, 36, 79, 0.5);
+    border-color: black;
+}
+
+.error-campo {
+    font-size: 12px;
+    line-height: 16px;
+    color: #E7000B;
+    margin-top: 4px;
+}
+
+/* BOTÓN PRINCIPAL Y PIE */
+.btn-crear-cuenta {
+    width: 100%;
+    height: 48px;
+    background: #741B3D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-crear-cuenta:hover {
+    background: #350B1A;
+}
+
+.pie-registro {
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7A6873;
+    margin: 0;
+}
+
+.enlace-login {
+    font-weight: 700;
+    color: #741B3D;
+    text-decoration: none;
+}
+
+.enlace-login:hover {
+    text-decoration: underline;
+}

@@ -410,6 +410,117 @@
                             <!-- PESTANA 3: SEDES -->
                             <div class="tab-pane" id="pestana-sedes">
                                 <!-- MODULO USUARIOS: VISTA SEDES SANTIAGO -->
+                                <div class="tarjeta-usuarios bg-white rounded-4 d-flex flex-column gap-4">
+                                        <div class="encabezado-usuarios d-flex flex-column align-items-start gap-2">
+                                            <p class="titulo-usuarios-tarjeta fw-medium mb-0">Sedes</p>
+                                            <button type="button"
+                                                class="btn-primario d-inline-flex align-items-center gap-2"
+                                                data-bs-toggle="modal" data-bs-target="#ventana-sede">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M5 12h14" />
+                                                    <path d="M12 5v14" />
+                                                </svg>Nueva sede
+                                            </button>
+                                        </div>
+                                        <div class="tarjeta-contenido d-flex flex-column gap-3">
+                                            <div class="contenedor-tabla rounded-4 overflow-x-auto">
+                                                <table class="tabla-contenido w-100">
+                                                    <thead>
+                                                        <tr
+                                                            class="tabla-encabezados fw-medium text-nowrap align-middle">
+                                                            <th>Nombre</th>
+                                                            <th>Dirección</th>
+                                                            <th>Teléfono</th>
+                                                            <th>Tipo</th>
+                                                            <th>Estado</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="fw-semibold">Planta de producción</td>
+                                                            <td>Zona Industrial, Bodega 14</td>
+                                                            <td>601 555 1000</td>
+                                                            <td>Planta</td>
+                                                            <td><span class="estado-activo">Activo</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="fw-semibold">Coffee Park Centro</td>
+                                                            <td>Cra. 7 # 18-40</td>
+                                                            <td>601 555 1001</td>
+                                                            <td>Punto de venta</td>
+                                                            <td><span class="estado-activo">Activo</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="fw-semibold">Coffee Park Norte</td>
+                                                            <td>Calle 127 # 19-20</td>
+                                                            <td>601 555 1002</td>
+                                                            <td>Punto de venta</td>
+                                                            <td><span class="estado-activo">Activo</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!-- VENTANA: NUEVA SEDE -->
+                                <div class="modal fade" id="ventana-sede" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" style="max-width: 512px;">
+                                        <div class="modal-content ventana d-flex flex-column gap-3">
+                                            <button type="button"
+                                                class="ventana-cerrar d-flex align-items-center justify-content-center p-0"
+                                                data-bs-dismiss="modal" aria-label="Cerrar">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M18 6 6 18" />
+                                                    <path d="m6 6 12 12" />
+                                                </svg>
+                                            </button>
+                                            <h2 class="ventana-titulo mb-0">Nueva sede</h2>
+                                            <form class="d-flex flex-column gap-3">
+                                                <div class="campo d-flex flex-column">
+                                                    <label for="nombre-sede" class="etiqueta">Nombre</label>
+                                                    <input id="nombre-sede" type="text" class="entrada"
+                                                        placeholder="Nombre de la sede">
+                                                    <span class="text-danger small mt-1 d-none">El nombre es
+                                                        obligatorio.</span>
+                                                </div>
+                                                <div class="campo d-flex flex-column">
+                                                    <label for="direccion-sede" class="etiqueta">Dirección</label>
+                                                    <input id="direccion-sede" type="text" class="entrada"
+                                                        placeholder="Dirección">
+                                                </div>
+                                                <div class="campo d-flex flex-column">
+                                                    <label for="telefono-sede" class="etiqueta">Teléfono</label>
+                                                    <input id="telefono-sede" type="tel" class="entrada"
+                                                        placeholder="601 555 0000">
+                                                </div>
+                                                <div class="campo d-flex flex-column">
+                                                    <label for="tipo-sede" class="etiqueta">Tipo</label>
+                                                    <select id="tipo-sede" class="entrada">
+                                                        <option>Planta</option>
+                                                        <option>Punto de venta</option>
+                                                    </select>
+                                                </div>
+                                                <div class="campo d-flex flex-column">
+                                                    <label for="estado-sede" class="etiqueta">Estado</label>
+                                                    <select id="estado-sede" class="entrada">
+                                                        <option>Activo</option>
+                                                        <option>Inactivo</option>
+                                                    </select>
+                                                </div>
+                                            </form>
+                                            <div
+                                                class="d-flex flex-column-reverse flex-sm-row justify-content-sm-end gap-2">
+                                                <button type="button" class="btn-cancelar"
+                                                    data-bs-dismiss="modal">Cancelar</button>
+                                                <button type="button" class="btn-primario">Guardar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
