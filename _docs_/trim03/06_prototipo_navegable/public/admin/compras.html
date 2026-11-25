@@ -26,7 +26,8 @@
             </div>
             <!-- ENLACES DE NAVEGACION ENTRE VISTAS -->
             <nav class="panel-nav flex-grow-1 d-flex flex-column gap-1">
-                <a href="dashboard.html" class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                <a href="../admin/dashboard.admin.html"
+                    class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="flex-shrink-0">
@@ -35,7 +36,8 @@
                             d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                     </svg>Inicio
                 </a>
-                <a href="usuarios.html" class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                <a href="../admin/usuarios.html"
+                    class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="flex-shrink-0">
@@ -308,15 +310,17 @@
                                 <!-- TARJETA PROVEEDORES -->
                                 <div class="tarjeta-proveedores bg-white rounded-4 d-flex flex-column gap-4">
                                     <!-- ENCABEZADO: TITULO Y BOTON NUEVO PROVEEDOR (ABRE SU VENTANA) -->
-                                    <div class="encabezado-proveedores d-grid align-items-center justify-content-between">
+                                    <div
+                                        class="encabezado-proveedores d-grid align-items-center justify-content-between">
                                         <div>
                                             <p class="titulo-proveedores fw-medium mb-0">Proveedores</p>
                                         </div>
                                         <button
                                             class="nuevo-proveedor d-inline-flex align-items-center justify-content-center gap-2"
                                             data-bs-toggle="modal" data-bs-target="#ventana-proveedor">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
                                                 class="lucide lucide-plus preview-icon">
                                                 <path d="M5 12h14" />
                                                 <path d="M12 5v14" />
@@ -387,8 +391,9 @@
                                         <button
                                             class="nuevo-insumo d-inline-flex align-items-center justify-content-center gap-2"
                                             data-bs-toggle="modal" data-bs-target="#ventana-insumo">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
                                                 class="lucide lucide-plus preview-icon">
                                                 <path d="M5 12h14" />
                                                 <path d="M12 5v14" />
@@ -407,13 +412,16 @@
                                                         <th>Stock mínimo</th>
                                                         <th>Stock máximo</th>
                                                         <th><span class="d-inline-flex align-items-center gap-1">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                        class="lucide lucide-lock">
-                                                        <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
-                                                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                                                    </svg>Costo de la última compra (calculado)
-                                                </span></th>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                    height="12" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    class="lucide lucide-lock">
+                                                                    <rect width="18" height="11" x="3" y="11" rx="2"
+                                                                        ry="2" />
+                                                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                                                </svg>Costo de la última compra (calculado)
+                                                            </span></th>
                                                         <th>Estado</th>
                                                     </tr>
                                                 </thead>
@@ -470,7 +478,8 @@
                                     <div class="tarjeta-contenido d-flex flex-column gap-3">
                                         <!-- FILTROS: 1 COLUMNA EN CELULAR Y DESDE 768PX BUSCADOR + 2 LISTAS -->
                                         <div class="filtros-ordenes d-grid">
-                                            <input type="text" class="entrada" placeholder="Buscar número o proveedor…" aria-label="Buscar orden">
+                                            <input type="text" class="entrada" placeholder="Buscar número o proveedor…"
+                                                aria-label="Buscar orden">
                                             <select class="entrada" aria-label="Filtrar por estado">
                                                 <option>Todos los estados</option>
                                                 <option>Borrador</option>
@@ -510,8 +519,12 @@
                                                         <td>
                                                             <!-- ACCIONES: SOLO LAS ORDENES EN BORRADOR SE PUEDEN ENVIAR O CANCELAR -->
                                                             <div class="d-flex gap-2">
-                                                                <button class="btn-tabla-primario" data-bs-toggle="modal" data-bs-target="#ventana-enviar-orden">Enviar orden</button>
-                                                                <button class="btn-tabla-contorno">Cancelar orden</button>
+                                                                <button class="btn-tabla-primario"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#ventana-enviar-orden">Enviar
+                                                                    orden</button>
+                                                                <button class="btn-tabla-contorno">Cancelar
+                                                                    orden</button>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -527,7 +540,8 @@
                                                         <td class="numero-orden">OC-2026-0039</td>
                                                         <td>Molinos Andinos S.A.S.</td>
                                                         <td>26/06/2026</td>
-                                                        <td><span class="estado-pendiente">Pendiente de factura</span></td>
+                                                        <td><span class="estado-pendiente">Pendiente de factura</span>
+                                                        </td>
                                                         <td class="total">$ 45.000</td>
                                                         <td></td>
                                                     </tr>
@@ -545,7 +559,8 @@
                                     <div class="encabezado-recepcion d-grid align-items-center justify-content-between">
                                         <div>
                                             <p class="titulo-recepcion fw-medium mb-0">Recepción de pedidos</p>
-                                            <p class="descripcion-semaforo mt-1 mb-0">Órdenes enviadas de Coffee Park Centro.</p>
+                                            <p class="descripcion-semaforo mt-1 mb-0">Órdenes enviadas de Coffee Park
+                                                Centro.</p>
                                         </div>
                                     </div>
                                     <!-- CONTENIDO E INFORMACION DE LA TARJETA -->
@@ -572,12 +587,17 @@
                                                         <td><span class="estado-enviada">Enviada</span></td>
                                                         <td>
                                                             <!-- SI LA ORDEN ESTA ENVIADA SE MUESTRA EL BOTON QUE ABRE LA VENTANA DE RECEPCION -->
-                                                            <button class="btn-tabla-contorno d-inline-flex align-items-center gap-2" data-bs-toggle="modal"
+                                                            <button
+                                                                class="btn-tabla-contorno d-inline-flex align-items-center gap-2"
+                                                                data-bs-toggle="modal"
                                                                 data-bs-target="#ventana-recepcion">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                    height="16" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
                                                                     class="lucide lucide-package preview-icon">
-                                                                    <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
+                                                                    <path
+                                                                        d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
                                                                     <path d="M12 22V12" />
                                                                     <path d="m3.3 7 8.7 5 8.7-5" />
                                                                 </svg>Revisar líneas
@@ -589,9 +609,11 @@
                                                         <td>Molinos Andinos S.A.S.</td>
                                                         <td>26/06/2026</td>
                                                         <td>1</td>
-                                                        <td><span class="estado-pendiente">Pendiente de factura</span></td>
+                                                        <td><span class="estado-pendiente">Pendiente de factura</span>
+                                                        </td>
                                                         <!-- SI YA SE RECIBIO SE MUESTRA QUIEN LA RECIBIO Y CUANDO -->
-                                                        <td><span class="dato-secundario">María Gómez · 27/06/2026 09:42</span></td>
+                                                        <td><span class="dato-secundario">María Gómez · 27/06/2026
+                                                                09:42</span></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -604,9 +626,11 @@
                                 <!-- TARJETA FACTURACION -->
                                 <div class="tarjeta-facturacion bg-white rounded-4 d-flex flex-column gap-4">
                                     <!-- ENCABEZADO: SOLO TITULO (SIN BOTON) -->
-                                    <div class="encabezado-facturacion d-grid align-items-center justify-content-between">
+                                    <div
+                                        class="encabezado-facturacion d-grid align-items-center justify-content-between">
                                         <div>
-                                            <p class="titulo-facturacion fw-medium mb-0">Órdenes pendientes de factura</p>
+                                            <p class="titulo-facturacion fw-medium mb-0">Órdenes pendientes de factura
+                                            </p>
                                         </div>
                                     </div>
                                     <!-- CONTENIDO E INFORMACION DE LA TARJETA -->
@@ -633,12 +657,17 @@
                                                         <td class="total">$ 45.000</td>
                                                         <td>
                                                             <!-- ABRE LA VENTANA CONFIRMAR FACTURACION (SI YA ESTA FACTURADA AQUI IRIA LA INSIGNIA estado-facturada) -->
-                                                            <button class="btn-tabla-contorno d-inline-flex align-items-center gap-2" data-bs-toggle="modal"
+                                                            <button
+                                                                class="btn-tabla-contorno d-inline-flex align-items-center gap-2"
+                                                                data-bs-toggle="modal"
                                                                 data-bs-target="#ventana-facturacion">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                    height="16" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
                                                                     class="lucide lucide-file-text preview-icon">
-                                                                    <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+                                                                    <path
+                                                                        d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
                                                                     <path d="M14 2v5a1 1 0 0 0 1 1h5" />
                                                                     <path d="M10 9H8" />
                                                                     <path d="M16 13H8" />
@@ -698,7 +727,10 @@
                     </div>
                     <div class="d-flex flex-column gap-2">
                         <label class="etiqueta">Estado</label>
-                        <select class="entrada"><option>Activo</option><option>Inactivo</option></select>
+                        <select class="entrada">
+                            <option>Activo</option>
+                            <option>Inactivo</option>
+                        </select>
                     </div>
                 </form>
                 <!-- PIE DE LA VENTANA: BOTONES (EN CELULAR UNO DEBAJO DEL OTRO, DESDE 576PX A LA DERECHA) -->
@@ -732,7 +764,11 @@
                     </div>
                     <div class="d-flex flex-column gap-2">
                         <label class="etiqueta">Unidad de medida</label>
-                        <select class="entrada"><option>g</option><option>ml</option><option>und</option></select>
+                        <select class="entrada">
+                            <option>g</option>
+                            <option>ml</option>
+                            <option>und</option>
+                        </select>
                     </div>
                     <div class="d-flex flex-column gap-2">
                         <label class="etiqueta">Stock mínimo</label>
@@ -746,7 +782,10 @@
                     </div>
                     <div class="d-flex flex-column gap-2">
                         <label class="etiqueta">Estado</label>
-                        <select class="entrada"><option>Activo</option><option>Inactivo</option></select>
+                        <select class="entrada">
+                            <option>Activo</option>
+                            <option>Inactivo</option>
+                        </select>
                     </div>
                 </form>
                 <!-- PIE DE LA VENTANA: BOTONES (EN CELULAR UNO DEBAJO DEL OTRO, DESDE 576PX A LA DERECHA) -->
@@ -778,28 +817,33 @@
                         <div class="col-12 col-md-4">
                             <div class="d-flex flex-column gap-2">
                                 <label class="etiqueta">Proveedor</label>
-                                <select class="entrada"><option>Molinos Andinos S.A.S.</option><option>Lácteos La Sabana</option></select>
+                                <select class="entrada">
+                                    <option>Molinos Andinos S.A.S.</option>
+                                    <option>Lácteos La Sabana</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
                             <div class="d-flex flex-column gap-2">
-                                <label class="etiqueta d-inline-flex align-items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="lucide lucide-lock">
-                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
-                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                            </svg>Creador</label>
+                                <label class="etiqueta d-inline-flex align-items-center gap-1"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-lock">
+                                        <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                    </svg>Creador</label>
                                 <input type="text" class="entrada" value="Laura Martínez" disabled>
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
                             <div class="d-flex flex-column gap-2">
-                                <label class="etiqueta d-inline-flex align-items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="lucide lucide-lock">
-                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
-                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                            </svg>Sede</label>
+                                <label class="etiqueta d-inline-flex align-items-center gap-1"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-lock">
+                                        <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                    </svg>Sede</label>
                                 <input type="text" class="entrada" value="Coffee Park Centro" disabled>
                             </div>
                         </div>
@@ -823,7 +867,10 @@
                         <div class="col-12 col-md-4">
                             <div class="d-flex flex-column gap-2">
                                 <label class="etiqueta">Insumo</label>
-                                <select class="entrada"><option>Harina de trigo</option><option>Levadura</option></select>
+                                <select class="entrada">
+                                    <option>Harina de trigo</option>
+                                    <option>Levadura</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-12 col-md-3">
@@ -840,12 +887,13 @@
                         </div>
                         <div class="col-12 col-md-2">
                             <div class="d-flex flex-column gap-2">
-                                <label class="etiqueta d-inline-flex align-items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="lucide lucide-lock">
-                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
-                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                            </svg>Subtotal</label>
+                                <label class="etiqueta d-inline-flex align-items-center gap-1"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-lock">
+                                        <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                    </svg>Subtotal</label>
                                 <input type="text" class="entrada" value="$ 327.600" disabled>
                             </div>
                         </div>
@@ -916,7 +964,8 @@
                         <button type="button" class="btn-grande-primario w-100">Enviar por correo automático</button>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <button type="button" class="btn-grande-contorno w-100">Descargar PDF para enviar manualmente</button>
+                        <button type="button" class="btn-grande-contorno w-100">Descargar PDF para enviar
+                            manualmente</button>
                     </div>
                 </div>
                 <!-- PIE DE LA VENTANA: BOTONES (EN CELULAR UNO DEBAJO DEL OTRO, DESDE 576PX A LA DERECHA) -->
@@ -999,7 +1048,8 @@
                     </svg>
                 </button>
                 <h2 class="ventana-titulo mb-0">Confirmar facturación</h2>
-                <p class="texto-ventana mb-0">¿Desea marcar la orden <strong>OC-2026-0039</strong> como facturada? Este cambio quedará registrado.</p>
+                <p class="texto-ventana mb-0">¿Desea marcar la orden <strong>OC-2026-0039</strong> como facturada? Este
+                    cambio quedará registrado.</p>
                 <!-- PIE DE LA VENTANA: BOTONES (EN CELULAR UNO DEBAJO DEL OTRO, DESDE 576PX A LA DERECHA) -->
                 <div class="d-flex flex-column-reverse flex-sm-row justify-content-sm-end gap-2">
                     <button type="button" class="btn-cancelar" data-bs-dismiss="modal">Cancelar</button>

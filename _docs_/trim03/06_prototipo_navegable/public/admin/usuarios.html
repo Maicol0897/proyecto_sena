@@ -27,7 +27,8 @@
             </div>
             <!-- ENLACES DE NAVEGACION ENTRE VISTAS -->
             <nav class="panel-nav flex-grow-1 d-flex flex-column gap-1">
-                <a href="dashboard.html" class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
+                <a href="../admin/dashboard.admin.html"
+                    class="panel-enlace d-flex align-items-center rounded-4 text-decoration-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="flex-shrink-0">
@@ -411,59 +412,58 @@
                             <div class="tab-pane" id="pestana-sedes">
                                 <!-- MODULO USUARIOS: VISTA SEDES SANTIAGO -->
                                 <div class="tarjeta-usuarios bg-white rounded-4 d-flex flex-column gap-4">
-                                        <div class="encabezado-usuarios d-flex flex-column align-items-start gap-2">
-                                            <p class="titulo-usuarios-tarjeta fw-medium mb-0">Sedes</p>
-                                            <button type="button"
-                                                class="btn-primario d-inline-flex align-items-center gap-2"
-                                                data-bs-toggle="modal" data-bs-target="#ventana-sede">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M5 12h14" />
-                                                    <path d="M12 5v14" />
-                                                </svg>Nueva sede
-                                            </button>
-                                        </div>
-                                        <div class="tarjeta-contenido d-flex flex-column gap-3">
-                                            <div class="contenedor-tabla rounded-4 overflow-x-auto">
-                                                <table class="tabla-contenido w-100">
-                                                    <thead>
-                                                        <tr
-                                                            class="tabla-encabezados fw-medium text-nowrap align-middle">
-                                                            <th>Nombre</th>
-                                                            <th>Dirección</th>
-                                                            <th>Teléfono</th>
-                                                            <th>Tipo</th>
-                                                            <th>Estado</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="fw-semibold">Planta de producción</td>
-                                                            <td>Zona Industrial, Bodega 14</td>
-                                                            <td>601 555 1000</td>
-                                                            <td>Planta</td>
-                                                            <td><span class="estado-activo">Activo</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="fw-semibold">Coffee Park Centro</td>
-                                                            <td>Cra. 7 # 18-40</td>
-                                                            <td>601 555 1001</td>
-                                                            <td>Punto de venta</td>
-                                                            <td><span class="estado-activo">Activo</span></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="fw-semibold">Coffee Park Norte</td>
-                                                            <td>Calle 127 # 19-20</td>
-                                                            <td>601 555 1002</td>
-                                                            <td>Punto de venta</td>
-                                                            <td><span class="estado-activo">Activo</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                    <div class="encabezado-usuarios d-flex flex-column align-items-start gap-2">
+                                        <p class="titulo-usuarios-tarjeta fw-medium mb-0">Sedes</p>
+                                        <button type="button"
+                                            class="btn-primario d-inline-flex align-items-center gap-2"
+                                            data-bs-toggle="modal" data-bs-target="#ventana-sede">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M5 12h14" />
+                                                <path d="M12 5v14" />
+                                            </svg>Nueva sede
+                                        </button>
+                                    </div>
+                                    <div class="tarjeta-contenido d-flex flex-column gap-3">
+                                        <div class="contenedor-tabla rounded-4 overflow-x-auto">
+                                            <table class="tabla-contenido w-100">
+                                                <thead>
+                                                    <tr class="tabla-encabezados fw-medium text-nowrap align-middle">
+                                                        <th>Nombre</th>
+                                                        <th>Dirección</th>
+                                                        <th>Teléfono</th>
+                                                        <th>Tipo</th>
+                                                        <th>Estado</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="fw-semibold">Planta de producción</td>
+                                                        <td>Zona Industrial, Bodega 14</td>
+                                                        <td>601 555 1000</td>
+                                                        <td>Planta</td>
+                                                        <td><span class="estado-activo">Activo</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="fw-semibold">Coffee Park Centro</td>
+                                                        <td>Cra. 7 # 18-40</td>
+                                                        <td>601 555 1001</td>
+                                                        <td>Punto de venta</td>
+                                                        <td><span class="estado-activo">Activo</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="fw-semibold">Coffee Park Norte</td>
+                                                        <td>Calle 127 # 19-20</td>
+                                                        <td>601 555 1002</td>
+                                                        <td>Punto de venta</td>
+                                                        <td><span class="estado-activo">Activo</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
+                                </div>
                                 <!-- VENTANA: NUEVA SEDE -->
                                 <div class="modal fade" id="ventana-sede" tabindex="-1" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" style="max-width: 512px;">

@@ -250,6 +250,9 @@ body {
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-crear-cuenta:hover {
