@@ -42,14 +42,19 @@ body {
   background-color: #F2EEF1 !important;
 }
 
-.btn-primary {
-  background-color: #741B3D;
-  border-color: #741B3D;
+.tarjeta-pedido .btn-primary {
+  background-color: #350B1A !important;
+  border-color: #350B1A !important;
+  color: #FFFFFF !important;
 }
 
-.btn-primary:hover {
-  background-color: #350B1A;
-  border-color: #350B1A;
+.tarjeta-pedido .btn-primary:hover,
+.tarjeta-pedido .btn-primary:focus,
+.tarjeta-pedido .btn-primary:focus-visible,
+.tarjeta-pedido .btn-primary:active {
+  background-color: #741B3D !important;
+  border-color: #741B3D !important;
+  color: #FFFFFF !important;
 }
 
 /* Pestañas de Domicilios */
@@ -68,6 +73,20 @@ body {
 .nav-pills .nav-link:hover {
   background-color: transparent;
 
+}
+
+.btn-cerrar-sesion {
+  color: #350B1A !important;
+  border-color: #350B1A !important;
+  background-color: transparent !important;
+}
+
+.btn-cerrar-sesion:hover,
+.btn-cerrar-sesion:focus,
+.btn-cerrar-sesion:active {
+  color: #FFFFFF !important;
+  background-color: #350B1A !important;
+  border-color: #350B1A !important;
 }
 
 .nav-pills .nav-link.active,
