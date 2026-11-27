@@ -440,3 +440,95 @@
     border-color: var(--vino-medio);
     box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
 }
+
+/* VISTA ROLES Y PERMISOS (PEGAR AL FINAL DE usuarios.css) */
+
+/* CONTENEDOR: 1 COLUMNA EN CELULAR, GAP 20PX; DESDE 1024PX 280PX + 1FR */
+.roles-contenedor {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+}
+
+@media (min-width: 1024px) {
+    .roles-contenedor {
+        grid-template-columns: 280px minmax(0, 1fr);
+    }
+}
+
+/* BOTON DE ROL: ANCHO COMPLETO, MIN 44PX, ESQUINAS 16 (rounded-4 EN EL HTML) */
+.rol-boton {
+    min-height: 44px;
+    padding: 0 12px;
+    background: transparent;
+    color: var(--bs-body-color);
+    border: 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* MOUSE ENCIMA */
+.rol-boton:hover {
+    background: #F2EEF1;
+}
+
+/* ROL ELEGIDO: FONDO ROSA Y LETRA VINO */
+.rol-boton-activo,
+.rol-boton-activo:hover {
+    background: #FCE8EA;
+    color: #741B3D;
+}
+
+.rol-boton:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* ESCUDO DEL TITULO */
+.icono-escudo {
+    color: #741B3D;
+}
+
+/* CADA CASILLA: ALTO MINIMO 48PX (borde, esquinas y relleno van en el HTML con Bootstrap) */
+.permiso {
+    min-height: 48px;
+    cursor: pointer;
+}
+
+/* NOMBRE DEL PERMISO EN <code>: SIN EL ROSADO DE BOOTSTRAP */
+.permiso code {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--bs-body-color);
+    word-break: break-all;
+}
+
+/* CASILLA DE 16PX EN VINO */
+.permiso .form-check-input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.permiso .form-check-input:checked {
+    background-color: #741B3D;
+    border-color: #741B3D;
+}
+
+.permiso .form-check-input:focus {
+    border-color: var(--vino-medio);
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+/* BOTON GUARDAR: 20PX ARRIBA; EN CELULAR OCUPA TODO EL ANCHO */
+.btn-guardar-permisos {
+    margin-top: 20px;
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .btn-guardar-permisos {
+        width: auto;
+    }
+}
