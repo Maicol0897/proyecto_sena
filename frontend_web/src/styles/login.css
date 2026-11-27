@@ -1,0 +1,301 @@
+/* BASE Y COLORES (Guía 0.3) */
+:root {
+    --vino-oscuro: #350B1A;
+    --vino: #741B3D;
+    --coral: #F27C86;
+    --texto-gris: #7A6873;
+    --fondo-pagina: #FCF8F9;
+    --rosa: #F6B4B8;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--fondo-pagina);
+    color: #321525;
+    margin: 0;
+}
+
+/* Clases utilitarias de color */
+.bg-fondo { background-color: var(--fondo-pagina); }
+.texto-gris { color: var(--texto-gris); }
+.texto-rosa { color: var(--rosa); }
+
+/* BLOQUE IZQUIERDO (HERO PANEL) */
+.hero-panel {
+    background-color: var(--vino-oscuro);
+    min-height: 100vh;
+}
+
+.logo-bake-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+/* Etiqueta de versión v2.0 */
+.badge-version {
+    background: rgba(242, 124, 134, 0.133);
+    border: 1px solid rgba(242, 124, 134, 0.333);
+    padding: 4px 12px;
+    color: var(--rosa);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Adornos de fondo (Círculos y Línea) */
+.circulo-1 {
+    width: 384px;
+    height: 384px;
+    background: var(--vino);
+    opacity: 0.4;
+    top: -128px;
+    left: -128px;
+    z-index: 0;
+}
+
+.circulo-2 {
+    width: 288px;
+    height: 288px;
+    background: var(--coral);
+    opacity: 0.2;
+    top: 50%;
+    right: -96px;
+    z-index: 0;
+}
+
+.circulo-3 {
+    width: 256px;
+    height: 256px;
+    background: #4A1027;
+    opacity: 0.25;
+    bottom: -80px;
+    left: 25%;
+    z-index: 0;
+}
+
+.linea-inclinada {
+    width: 1px;
+    height: 100%;
+    background: var(--rosa);
+    opacity: 0.2;
+    top: 0;
+    right: 96px;
+    transform: rotate(12deg);
+    transform-origin: top;
+    z-index: 0;
+}
+
+/* Textos del centro */
+.hero-subtitulo {
+    color: var(--coral);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.hero-titulo {
+    color: var(--fondo-pagina);
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 24px;
+}
+
+/* Desde 1024px el título crece según la guía */
+@media (min-width: 1024px) {
+    .hero-titulo {
+        font-size: 60px;
+    }
+}
+@media (min-width: 1280px) {
+    .hero-titulo {
+        font-size: 72px;
+    }
+}
+
+.hero-titulo span {
+    color: var(--coral);
+}
+
+.hero-texto {
+    color: var(--rosa);
+    opacity: 0.8;
+    font-size: 16px;
+    line-height: 1.625;
+    max-width: 384px;
+}
+
+@media (min-width: 1024px) {
+    .hero-texto {
+        font-size: 18px;
+    }
+}
+
+
+/* BLOQUE DERECHO (FORMULARIO) */
+.login-grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 448px;
+}
+
+.login-header h2 {
+    color: #321525;
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0;
+    line-height: 36px;
+}
+
+.login-header p {
+    color: var(--texto-gris);
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field-group label {
+    font-weight: 600;
+    color: #321525;
+    font-size: 14px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgot-link {
+    font-size: 12px;
+    color: #96244F;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Campos de texto */
+.form-control-custom {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid rgba(116, 27, 61, 0.2);
+    background-color: #F2EEF1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    color: #321525;
+    transition: box-shadow 0.2s;
+}
+
+.form-control-custom:focus {
+    border-color: var(--vino);
+    box-shadow: 0 0 0 3px rgba(150, 36, 79, 0.5);
+}
+
+.form-control-custom::placeholder {
+    color: var(--texto-gris);
+}
+
+/* Botón principal "Ingresar" */
+.btn-primary-custom {
+    width: 100%;
+    height: 48px;
+    background-color: var(--vino);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--vino-oscuro);
+    color: #ffffff;
+}
+
+/* Pie del formulario */
+.login-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.btn-secundary-custom {
+    color: var(--vino);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-secundary-custom:hover {
+    text-decoration: underline;
+}
+
+/* Separador "o continúa sin cuenta" */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--texto-gris);
+    font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: rgba(116, 27, 61, 0.14);
+}
+
+/* Botón secundario (sin cuenta) */
+.btn-secondary-custom {
+    width: 100%;
+    height: 48px;
+    background-color: rgba(242, 124, 134, 0.082);
+    color: #321525;
+    border: 1px solid var(--coral);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary-custom:hover {
+    background-color: rgba(242, 124, 134, 0.15);
+    color: #321525;
+}
