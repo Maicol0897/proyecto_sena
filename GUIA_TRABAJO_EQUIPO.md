@@ -183,31 +183,35 @@ Formato: `tipo: qué hiciste` (corto, en minúscula, sin tildes si no quieres pr
 
 ## 5. DESPUÉS de trabajar (subir y juntar)
 
-### 5.1 Al terminar el día
+**Regla del equipo:** al terminar de trabajar, lo que hiciste se sube a tu rama personal y **en seguida se abre el PR a `development`**. Así `development` está siempre actualizada y nadie trabaja sobre código viejo. No se acumulan días de trabajo en la rama personal.
+
+### 5.1 Subir a tu rama personal (todos los días, al terminar)
 
 ```bash
-git status                        # debe estar limpio
+git status                        # debe estar limpio (todo commiteado)
+git fetch origin                  # mira si hubo cambios nuevos
+git merge origin/development      # trae lo nuevo a tu rama
 git push origin duberney_         # sube tu rama (cambia el nombre por el tuyo)
 ```
 Cuando `git push` termina bien, la última línea se ve así: `duberney_ -> duberney_`.
+Si el `merge` da conflicto, resuélvelo antes de subir (sección 6).
 
-### 5.2 Cuando una parte está terminada y probada: Pull Request
+### 5.2 Hacer el PR a `development` (inmediatamente después del push)
 
-1. Antes de abrir el PR, **trae `development` a tu rama** (sección 3, pasos 2 a 4) y sube:
-   ```bash
-   git push origin duberney_
-   ```
-   Así el PR no sale con conflictos.
-2. En GitHub: pestaña **Pull requests** → **New pull request**.
-3. Pon **base: `development`** y **compare: tu rama**. Verifica esto con cuidado: `base` nunca debe ser `main`.
-4. Debe decir **"Able to merge"** (en verde). Si dice **"Can't automatically merge"**, tu rama está desactualizada: vuelve al paso 1.
-5. Título claro: `Duberney: pestaña Usuarios`. **Create pull request**.
-6. **Otra persona del equipo** lo revisa (pestaña *Files changed*) y presiona **Merge pull request** → **Confirm merge**.
-7. Los PR se aceptan **uno por uno**, no todos a la vez.
+1. En GitHub: pestaña **Pull requests** → **New pull request** (o el botón verde **Compare & pull request** que aparece tras el push).
+2. Pon **base: `development`** y **compare: tu rama**. Verifica con cuidado: `base` nunca debe ser `main`.
+3. Debe decir **"Able to merge"** (en verde). Si dice **"Can't automatically merge"**, tu rama está desactualizada: vuelve al paso 5.1.
+4. Título claro: `Duberney: login y panel`. **Create pull request**.
+5. **Otra persona del equipo** lo revisa (pestaña *Files changed*) y presiona **Merge pull request** → **Confirm merge**. Si nadie lo ha revisado, avisa en el grupo.
+6. Los PR se aceptan **uno por uno**, no todos a la vez.
+
+Antes de abrir el PR confirma que lo que subes **funciona** (`npm run dev` abre, `npm run lint` sin errores). Si algo está a medias, no lo subas a `development`: déjalo en tu rama y dilo en el grupo.
 
 ### 5.3 Después de que se acepta un PR
 
-Todos los demás actualizan su rama (sección 3). Quien aceptó el PR avisa en el grupo.
+1. Quien lo aceptó avisa en el grupo ("PR de X aceptado").
+2. Todos hacen la rutina de **ANTES** (sección 3): `git fetch origin` y `git merge origin/development`, para que su rama tenga lo nuevo.
+3. Tú también: así tu rama queda igual a `development` y empiezas el siguiente día limpio.
 
 ### 5.4 Pasar a `main` (entrega final)
 
@@ -389,7 +393,7 @@ Muestra el historial de todo lo que Git hizo en tu computador, incluso commits q
 ```
 ANTES      git status → git switch mi_rama → git fetch origin → git merge origin/development
 DURANTE    editar solo lo mío → git status → git add archivo → git commit -m "tipo: algo" → git push origin mi_rama
-DESPUÉS    PR de mi_rama a development (base = development) → otro lo revisa y lo acepta → todos actualizan
+DESPUÉS    git fetch → git merge origin/development → git push origin mi_rama → PR a development (base = development) INMEDIATAMENTE → otro lo acepta → todos hacen fetch + merge
 CONFLICTO  git status → abrir archivo → elegir versión → verificar etiquetas → git add → git commit → git push
 SE ENREDÓ  git merge --abort  (o git reflog y pedir ayuda)
 ```
